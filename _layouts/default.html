@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <style>
+        /* Style temporaire en attendant le thème */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #0056b3, #003d82);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .navigation {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .navigation a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .navigation a:hover {
+            background: #0056b3;
+            color: white;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 5px solid;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-cours {
+            border-top-color: #0056b3;
+        }
+        .card-td {
+            border-top-color: #28a745;
+        }
+        .card-examens {
+            border-top-color: #ffc107;
+        }
+        .card-contact {
+            border-top-color: #dc3545;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        .btn:hover {
+            background: #004494;
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .university-badge {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            border-left: 4px solid #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎓 {{ site.title }}</h1>
+        <p>{{ site.faculty }} - {{ site.university }}</p>
+    </div>
+
+    <nav class="navigation">
+        <a href="/">Accueil</a>
+        <a href="/cours/">Cours Magistraux</a>
+        <a href="/td/">Travaux Dirigés</a>
+        <a href="/examens/">Examens & Annales</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="university-badge">
+        <strong>📚 Plateforme Officielle d'Enseignement</strong><br>
+        Département de Mathématiques - {{ site.faculty }}
+    </div>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 {{ site.faculty }} - {{ site.university }}</p>
+        <p>Enseignant responsable : {{ site.name }} | Contact : {{ site.email }}</p>
+        <p><small>Dernière mise à jour : {{ site.time | date: "%d/%m/%Y" }}</small></p>
+    </footer>
+</body>
+</html>
