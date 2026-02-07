@@ -1,0 +1,43 @@
+# Configuration du site
+title: "Cours de Mathématiques - FST Fès"
+description: "Plateforme pédagogique - Faculté des Sciences et Techniques de Fès, USMBA"
+baseurl: ""
+url: "https://mahmoudmath.github.io"
+
+# Thème
+theme: jekyll-theme-cayman
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+
+# Informations
+name: "Pr. Mahmoud Math"
+university: "Université Sidi Mohamed Ben Abdellah"
+faculty: "Faculté des Sciences et Techniques de Fès"
+email: "mahmoud.math@usmba.ac.ma"
+
+# Options d'affichage
+show_downloads: true
+logo: "/assets/images/logo.png"
+
+# Exclusions
+exclude:
+  - README.md
+  - .gitignore
+
+# Navigation
+nav:
+  - title: "Accueil"
+    url: "/"
+  - title: "Cours Magistraux"
+    url: "/cours/"
+  - title: "Travaux Dirigés"
+    url: "/td/"
+  - title: "Examens"
+    url: "/examens/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Social (optionnel)
+github_username: mahmoudmath
