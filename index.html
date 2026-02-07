@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de Mathématiques - FST Fès</title>
+    <style>
+        /* Style FST Fès */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #0056b3, #003d82);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .site-header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        
+        .site-header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            background: white;
+            color: #0056b3;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #0056b3;
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: #0056b3;
+            color: white;
+        }
+        
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid #0056b3;
+        }
+        
+        .card h3 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header unique -->
+        <header class="site-header">
+            <h1>🎓 Cours de Mathématiques</h1>
+            <p>Faculté des Sciences et Techniques de Fès</p>
+            <p><strong>Université Sidi Mohamed Ben Abdellah (USMBA)</strong></p>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <a href="/" class="nav-btn">Accueil</a>
+            <a href="/cours/" class="nav-btn">Cours</a>
+            <a href="/td/" class="nav-btn">Travaux Dirigés</a>
+            <a href="/examens/" class="nav-btn">Examens</a>
+            <a href="/contact/" class="nav-btn">Contact</a>
+        </nav>
+        
+        <!-- Introduction -->
+        <div class="card">
+            <h2>📚 Plateforme Pédagogique Officielle</h2>
+            <p>Bienvenue sur la plateforme numérique du <strong>Département de Mathématiques</strong> de la FST Fès.</p>
+            <p>Cette plateforme centralise les ressources pédagogiques pour les étudiants en mathématiques.</p>
+        </div>
+        
+        <!-- Cards -->
+        <div class="card-grid">
+            <div class="card">
+                <h3>📘 Cours Magistraux</h3>
+                <p>Supports de cours complets et détaillés.</p>
+                <ul>
+                    <li>Analyse Réelle</li>
+                    <li>Algèbre Linéaire</li>
+                    <li>Probabilités</li>
+                    <li>Statistiques</li>
+                </ul>
+                <a href="/cours/" class="nav-btn">Accéder →</a>
+            </div>
+            
+            <div class="card">
+                <h3>📝 Travaux Dirigés</h3>
+                <p>Séries d'exercices et corrigés.</p>
+                <ul>
+                    <li>Séries hebdomadaires</li>
+                    <li>Corrigés détaillés</li>
+                    <li>Méthodologie</li>
+                </ul>
+                <a href="/td/" class="nav-btn">Voir les TD →</a>
+            </div>
+            
+            <div class="card">
+                <h3>📊 Examens</h3>
+                <p>Sujets et corrigés des années précédentes.</p>
+                <ul>
+                    <li>Contrôles continus</li>
+                    <li>Examens semestriels</li>
+                    <li>Corrigés types</li>
+                </ul>
+                <a href="/examens/" class="nav-btn">Consulter →</a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Faculté des Sciences et Techniques de Fès - USMBA</p>
+            <p>Département de Mathématiques | Enseignant : Pr. Mahmoud Math</p>
+            <p><a href="http://www.fstf.ump.ma" style="color: #0056b3;">Site officiel de la FST Fès</a></p>
+        </footer>
+    </div>
+</body>
+</html>
