@@ -4,397 +4,328 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cours de Mathématiques - FST Fès</title>
+
     <style>
+        :root {
+            --primary: #0056b3;
+            --primary-dark: #003d82;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --bg-light: #f8f9fa;
+            --shadow-soft: 0 3px 10px rgba(0,0,0,0.05);
+            --shadow-medium: 0 5px 20px rgba(0,0,0,0.1);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+            --font-main: 'Segoe UI', Arial, sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: var(--font-main);
         }
-        
+
         body {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, var(--bg-light), #e9ecef);
             min-height: 100vh;
             color: #333;
         }
-        
+
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 20px;
         }
-        
-        /* Header académique */
+
+        /* ===== HEADER ===== */
         .header {
-            background: linear-gradient(135deg, #0056b3, #003d82);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             padding: 40px;
             border-radius: 15px;
-            margin-bottom: 30px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 86, 179, 0.2);
+            box-shadow: 0 5px 20px rgba(0,86,179,.2);
+            margin-bottom: 30px;
         }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .header h2 {
-            font-size: 1.3em;
-            opacity: 0.9;
-            font-weight: normal;
-        }
-        
+
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header h2 { font-size: 1.3em; opacity: .9; }
+
         .university-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
+            margin-top: 15px;
             padding: 8px 20px;
             border-radius: 30px;
-            margin-top: 15px;
-            font-size: 0.9em;
+            background: rgba(255,255,255,.2);
+            display: inline-block;
+            font-size: .9em;
         }
-        
-        /* Navigation */
+
+        /* ===== NAV ===== */
         .nav {
             display: flex;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 30px;
             padding: 20px;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 30px;
         }
-        
+
         .nav a {
             text-decoration: none;
-            color: #0056b3;
+            color: var(--primary);
+            font-weight: 600;
             padding: 10px 20px;
             border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 2px solid transparent;
+            transition: var(--transition);
         }
-        
+
         .nav a:hover {
-            background: #0056b3;
+            background: var(--primary);
             color: white;
-            border-color: #0056b3;
         }
-        
-        /* Section unique d'introduction */
-        .intro {
+
+        /* ===== SECTIONS COMMUNES ===== */
+        .section {
             background: white;
             padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border-left: 5px solid #0056b3;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-radius: var(--radius);
+            margin: 30px 0;
+            box-shadow: var(--shadow-soft);
+            border-left: 5px solid var(--primary);
         }
-        
-        .intro h2 {
-            color: #0056b3;
+
+        .section h2,
+        .section h3 {
+            color: var(--primary);
             margin-bottom: 15px;
         }
-        
-        /* Grid des cartes */
+
+        /* ===== GRID & CARDS ===== */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
-        
+
         .card {
             background: white;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-medium);
             position: relative;
-            overflow: hidden;
+            transition: var(--transition);
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
-        
+
         .card::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
             height: 5px;
+            width: 100%;
         }
-        
-        .card-cours::before { background: #0056b3; }
-        .card-td::before { background: #28a745; }
-        .card-examens::before { background: #ffc107; }
-        .card-contact::before { background: #dc3545; }
-        
-        .card h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-        
+
+        .card[data-color="primary"]::before { background: var(--primary); }
+        .card[data-color="success"]::before { background: var(--success); }
+        .card[data-color="warning"]::before { background: var(--warning); }
+        .card[data-color="danger"]::before  { background: var(--danger); }
+
         .card ul {
             list-style: none;
             margin: 15px 0;
         }
-        
+
         .card li {
-            padding: 8px 0;
+            padding: 8px 0 8px 25px;
             border-bottom: 1px solid #eee;
             position: relative;
-            padding-left: 25px;
         }
-        
+
         .card li::before {
-            content: '✓';
+            content: "✓";
             position: absolute;
             left: 0;
-            color: #0056b3;
-            font-weight: bold;
+            color: var(--primary);
         }
-        
+
+        /* ===== BUTTON ===== */
         .btn {
             display: inline-block;
+            margin-top: 15px;
             padding: 10px 20px;
-            background: linear-gradient(135deg, #0056b3, #007bff);
+            background: linear-gradient(135deg, var(--primary), #007bff);
             color: white;
             text-decoration: none;
             border-radius: 6px;
             font-weight: 600;
-            margin-top: 15px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9em;
+            transition: var(--transition);
         }
-        
+
         .btn:hover {
-            background: linear-gradient(135deg, #004494, #0056b3);
+            background: linear-gradient(135deg, #004494, var(--primary));
         }
-        
-        /* Section actualités */
-        .news {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 30px 0;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            border-left: 5px solid #0056b3;
-        }
-        
-        .news h3 {
-            color: #0056b3;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        /* Table des modules */
+
+        /* ===== TABLE ===== */
         .modules-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            margin-top: 15px;
         }
-        
+
         .modules-table th {
-            background: #0056b3;
+            background: var(--primary);
             color: white;
             padding: 15px;
             text-align: left;
         }
-        
+
         .modules-table td {
             padding: 12px 15px;
             border-bottom: 1px solid #eee;
         }
-        
+
         .modules-table tr:hover {
-            background: #f8f9fa;
+            background: var(--bg-light);
         }
-        
-        /* Footer */
+
+        /* ===== FOOTER ===== */
         .footer {
             margin-top: 50px;
             padding-top: 25px;
             border-top: 1px solid #ddd;
             text-align: center;
+            font-size: .9em;
             color: #666;
-            font-size: 0.9em;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 15px 0;
             flex-wrap: wrap;
+            margin-bottom: 15px;
         }
-        
+
         .footer a {
-            color: #0056b3;
+            color: var(--primary);
             text-decoration: none;
         }
-        
-        /* Responsive */
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .header h1 { font-size: 2em; }
-            .header h2 { font-size: 1.1em; }
-            .nav { flex-direction: column; align-items: center; }
-            .nav a { width: 100%; text-align: center; }
-            .grid { grid-template-columns: 1fr; }
-            .modules-table { display: block; overflow-x: auto; }
+            .nav { flex-direction: column; }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- En-tête académique -->
-        <header class="header">
-            <h1>🎓 Cours de Mathématiques</h1>
-            <h2>Faculté des Sciences et Techniques de Fès</h2>
-            <div class="university-badge">
-                Université Sidi Mohamed Ben Abdellah (USMBA)
-            </div>
-        </header>
-        
-        <!-- Navigation -->
-        <nav class="nav">
-            <a href="/">Accueil</a>
-            <a href="/cours/">Cours Magistraux</a>
-            <a href="/td/">Travaux Dirigés</a>
-            <a href="/examens/">Examens & Annales</a>
-            <a href="/contact/">Contact</a>
-        </nav>
-        
-        <!-- Introduction unique -->
-        <section class="intro">
-            <h2>Plateforme Officielle d'Enseignement</h2>
-            <p>Département de Mathématiques - Faculté des Sciences et Techniques de Fès</p>
-            <p>Cette plateforme pédagogique centralise l'ensemble des ressources académiques pour les étudiants en mathématiques de la FST Fès.</p>
-        </section>
-        
-        <!-- Grid des cartes -->
-        <div class="grid">
-            <div class="card card-cours">
-                <h3>📘 Cours Magistraux</h3>
-                <p>Supports de cours complets et détaillés pour tous les modules.</p>
-                <ul>
-                    <li>Analyse Réelle I & II</li>
-                    <li>Algèbre Linéaire I & II</li>
-                    <li>Probabilités et Statistiques</li>
-                    <li>Analyse Complexe</li>
-                    <li>Topologie</li>
-                </ul>
-                <a href="/cours/" class="btn">Accéder aux cours →</a>
-            </div>
-            
-            <div class="card card-td">
-                <h3>📝 Travaux Dirigés</h3>
-                <p>Séries d'exercices corrigés et méthodes de résolution.</p>
-                <ul>
-                    <li>Séries hebdomadaires</li>
-                    <li>Corrigés détaillés</li>
-                    <li>Méthodologie</li>
-                    <li>Exercices complémentaires</li>
-                </ul>
-                <a href="/td/" class="btn">Voir les TD →</a>
-            </div>
-            
-            <div class="card card-examens">
-                <h3>📊 Examens & Annales</h3>
-                <p>Sujets et corrigés des années précédentes.</p>
-                <ul>
-                    <li>Contrôles continus</li>
-                    <li>Examens semestriels</li>
-                    <li>Corrigés types</li>
-                    <li>Conseils de préparation</li>
-                </ul>
-                <a href="/examens/" class="btn">Consulter les examens →</a>
-            </div>
-            
-            <div class="card card-contact">
-                <h3>👨‍🏫 Contact & Informations</h3>
-                <p>Coordonnées et informations pratiques.</p>
-                <ul>
-                    <li>Bureau : Bâtiment C, Bureau 210</li>
-                    <li>Email : mahmoud.math@usmba.ac.ma</li>
-                    <li>Permanence : Lundi & Jeudi, 14h-16h</li>
-                    <li>Site FST : www.fstf.ump.ma</li>
-                </ul>
-                <a href="/contact/" class="btn">Nous contacter →</a>
-            </div>
+<div class="container">
+
+    <header class="header">
+        <h1>🎓 Cours de Mathématiques</h1>
+        <h2>Faculté des Sciences et Techniques de Fès</h2>
+        <div class="university-badge">
+            Université Sidi Mohamed Ben Abdellah (USMBA)
         </div>
-        
-        <!-- Actualités -->
-        <section class="news">
-            <h3>📅 Actualités Pédagogiques - Février 2025</h3>
+    </header>
+
+    <nav class="nav">
+        <a href="/">Accueil</a>
+        <a href="/cours/">Cours</a>
+        <a href="/td/">TD</a>
+        <a href="/examens/">Examens</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <section class="section">
+        <h2>Plateforme Officielle d'Enseignement</h2>
+        <p>Département de Mathématiques – FST Fès.</p>
+        <p>Ressources pédagogiques complètes pour les étudiants en mathématiques.</p>
+    </section>
+
+    <div class="grid">
+        <div class="card" data-color="primary">
+            <h3>📘 Cours Magistraux</h3>
             <ul>
-                <li><strong>Nouveaux supports :</strong> Cours d'Analyse 1 mis à jour</li>
-                <li><strong>TD ajoutés :</strong> Séries de Probabilités 1 à 3 disponibles</li>
-                <li><strong>En cours :</strong> Numérisation des annales 2020-2024</li>
-                <li><strong>Prochainement :</strong> Forum de questions en ligne pour étudiants</li>
+                <li>Analyse Réelle I & II</li>
+                <li>Algèbre Linéaire I & II</li>
+                <li>Analyse Complexe</li>
+                <li>Topologie</li>
             </ul>
-        </section>
-        
-        <!-- Modules -->
-        <section class="news">
-            <h3>🎯 Modules d'Enseignement 2024-2025</h3>
-            <table class="modules-table">
-                <thead>
-                    <tr>
-                        <th>Licence 1</th>
-                        <th>Licence 2</th>
-                        <th>Licence 3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>MATH 101 - Analyse Réelle I (6cr)</td>
-                        <td>MATH 201 - Analyse Réelle II (6cr)</td>
-                        <td>MATH 301 - Analyse Complexe (6cr)</td>
-                    </tr>
-                    <tr>
-                        <td>MATH 102 - Algèbre Linéaire I (6cr)</td>
-                        <td>MATH 202 - Algèbre Linéaire II (6cr)</td>
-                        <td>MATH 302 - Topologie (6cr)</td>
-                    </tr>
-                    <tr>
-                        <td>MATH 103 - Méthodes Mathématiques (3cr)</td>
-                        <td>MATH 203 - Probabilités Élémentaires (3cr)</td>
-                        <td>MATH 303 - Statistiques Inférentielles (6cr)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-links">
-                <a href="http://www.fstf.ump.ma" target="_blank">Site officiel FST Fès</a>
-                <a href="https://www.usmba.ac.ma" target="_blank">Portail USMBA</a>
-                <a href="http://biblio.fstf.ump.ma" target="_blank">Bibliothèque numérique</a>
-                <a href="http://edt.fstf.ump.ma" target="_blank">Emploi du temps</a>
-            </div>
-            <p>© 2025 Faculté des Sciences et Techniques de Fès - Université Sidi Mohamed Ben Abdellah</p>
-            <p>Département de Mathématiques | Enseignant responsable : Pr. Mahmoud Math</p>
-            <p style="margin-top: 15px; color: #888;">
-                Plateforme pédagogique dédiée à l'excellence académique
-            </p>
-        </footer>
+            <a href="/cours/" class="btn">Accéder</a>
+        </div>
+
+        <div class="card" data-color="success">
+            <h3>📝 Travaux Dirigés</h3>
+            <ul>
+                <li>Séries corrigées</li>
+                <li>Méthodologie</li>
+                <li>Exercices supplémentaires</li>
+            </ul>
+            <a href="/td/" class="btn">Voir TD</a>
+        </div>
+
+        <div class="card" data-color="warning">
+            <h3>📊 Examens</h3>
+            <ul>
+                <li>Contrôles</li>
+                <li>Annales</li>
+                <li>Corrigés types</li>
+            </ul>
+            <a href="/examens/" class="btn">Consulter</a>
+        </div>
+
+        <div class="card" data-color="danger">
+            <h3>👨‍🏫 Contact</h3>
+            <ul>
+                <li>Bureau C-210</li>
+                <li>mahmoud.math@usmba.ac.ma</li>
+                <li>Lundi & Jeudi 14h–16h</li>
+            </ul>
+            <a href="/contact/" class="btn">Contact</a>
+        </div>
     </div>
+
+    <section class="section">
+        <h3>🎯 Modules 2024–2025</h3>
+        <table class="modules-table">
+            <tr>
+                <th>Licence 1</th>
+                <th>Licence 2</th>
+                <th>Licence 3</th>
+            </tr>
+            <tr>
+                <td>Analyse Réelle I</td>
+                <td>Analyse Réelle II</td>
+                <td>Analyse Complexe</td>
+            </tr>
+            <tr>
+                <td>Algèbre Linéaire I</td>
+                <td>Algèbre Linéaire II</td>
+                <td>Topologie</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://www.usmba.ac.ma" target="_blank">USMBA</a>
+            <a href="http://www.fstf.ump.ma" target="_blank">FST Fès</a>
+        </div>
+        <p>© 2025 FST Fès – Département de Mathématiques</p>
+    </footer>
+
+</div>
 </body>
 </html>
