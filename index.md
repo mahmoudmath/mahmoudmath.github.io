@@ -15,6 +15,7 @@
         body {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             min-height: 100vh;
+            color: #333;
         }
         
         .container {
@@ -29,28 +30,29 @@
             color: white;
             padding: 40px;
             border-radius: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0, 86, 179, 0.2);
         }
         
         .header h1 {
-            font-size: 2.8em;
-            margin-bottom: 15px;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         
-        .header p {
+        .header h2 {
             font-size: 1.3em;
             opacity: 0.9;
+            font-weight: normal;
         }
         
         .university-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 30px;
             margin-top: 15px;
-            font-weight: 500;
+            font-size: 0.9em;
         }
         
         /* Navigation */
@@ -59,7 +61,7 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             padding: 20px;
             background: white;
             border-radius: 12px;
@@ -69,7 +71,7 @@
         .nav a {
             text-decoration: none;
             color: #0056b3;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s;
@@ -80,7 +82,21 @@
             background: #0056b3;
             color: white;
             border-color: #0056b3;
-            transform: translateY(-2px);
+        }
+        
+        /* Section unique d'introduction */
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #0056b3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #0056b3;
+            margin-bottom: 15px;
         }
         
         /* Grid des cartes */
@@ -93,7 +109,7 @@
         
         .card {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
@@ -102,8 +118,8 @@
         }
         
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
         .card::before {
@@ -120,15 +136,15 @@
         .card-examens::before { background: #ffc107; }
         .card-contact::before { background: #dc3545; }
         
-        .card h2 {
+        .card h3 {
             color: #333;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
         
         .card ul {
             list-style: none;
-            margin: 20px 0;
+            margin: 15px 0;
         }
         
         .card li {
@@ -148,56 +164,83 @@
         
         .btn {
             display: inline-block;
-            padding: 12px 25px;
+            padding: 10px 20px;
             background: linear-gradient(135deg, #0056b3, #007bff);
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: 600;
-            margin-top: 20px;
+            margin-top: 15px;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            font-size: 0.9em;
         }
         
         .btn:hover {
             background: linear-gradient(135deg, #004494, #0056b3);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
         }
         
         /* Section actualités */
         .news {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
-            margin: 40px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 30px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
             border-left: 5px solid #0056b3;
         }
         
-        .news h2 {
+        .news h3 {
             color: #0056b3;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
+        /* Table des modules */
+        .modules-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .modules-table th {
+            background: #0056b3;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .modules-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modules-table tr:hover {
+            background: #f8f9fa;
+        }
+        
         /* Footer */
         .footer {
-            margin-top: 60px;
-            padding-top: 30px;
+            margin-top: 50px;
+            padding-top: 25px;
             border-top: 1px solid #ddd;
             text-align: center;
             color: #666;
+            font-size: 0.9em;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
+            gap: 25px;
+            margin: 15px 0;
             flex-wrap: wrap;
         }
         
@@ -209,9 +252,11 @@
         /* Responsive */
         @media (max-width: 768px) {
             .header h1 { font-size: 2em; }
-            .header p { font-size: 1.1em; }
+            .header h2 { font-size: 1.1em; }
             .nav { flex-direction: column; align-items: center; }
             .nav a { width: 100%; text-align: center; }
+            .grid { grid-template-columns: 1fr; }
+            .modules-table { display: block; overflow-x: auto; }
         }
     </style>
 </head>
@@ -220,7 +265,7 @@
         <!-- En-tête académique -->
         <header class="header">
             <h1>🎓 Cours de Mathématiques</h1>
-            <p>Faculté des Sciences et Techniques de Fès</p>
+            <h2>Faculté des Sciences et Techniques de Fès</h2>
             <div class="university-badge">
                 Université Sidi Mohamed Ben Abdellah (USMBA)
             </div>
@@ -235,10 +280,17 @@
             <a href="/contact/">Contact</a>
         </nav>
         
+        <!-- Introduction unique -->
+        <section class="intro">
+            <h2>Plateforme Officielle d'Enseignement</h2>
+            <p>Département de Mathématiques - Faculté des Sciences et Techniques de Fès</p>
+            <p>Cette plateforme pédagogique centralise l'ensemble des ressources académiques pour les étudiants en mathématiques de la FST Fès.</p>
+        </section>
+        
         <!-- Grid des cartes -->
         <div class="grid">
             <div class="card card-cours">
-                <h2>📘 Cours Magistraux</h2>
+                <h3>📘 Cours Magistraux</h3>
                 <p>Supports de cours complets et détaillés pour tous les modules.</p>
                 <ul>
                     <li>Analyse Réelle I & II</li>
@@ -251,7 +303,7 @@
             </div>
             
             <div class="card card-td">
-                <h2>📝 Travaux Dirigés</h2>
+                <h3>📝 Travaux Dirigés</h3>
                 <p>Séries d'exercices corrigés et méthodes de résolution.</p>
                 <ul>
                     <li>Séries hebdomadaires</li>
@@ -263,7 +315,7 @@
             </div>
             
             <div class="card card-examens">
-                <h2>📊 Examens & Annales</h2>
+                <h3>📊 Examens & Annales</h3>
                 <p>Sujets et corrigés des années précédentes.</p>
                 <ul>
                     <li>Contrôles continus</li>
@@ -275,7 +327,7 @@
             </div>
             
             <div class="card card-contact">
-                <h2>👨‍🏫 Contact & Informations</h2>
+                <h3>👨‍🏫 Contact & Informations</h3>
                 <p>Coordonnées et informations pratiques.</p>
                 <ul>
                     <li>Bureau : Bâtiment C, Bureau 210</li>
@@ -289,45 +341,44 @@
         
         <!-- Actualités -->
         <section class="news">
-            <h2>📅 Actualités Pédagogiques - Février 2025</h2>
+            <h3>📅 Actualités Pédagogiques - Février 2025</h3>
             <ul>
-                <li><strong>✅ Nouveaux supports :</strong> Cours d'Analyse 1 mis à jour</li>
-                <li><strong>✅ TD ajoutés :</strong> Séries de Probabilités 1 à 3 disponibles</li>
-                <li><strong>🔄 En cours :</strong> Numérisation des annales 2020-2024</li>
-                <li><strong>📅 Prochainement :</strong> Forum de questions en ligne pour étudiants</li>
-                <li><strong>📚 Bibliothèque :</strong> Nouveaux ouvrages référencés</li>
+                <li><strong>Nouveaux supports :</strong> Cours d'Analyse 1 mis à jour</li>
+                <li><strong>TD ajoutés :</strong> Séries de Probabilités 1 à 3 disponibles</li>
+                <li><strong>En cours :</strong> Numérisation des annales 2020-2024</li>
+                <li><strong>Prochainement :</strong> Forum de questions en ligne pour étudiants</li>
             </ul>
         </section>
         
         <!-- Modules -->
         <section class="news">
-            <h2>🎯 Modules d'Enseignement 2024-2025</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
-                <div>
-                    <h3 style="color: #0056b3; margin-bottom: 10px;">Licence 1</h3>
-                    <ul>
-                        <li>MATH 101 - Analyse Réelle I (6cr)</li>
-                        <li>MATH 102 - Algèbre Linéaire I (6cr)</li>
-                        <li>MATH 103 - Méthodes Mathématiques (3cr)</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 style="color: #28a745; margin-bottom: 10px;">Licence 2</h3>
-                    <ul>
-                        <li>MATH 201 - Analyse Réelle II (6cr)</li>
-                        <li>MATH 202 - Algèbre Linéaire II (6cr)</li>
-                        <li>MATH 203 - Probabilités Élémentaires (3cr)</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 style="color: #ffc107; margin-bottom: 10px;">Licence 3</h3>
-                    <ul>
-                        <li>MATH 301 - Analyse Complexe (6cr)</li>
-                        <li>MATH 302 - Topologie (6cr)</li>
-                        <li>MATH 303 - Statistiques Inférentielles (6cr)</li>
-                    </ul>
-                </div>
-            </div>
+            <h3>🎯 Modules d'Enseignement 2024-2025</h3>
+            <table class="modules-table">
+                <thead>
+                    <tr>
+                        <th>Licence 1</th>
+                        <th>Licence 2</th>
+                        <th>Licence 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MATH 101 - Analyse Réelle I (6cr)</td>
+                        <td>MATH 201 - Analyse Réelle II (6cr)</td>
+                        <td>MATH 301 - Analyse Complexe (6cr)</td>
+                    </tr>
+                    <tr>
+                        <td>MATH 102 - Algèbre Linéaire I (6cr)</td>
+                        <td>MATH 202 - Algèbre Linéaire II (6cr)</td>
+                        <td>MATH 302 - Topologie (6cr)</td>
+                    </tr>
+                    <tr>
+                        <td>MATH 103 - Méthodes Mathématiques (3cr)</td>
+                        <td>MATH 203 - Probabilités Élémentaires (3cr)</td>
+                        <td>MATH 303 - Statistiques Inférentielles (6cr)</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         
         <!-- Footer -->
@@ -340,8 +391,8 @@
             </div>
             <p>© 2025 Faculté des Sciences et Techniques de Fès - Université Sidi Mohamed Ben Abdellah</p>
             <p>Département de Mathématiques | Enseignant responsable : Pr. Mahmoud Math</p>
-            <p style="margin-top: 20px; font-size: 0.9em; color: #888;">
-                Dernière mise à jour : Février 2025 | Plateforme pédagogique dédiée à l'excellence académique
+            <p style="margin-top: 15px; color: #888;">
+                Plateforme pédagogique dédiée à l'excellence académique
             </p>
         </footer>
     </div>
