@@ -12,6 +12,20 @@ body {
     color: #333;
 }
 
+/* --- LIENS : FIX GLOBAL (IMPORTANT) --- */
+a,
+a:link,
+a:visited,
+a:active {
+    color: inherit;              /* hérite la couleur du parent */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- CONTAINER --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -27,8 +41,6 @@ body {
     margin-bottom: 40px;
     text-align: center;
     box-shadow: 0 15px 35px rgba(0, 86, 179, 0.3);
-    position: relative;
-    overflow: hidden;
 }
 
 .professor-name {
@@ -49,10 +61,12 @@ body {
     border-radius: 30px;
     display: inline-block;
     font-size: 1.1em;
-    backdrop-filter: blur(10px);
 }
 
-.university { font-weight: 600; color: #ffc107; }
+.university {
+    font-weight: 600;
+    color: #ffc107;
+}
 
 /* --- NAVIGATION --- */
 .academic-nav {
@@ -68,10 +82,9 @@ body {
     color: #0056b3;
     padding: 18px 35px;
     border-radius: 12px;
-    text-decoration: none;
     font-weight: 600;
     border: 2px solid #0056b3;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     min-width: 200px;
     text-align: center;
 }
@@ -80,6 +93,7 @@ body {
     background: #0056b3;
     color: white;
     transform: translateY(-5px);
+    text-decoration: none;
 }
 
 /* --- SECTIONS DE CONTENU --- */
@@ -106,9 +120,25 @@ body {
     border-top: 6px solid #0056b3;
 }
 
-.resource-list { list-style: none; margin: 20px 0; }
-.resource-list li { padding: 10px 0; border-bottom: 1px solid #eee; padding-left: 30px; position: relative; }
-.resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
+.resource-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.resource-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    padding-left: 30px;
+    position: relative;
+}
+
+.resource-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #0056b3;
+    font-weight: bold;
+}
 
 .btn-resource {
     display: inline-block;
@@ -116,12 +146,16 @@ body {
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
-    text-decoration: none;
     margin-top: 15px;
     font-weight: 600;
 }
 
-/* --- FOOTER (BAS DE PAGE) --- */
+.btn-resource:hover {
+    background: #003d82;
+    text-decoration: none;
+}
+
+/* --- FOOTER --- */
 .professor-footer {
     background: #003d82;
     color: white;
@@ -131,22 +165,6 @@ body {
     text-align: center;
 }
 
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 30px 0;
-}
-
-.contact-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-}
-
-.contact-item h4 { margin-bottom: 10px; color: #ffc107; }
-
-/* --- FIX FINAL : VISIBILITÉ DES LIENS DU FOOTER --- */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -155,13 +173,8 @@ body {
     flex-wrap: wrap;
 }
 
-/* On force le blanc sur TOUS les états du lien pour éviter le bleu/violet du navigateur */
-.footer-links a, 
-.footer-links a:link, 
-.footer-links a:visited, 
-.footer-links a:active {
-    color: #ffffff !important; /* BLANC PUR FORCÉ */
-    text-decoration: none !important;
+.footer-links a {
+    color: #ffffff !important;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -170,8 +183,8 @@ body {
 }
 
 .footer-links a:hover {
-    color: #ffc107 !important; /* DEVIENT JAUNE AU SURVOL */
-    text-decoration: underline !important;
+    color: #ffc107 !important;
+    text-decoration: underline;
 }
 
 .signature {
@@ -184,7 +197,15 @@ body {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .professor-name { font-size: 2.2em; }
-    .academic-nav { flex-direction: column; }
-    .nav-card { width: 100%; }
+    .professor-name {
+        font-size: 2.2em;
+    }
+
+    .academic-nav {
+        flex-direction: column;
+    }
+
+    .nav-card {
+        width: 100%;
+    }
 }
