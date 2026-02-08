@@ -12,17 +12,10 @@ body {
     color: #333;
 }
 
-/* --- LIENS : FIX GLOBAL (IMPORTANT) --- */
-a,
-a:link,
-a:visited,
-a:active {
-    color: inherit;              /* hérite la couleur du parent */
+/* --- LIENS --- */
+a {
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    transition: all 0.3s ease;
 }
 
 /* --- CONTAINER --- */
@@ -32,11 +25,11 @@ a:hover {
     padding: 20px;
 }
 
-/* --- EN-TÊTE (HEADER) --- */
+/* --- HEADER --- */
 .professor-header {
     background: linear-gradient(135deg, #0056b3, #003d82);
     color: white;
-    padding: 50px 40px;
+    padding: 60px 40px;
     border-radius: 20px;
     margin-bottom: 40px;
     text-align: center;
@@ -44,15 +37,9 @@ a:hover {
 }
 
 .professor-name {
-    font-size: 2.8em;
+    font-size: 3em;
     font-weight: 700;
     margin-bottom: 10px;
-}
-
-.professor-title {
-    font-size: 1.4em;
-    opacity: 0.95;
-    margin-bottom: 15px;
 }
 
 .institution {
@@ -60,7 +47,7 @@ a:hover {
     padding: 12px 30px;
     border-radius: 30px;
     display: inline-block;
-    font-size: 1.1em;
+    margin-top: 15px;
 }
 
 .university {
@@ -84,93 +71,91 @@ a:hover {
     border-radius: 12px;
     font-weight: 600;
     border: 2px solid #0056b3;
-    transition: all 0.3s ease;
     min-width: 200px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .nav-card:hover {
     background: #0056b3;
     color: white;
     transform: translateY(-5px);
-    text-decoration: none;
 }
 
-/* --- SECTIONS DE CONTENU --- */
+.nav-card.active {
+    background: #0056b3;
+    color: white;
+}
+
+/* --- PRESENTATION --- */
 .presentation {
     background: white;
-    padding: 40px;
+    padding: 45px;
     border-radius: 15px;
     margin-bottom: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border-left: 8px solid #0056b3;
 }
 
+.presentation h2 { color: #003d82; margin-bottom: 20px; }
+.presentation p { font-size: 1.15em; line-height: 1.8; text-align: justify; color: #444; }
+
+/* --- GRILLE DE RESSOURCES --- */
 .resources-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
+    margin: 50px 0;
 }
 
 .resource-card {
     background: white;
-    padding: 35px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-top: 6px solid #0056b3;
 }
 
-.resource-list {
-    list-style: none;
-    margin: 20px 0;
-}
+.resource-icon { font-size: 3.5em; margin-bottom: 25px; display: block; text-align: center; }
 
-.resource-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    padding-left: 30px;
-    position: relative;
-}
+.resource-list { list-style: none; margin: 20px 0; }
+.resource-list li { padding: 12px 0; border-bottom: 1px solid #eee; padding-left: 35px; position: relative; }
+.resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
 
-.resource-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: #0056b3;
-    font-weight: bold;
-}
-
-.btn-resource {
-    display: inline-block;
-    background: #0056b3;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
-    margin-top: 15px;
-    font-weight: 600;
-}
-
-.btn-resource:hover {
-    background: #003d82;
-    text-decoration: none;
-}
-
-/* --- FOOTER --- */
+/* --- FOOTER (MODIFIÉ POUR ALIGNEMENT HORIZONTAL) --- */
 .professor-footer {
     background: #003d82;
     color: white;
-    padding: 50px 40px;
-    margin-top: 60px;
+    padding: 60px 40px;
+    margin-top: 80px;
     border-radius: 20px;
     text-align: center;
 }
 
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.contact-item h4 { color: #ffc107; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Correction alignement horizontal liens */
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin: 30px 0;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap; /* Important pour mobile */
+    width: 100%;
 }
 
 .footer-links a {
@@ -178,34 +163,25 @@ a:hover {
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 1.1em;
+    gap: 10px;
+    font-size: 1.05em;
 }
 
 .footer-links a:hover {
     color: #ffc107 !important;
-    text-decoration: underline;
+    transform: translateY(-2px);
 }
 
 .signature {
-    margin-top: 30px;
+    margin-top: 40px;
     font-style: italic;
-    opacity: 0.9;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 20px;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 25px;
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .professor-name {
-        font-size: 2.2em;
-    }
-
-    .academic-nav {
-        flex-direction: column;
-    }
-
-    .nav-card {
-        width: 100%;
-    }
+    .professor-name { font-size: 2.2em; }
+    .footer-links { gap: 20px; flex-direction: column; }
 }
