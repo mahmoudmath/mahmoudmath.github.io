@@ -3,27 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Mahmoud El Ahmadi</title>
-    <link rel="stylesheet" href="style.css"> <!-- C'EST ICI QU'ON APPELLE LE STYLE -->
+    <title>Prof. Mahmoud El Ahmadi - Accueil</title>
+    <!-- On lie le fichier de style pour garder le design -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <!-- 1. EN-TÊTE -->
         <header class="professor-header">
             <div class="professor-name">Mahmoud El Ahmadi</div>
             <div class="professor-title">Professeur de Mathématiques</div>
-            <div class="institution"><span class="university">FST de Fès</span></div>
+            <div class="institution">
+                <span class="university">Faculté des Sciences et Techniques de Fès</span><br>
+                Université Sidi Mohamed Ben Abdellah (USMBA)
+            </div>
         </header>
         
+        <!-- 2. NAVIGATION PRINCIPALE -->
         <nav class="academic-nav">
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
             <a href="recherche.html" class="nav-card">🔬 RECHERCHE</a>
             <a href="pedagogie.html" class="nav-card">👨‍🏫 PÉDAGOGIE</a>
         </nav>
-
+        
+        <!-- 3. DESCRIPTION (PRÉSENTATION) -->
         <section class="presentation">
-            <h2>Bienvenue</h2>
-            <p>Bienvenue sur mon espace académique. Vous trouverez ici mes travaux de recherche ainsi que les ressources pédagogiques pour mes étudiants.</p>
+            <h2>Présentation Académique</h2>
+            <p style="font-size: 1.1em; line-height: 1.7;">
+                <strong>M. El Ahmadi</strong>, professeur-chercheur à la FST de Fès, spécialisé en mathématiques. 
+                Le domaine de recherche privilégié est l’analyse non linéaire, tandis que les activités d’enseignement 
+                couvrent les mathématiques fondamentales et appliquées aux niveaux Licence et Master.
+            </p>
+            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.7;">
+                Cet espace numérique a pour objectif de mettre à disposition des étudiants des documents pédagogiques 
+                ainsi que des ressources scientifiques de référence.
+            </p>
         </section>
+
+        <!-- 4. LES DEUX GRANDS PÔLES (Accès Rapide) -->
+        <div class="resources-grid">
+            <!-- PÔLE RECHERCHE -->
+            <div class="resource-card cours">
+                <span class="resource-icon">🔬</span>
+                <h3>RECHERCHE</h3>
+                <p>Articles scientifiques et publications.</p>
+                <ul class="resource-list">
+                    <li>Analyse non linéaire</li>
+                    <li>Publications internationales</li>
+                    <li>Conférences</li>
+                </ul>
+                <a href="recherche.html" class="btn-resource">Consulter mes articles →</a>
+            </div>
+            
+            <!-- PÔLE PÉDAGOGIE -->
+            <div class="resource-card td">
+                <span class="resource-icon">👨‍🏫</span>
+                <h3>PÉDAGOGIE</h3>
+                <p>Cours, TD et Examens pour les étudiants.</p>
+                <ul class="resource-list">
+                    <li>Analyse I et Analyse II</li>
+                    <li>TD Analyse IV</li>
+                    <li>Archives d'examens</li>
+                </ul>
+                <a href="pedagogie.html" class="btn-resource">Espace Étudiants →</a>
+            </div>
+        </div>
+        
+        <!-- 5. PIED DE PAGE (COORDONNÉES) -->
+        <footer class="professor-footer">
+            <h3 style="font-size: 1.8em; margin-bottom: 20px;">Contact & Informations</h3>
+            
+            <div class="contact-info">
+                <!-- Localisation -->
+                <div class="contact-item">
+                    <h4>📍 Localisation</h4>
+                    <p>Département de Mathématiques<br>
+                    Faculté des Sciences et Techniques de Fès<br>
+                    Route d'Imouzzer, BP 2202, Fès</p>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-item">
+                    <h4>📧 Contact Professionnel</h4>
+                    <p><strong>mahmoud.elahmadi@usmba.ac.ma</strong><br>
+                    Bureau : Bâtiment C, Bureau 210</p>
+                </div>
+                
+                <!-- Permanence -->
+                <div class="contact-item">
+                    <h4>🕒 Permanence</h4>
+                    <p>Lundi: 14h00 - 16h00<br>
+                    Jeudi: 14h00 - 16h00</p>
+                </div>
+            </div>
+            
+            <!-- Liens utiles -->
+            <div class="footer-links">
+                <a href="http://www.fst-usmba.ac.ma/" target="_blank">🌐 Site FST Fès</a>
+                <a href="https://www.usmba.ac.ma" target="_blank">🏛️ Portail USMBA</a>
+            </div>
+            
+            <div class="signature">
+                <p>"L'enseignement des mathématiques est l'art de révéler la beauté de la logique."</p>
+                <p style="margin-top: 15px;">© 2025 Prof. Mahmoud El Ahmadi - FST Fès</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
