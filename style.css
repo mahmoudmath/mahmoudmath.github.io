@@ -1,4 +1,4 @@
-/* --- RESET ET DEFINITIONS DE BASE --- */
+/* --- RESET ET DEFINITIONS DE BASE (Inchangé) --- */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     color: #333;
 }
 
-/* --- LIENS : FIX GLOBAL --- */
+/* --- LIENS (Inchangé) --- */
 a, a:link, a:visited, a:active {
     color: inherit;
     text-decoration: none;
@@ -22,22 +22,47 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- CONTAINER --- */
+/* --- CONTAINER (Inchangé) --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* --- EN-TÊTE (HEADER) --- */
+/* --- EN-TÊTE MODIFIÉ POUR LES PHOTOS --- */
 .professor-header {
     background: linear-gradient(135deg, #0056b3, #003d82);
     color: white;
-    padding: 50px 40px;
+    padding: 40px 30px;
     border-radius: 20px;
     margin-bottom: 40px;
-    text-align: center;
     box-shadow: 0 15px 35px rgba(0, 86, 179, 0.3);
+    
+    /* Ajout de l'alignement horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style Photo en cercle */
+.header-photo img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; /* Cercle parfait */
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
+/* Style Logo */
+.header-logo img {
+    max-height: 110px;
+    width: auto;
+}
+
+.header-content {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .professor-name {
@@ -65,7 +90,7 @@ a:hover {
     color: #ffc107;
 }
 
-/* --- NAVIGATION --- */
+/* --- NAVIGATION (Inchangé) --- */
 .academic-nav {
     display: flex;
     justify-content: center;
@@ -93,7 +118,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* --- SECTIONS --- */
+/* --- SECTIONS (Inchangé) --- */
 .presentation {
     background: white;
     padding: 40px;
@@ -137,7 +162,7 @@ a:hover {
     font-weight: bold;
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER (Inchangé) --- */
 .professor-footer {
     background: #003d82;
     color: white;
@@ -162,7 +187,6 @@ a:hover {
 
 .contact-item h4 { color: #ffc107; margin-bottom: 10px; }
 
-/* FIX POUR ALIGNEMENT HORIZONTAL DES LIENS */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -194,7 +218,13 @@ a:hover {
     padding-top: 20px;
 }
 
+/* Responsive pour mobile */
 @media (max-width: 768px) {
+    .professor-header { 
+        flex-direction: column; /* On empile sur mobile */
+    }
+    .header-photo { margin-bottom: 15px; }
+    .header-logo { margin-top: 15px; }
     .academic-nav { flex-direction: column; }
     .nav-card { width: 100%; }
 }
