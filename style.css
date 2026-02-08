@@ -29,11 +29,11 @@ a:hover {
     padding: 20px;
 }
 
-/* --- EN-TÊTE MODIFIÉ (Tailles augmentées pour combler l'espace) --- */
+/* --- EN-TÊTE (Style Carré Arrondi pour voir tout le visage) --- */
 .professor-header {
     background: linear-gradient(135deg, #0056b3, #003d82);
     color: white;
-    padding: 40px 50px; /* Padding augmenté pour accompagner les grandes photos */
+    padding: 40px 50px;
     border-radius: 20px;
     margin-bottom: 40px;
     box-shadow: 0 15px 35px rgba(0, 86, 179, 0.3);
@@ -43,19 +43,24 @@ a:hover {
     justify-content: space-between;
 }
 
-/* Style Photo en cercle - TAILLE PASSÉE À 240px */
+/* Photo de profil - STYLE CARRÉ ARRONDI (Plus de visage coupé) */
 .header-photo img {
     width: 240px;
     height: 240px;
-    border-radius: 50%; 
+    border-radius: 25px; /* Arrondi léger pour ne pas couper le visage */
     border: 5px solid rgba(255, 255, 255, 0.2);
     object-fit: cover;
+    display: block;
 }
 
-/* Style Logo - TAILLE PASSÉE À 240px */
+/* Logo - STYLE CARRÉ ARRONDI (Harmonisé avec la photo) */
 .header-logo img {
-    max-height: 240px;
+    height: 240px;
     width: auto;
+    border-radius: 15px;
+    background-color: white; /* Fond blanc propre pour le logo */
+    padding: 10px;
+    display: block;
 }
 
 .header-content {
@@ -65,28 +70,28 @@ a:hover {
 }
 
 .professor-name {
-    font-size: 2.8em;
+    font-size: 3em;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .professor-title {
-    font-size: 1.4em;
+    font-size: 1.5em;
     opacity: 0.95;
     margin-bottom: 15px;
 }
 
 .institution {
     background: rgba(255, 255, 255, 0.15);
-    padding: 12px 30px;
-    border-radius: 30px;
+    padding: 15px 30px;
+    border-radius: 35px;
     display: inline-block;
-    font-size: 1.1em;
 }
 
 .university {
     font-weight: 600;
     color: #ffc107;
+    font-size: 1.1em;
 }
 
 /* --- NAVIGATION --- */
@@ -218,17 +223,16 @@ a:hover {
 }
 
 /* Responsive pour mobile */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .professor-header { 
         flex-direction: column; 
+        padding: 30px;
+    }
+    .header-photo img, .header-logo img { 
+        width: 200px; 
+        height: auto; 
+        max-height: 200px;
     }
     .header-photo { margin-bottom: 20px; }
     .header-logo { margin-top: 20px; }
-    
-    /* Tailles réduites uniquement pour le mobile */
-    .header-photo img { width: 180px; height: 180px; }
-    .header-logo img { max-height: 180px; }
-
-    .academic-nav { flex-direction: column; }
-    .nav-card { width: 100%; }
 }
