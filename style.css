@@ -1,4 +1,4 @@
-/* --- RESET ET DEFINITIONS DE BASE (Inchangé) --- */
+/* --- RESET ET DEFINITIONS DE BASE --- */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     color: #333;
 }
 
-/* --- LIENS (Inchangé) --- */
+/* --- LIENS --- */
 a, a:link, a:visited, a:active {
     color: inherit;
     text-decoration: none;
@@ -22,7 +22,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- CONTAINER (Inchangé) --- */
+/* --- CONTAINER --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,24 +38,23 @@ a:hover {
     margin-bottom: 40px;
     box-shadow: 0 15px 35px rgba(0, 86, 179, 0.3);
     
-    /* Ajout de l'alignement horizontal */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Style Photo en cercle */
+/* Style Photo en cercle - TAILLE AUGMENTÉE */
 .header-photo img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%; /* Cercle parfait */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
     border: 4px solid rgba(255, 255, 255, 0.2);
     object-fit: cover;
 }
 
-/* Style Logo */
+/* Style Logo - TAILLE AUGMENTÉE */
 .header-logo img {
-    max-height: 110px;
+    max-height: 160px;
     width: auto;
 }
 
@@ -90,7 +89,7 @@ a:hover {
     color: #ffc107;
 }
 
-/* --- NAVIGATION (Inchangé) --- */
+/* --- NAVIGATION --- */
 .academic-nav {
     display: flex;
     justify-content: center;
@@ -118,7 +117,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* --- SECTIONS (Inchangé) --- */
+/* --- SECTIONS --- */
 .presentation {
     background: white;
     padding: 40px;
@@ -162,7 +161,7 @@ a:hover {
     font-weight: bold;
 }
 
-/* --- FOOTER (Inchangé) --- */
+/* --- FOOTER --- */
 .professor-footer {
     background: #003d82;
     color: white;
@@ -221,7 +220,7 @@ a:hover {
 /* Responsive pour mobile */
 @media (max-width: 768px) {
     .professor-header { 
-        flex-direction: column; /* On empile sur mobile */
+        flex-direction: column; 
     }
     .header-photo { margin-bottom: 15px; }
     .header-logo { margin-top: 15px; }
