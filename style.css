@@ -29,7 +29,7 @@ a:hover {
     padding: 20px;
 }
 
-/* --- EN-TÊTE (Style Circulaire pour les photos) --- */
+/* --- EN-TÊTE (Style Circulaire mais avec visage complet) --- */
 .professor-header {
     background: linear-gradient(135deg, #0056b3, #003d82);
     color: white;
@@ -43,8 +43,31 @@ a:hover {
     justify-content: space-between;
 }
 
-/* Photo de profil - STYLE CIRCOLAIRE */
+/* Photo de profil - CERCLE avec visage complet */
 .header-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.header-photo img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Change de 'cover' à 'contain' pour voir l'image entière */
+    display: block;
+}
+
+/* Logo - CERCLE */
+.header-logo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -54,33 +77,12 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.header-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
-
-/* Logo - STYLE CIRCOLAIRE (harmonisé avec la photo) */
-.header-logo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .header-logo img {
-    width: 75%;
-    height: 75%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
     padding: 5px;
 }
@@ -251,9 +253,13 @@ a:hover {
         padding: 25px;
         gap: 25px;
     }
-    .header-photo, .header-logo { 
-        width: 160px; 
-        height: 160px;
+    .header-photo { 
+        width: 200px; 
+        height: 200px;
+    }
+    .header-logo { 
+        width: 180px; 
+        height: 180px;
     }
     .header-content {
         padding: 0;
