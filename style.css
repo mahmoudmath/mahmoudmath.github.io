@@ -63,9 +63,16 @@ body {
 .search-container { max-width: 700px; margin: 0 auto 30px auto; position: relative; }
 .search-bar { width: 100%; padding: 18px 25px; border-radius: 35px; border: 2px solid #0056b3; outline: none; }
 #searchResultsBox {
-    display:none; position: absolute; width: 100%; z-index: 2000; 
-    background: white; padding: 20px; border-radius: 15px; 
-    border: 2px solid #0056b3; margin-top: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    display:none; 
+    position: absolute; 
+    width: 100%; 
+    z-index: 9999;           /* Augmenté pour passer devant tout le reste */
+    background: #ffffff !important; /* Force le fond blanc pur et opaque */
+    padding: 20px; 
+    border-radius: 15px; 
+    border: 2px solid #0056b3; 
+    margin-top: 10px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* Ombre plus forte pour bien détacher du texte */
 }
 .search-link { 
     display: block; color: #0056b3; font-weight: bold; background: #f0f7ff; 
