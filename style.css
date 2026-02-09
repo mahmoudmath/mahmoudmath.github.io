@@ -241,43 +241,31 @@ body {
     display: block !important;
 }
 
-/* 2. LE LOGO (Fond blanc pour lisibilité) */
+/* FORCER LE LOGO - SYMÉTRIE TOTALE AVEC LA PHOTO */
 .professor-header .header-logo,
 .professor-header > div:last-child {
-    background: white !important; /* Indispensable pour voir les détails du logo */
+    /* DIMENSIONS IDENTIQUES À LA PHOTO */
+    width: 140px !important;  
+    height: 175px !important; 
+    
+    background: white !important;
+    border: 2px solid white !important; /* Même bordure */
+    border-radius: 12px !important;    /* Même arrondi */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; /* Même ombre */
+    
+    /* Centrage parfait du logo à l'intérieur du rectangle vertical */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     padding: 10px !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
-    width: 180px !important; /* Largeur fixe pour le logo */
-    height: 100px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* FORCER LE LOGO - STYLE IDENTIQUE À LA PHOTO */
-.professor-header .header-logo,
-.professor-header > div:last-child {
-    background: white !important; /* Fond blanc pour que le logo soit propre */
-    border: 2px solid white !important; /* MÊME BORDURE QUE TA PHOTO */
-    border-radius: 12px !important;    /* MÊME ARRONDI QUE TA PHOTO */
-    
-    width: 160px !important;  /* Largeur équilibrée */
-    height: 110px !important; /* Hauteur équilibrée */
-    
-    padding: 8px !important;
     overflow: hidden !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; /* MÊME OMBRE */
-    
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
 }
 
 .professor-header .header-logo img,
 .professor-header > div:last-child img {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* Pour que le logo ne soit pas déformé */
-    border: none !important; /* On enlève les anciennes bordures de l'image */
+    height: auto !important;
+    max-height: 90% !important; /* Pour garder de l'espace en haut et en bas */
+    object-fit: contain !important;
+    border: none !important;
 }
