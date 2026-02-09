@@ -28,7 +28,7 @@ body {
 .header-photo, .header-logo {
     width: 210px; height: 210px; border-radius: 50%;
     border: 6px solid rgba(255, 255, 255, 0.2);
-    overflow: hidden; background: white; display: flex; 
+    background: white; display: flex; 
     align-items: center; justify-content: center; flex-shrink: 0;
 }
 .header-photo img { width: auto; height: 100%; max-width: 100%; object-fit: contain; }
@@ -64,6 +64,8 @@ body {
 .search-container { 
     max-width: 800px; 
     margin: 0 auto 30px auto; 
+    position: relative;
+    z-index: 10;
 }
 
 .search-bar { 
@@ -78,7 +80,8 @@ body {
 
 #searchResultsBox {
     display: none; 
-    position: relative;    /* CHANGE CECI : de absolute à relative */
+    position: absolute;
+    z-index: 9999;    
     width: 100%; 
     background-color: #ffffff !important; /* Force le blanc opaque */
     padding: 20px; 
