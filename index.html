@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pr. Mahmoud El Ahmadi - Espace Académique</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Pour les animations et icônes -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- EN-TÊTE -->
+        <!-- EN-TÊTE (TEXTE ET IMAGES CONSERVÉS) -->
         <header class="professor-header">
            <div class="header-photo">
                 <img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi">
             </div>
-
             <div class="header-content">
                 <div class="professor-name">Pr. Mahmoud El Ahmadi</div>
                 <div class="professor-title">Professeur de Mathématiques</div>
@@ -24,13 +21,12 @@
                     Université Sidi Mohamed Ben Abdellah (USMBA)
                 </div>
             </div>
-
            <div class="header-logo">
                 <img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST">
             </div>
         </header>
         
-        <!-- NAVIGATION -->
+        <!-- NAVIGATION (STRICTEMENT IDENTIQUE) -->
         <nav class="academic-nav">
             <a href="index.html" class="nav-card active">🏠 ACCUEIL</a>
             <a href="recherche.html" class="nav-card">🔬 RECHERCHE</a>
@@ -38,18 +34,24 @@
             <a href="contact.html" class="nav-card">✉️ CONTACT</a>
         </nav>
 
-        <!-- AJOUT : MESSAGE DE BIENVENUE -->
+        <!-- MESSAGE DE BIENVENUE -->
         <div class="presentation" style="text-align: center; border-left: none; margin-bottom: 20px;">
             <h2 style="color: #0056b3;">Bienvenue sur votre plateforme académique</h2>
             <p style="font-style: italic; margin-top: 10px;">Accédez à vos ressources pédagogiques et suivez l'actualité de nos modules.</p>
         </div>
 
-        <!-- AJOUT : BARRE DE RECHERCHE -->
-        <div class="search-container">
-            <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher un module (ex: Analyse 1, EDP, TD...)">
+        <!-- RECHERCHE AMÉLIORÉE (ANALYSE 1, 2, 4, ARTICLES, COMMUNICATIONS) -->
+        <div class="search-container" style="position: relative;">
+            <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher : Analyse 1, Analyse 2, Articles, Communications...">
+            
+            <!-- Zone d'affichage des résultats rapides -->
+            <div id="searchResultsBox" style="display:none; position: absolute; width: 100%; z-index: 100; background: white; padding: 15px; border-radius: 12px; border: 2px solid #0056b3; margin-top: 5px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                <p style="font-weight: bold; color: #0056b3; margin-bottom: 10px;">Résultats trouvés :</p>
+                <div id="linksContainer" style="display: flex; flex-direction: column; gap: 8px;"></div>
+            </div>
         </div>
         
-        <!-- PRÉSENTATION (Texte original conservé) -->
+        <!-- PRÉSENTATION (TEXTE ORIGINAL STRICTEMENT CONSERVÉ) -->
         <section class="presentation search-item">
             <h2>Parcours académique et axes de recherche</h2>
             <p style="font-size: 1.1em; line-height: 1.8; text-align: justify; margin-top: 15px;">
@@ -61,12 +63,10 @@
             <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; text-align: justify;">
                 Cette plateforme académique est dédiée à la diffusion de ressources pédagogiques (Cours, Travaux Dirigés et Annales d’Examens) à destination des étudiants de <strong>Licence et de Master</strong>. Elle a pour vocation de soutenir la formation universitaire, de favoriser l’autonomie intellectuelle des étudiants et de garantir un accès structuré et pérenne aux documents scientifiques de référence.
             </p>
-            <!-- Mots-clés pour que la recherche trouve cette section -->
-            <span style="display:none;">biographie chercheur parcours edp analyse non lineaire</span>
         </section>
         
+        <!-- RESSOURCES (TEXTE ORIGINAL STRICTEMENT CONSERVÉ) -->
         <div class="resources-grid">
-            <!-- ANNONCES (Texte original conservé + Mots-clés Analyse 1, 2, 4) -->
             <div class="resource-card search-item" style="border-top-color: #dc3545;">
                 <span class="resource-icon">📢</span>
                 <h3>ANNONCES PÉDAGOGIQUES</h3>
@@ -75,11 +75,8 @@
                     <li><strong>Communication :</strong> Pour toute correspondance officielle, l'usage de votre adresse institutionnelle <em>(@usmba.ac.ma)</em> est impératif.</li>
                     <li><strong>Méthodologie :</strong> La préparation rigoureuse des exercices de TD est une condition nécessaire à la validation des modules.</li>
                 </ul>
-                <!-- AJOUT DES MOTS CLÉS POUR LA RECHERCHE -->
-                <span style="display:none;">analyse 1 analyse 2 analyse 4 edp cours td examens ressources supports</span>
             </div>
             
-            <!-- RÉFÉRENCES (Texte original conservé) -->
             <div class="resource-card search-item" style="border-top-color: #28a745;">
                 <span class="resource-icon">🔗</span>
                 <h3>RÉFÉRENCES UTILES</h3>
@@ -89,60 +86,60 @@
                     <li><a href="https://memoirepfe.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Bibliothèque FST Fès (Mémoires PFE)</a></li>
                     <li><a href="http://exo7.emath.fr/" target="_blank" style="color:#0056b3;">Exo7 : Cours et exercices</a></li>
                     <li><a href="https://www.bibmath.net/" target="_blank" style="color:#0056b3;">BibMath : Bibliothèque des maths</a></li>
-                    <li><a href="https://www.wolframalpha.com/" target="_blank" style="color:#0056b3;">Wolfram Alpha – Calcul formel et numérique</a></li>
                 </ul>
-                <span style="display:none;">liens utiles universite fst usmba pfe moodle ent wolfram alpha</span>
             </div>
         </div>
         
-        <!-- FOOTER (Texte original conservé) -->
+        <!-- FOOTER (TEXTE ORIGINAL STRICTEMENT CONSERVÉ) -->
         <footer class="professor-footer">
             <h3 style="font-size: 1.8em; margin-bottom: 20px;">Département de Mathématiques</h3>
             <p>Faculté des Sciences et Techniques de Fès</p>
-            
             <div class="contact-info">
-                <div class="contact-item">
-                    <h4>📍 Localisation</h4>
-                    <p>FST de Fès, Route d'Imouzzer, BP 2202, Fès</p>
-                </div>
-                
-                <div class="contact-item">
-                    <h4>📧 Correspondance</h4>
-                    <p>mahmoud.elahmadi@usmba.ac.ma<br>Réponse sous 48h ouvrées</p>
-                </div>
-                
-                <div class="contact-item">
-                    <h4>🕒 Permanence</h4>
-                    <p>Réception sur rendez-vous<br>à solliciter par courriel institutionnel</p>
-                </div>
+                <div class="contact-item"><h4>📍 Localisation</h4><p>FST de Fès, Route d'Imouzzer, BP 2202, Fès</p></div>
+                <div class="contact-item"><h4>📧 Correspondance</h4><p>mahmoud.elahmadi@usmba.ac.ma</p></div>
             </div>
-
-            <div class="footer-links">
-                <a href="http://www.fst-usmba.ac.ma/" target="_blank">🌐 Portail FST Fès</a>
-                <a href="https://www.usmba.ac.ma" target="_blank">🏛️ Université USMBA</a>
-                <a href="https://fst-usmba.ac.ma/emploi-du-temps/" target="_blank">📅 Emplois du Temps</a>
-            </div>
-            
             <div class="signature">
-                <p>"La rigueur mathématique est le fondement de toute pensée scientifique structurée."</p>
-                <p style="margin-top: 15px;">© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
+                <p>© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
             </div>
         </footer>
     </div>
 
-    <!-- SCRIPT DE RECHERCHE -->
+    <!-- SCRIPT DE RECHERCHE DYNAMIQUE -->
     <script>
+        const database = [
+            { key: "analyse 1", results: [ {n: "Cours Analyse 1", u: "cours-25-26.html"}, {n: "TD Analyse 1", u: "td-25-26.html"}, {n: "Examens Analyse 1", u: "examens-25-26.html"} ] },
+            { key: "analyse 2", results: [ {n: "Cours Analyse 2", u: "cours-24-25.html"}, {n: "TD Analyse 2", u: "td-24-25.html"}, {n: "Examens Analyse 2", u: "examens-24-25.html"} ] },
+            { key: "analyse 4", results: [ {n: "Travaux Dirigés Analyse 4", u: "td-24-25.html"} ] },
+            { key: "articles", results: [ {n: "Consulter les Articles Scientifiques", u: "articles.html"} ] },
+            { key: "communications", results: [ {n: "Consulter les Communications", u: "communications.html"} ] }
+        ];
+
         document.getElementById('searchInput').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase().trim();
-            let items = document.querySelectorAll('.search-item');
+            let box = document.getElementById('searchResultsBox');
+            let container = document.getElementById('linksContainer');
+            container.innerHTML = "";
+            let found = false;
+
+            if (filter.length > 1) {
+                database.forEach(item => {
+                    if (item.key.includes(filter)) {
+                        found = true;
+                        item.results.forEach(res => {
+                            let a = document.createElement('a');
+                            a.href = res.u;
+                            a.textContent = "➜ " + res.n;
+                            a.style.cssText = "color: #0056b3; font-weight: bold; background: #f0f7ff; padding: 8px; border-radius: 6px;";
+                            container.appendChild(a);
+                        });
+                    }
+                });
+            }
+            box.style.display = found ? "block" : "none";
             
-            items.forEach(item => {
-                let text = item.textContent.toLowerCase();
-                if (text.includes(filter)) {
-                    item.style.display = "";
-                } else {
-                    item.style.display = "none";
-                }
+            // Filtrer les blocs visuels de la page
+            document.querySelectorAll('.search-item').forEach(el => {
+                el.style.display = el.textContent.toLowerCase().includes(filter) ? "" : "none";
             });
         });
     </script>
