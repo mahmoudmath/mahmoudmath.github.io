@@ -220,3 +220,8 @@ body {
 [data-aos] {
     overflow: visible !important;
 }
+[data-aos].img-container, 
+[data-aos] img,
+.avatar-wrapper {
+    overflow: hidden !important;
+}
