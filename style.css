@@ -78,16 +78,16 @@ body {
 
 #searchResultsBox {
     display: none; 
-    position: relative;    /* CHANGEMENT ICI : pousse le contenu au lieu de flotter */
+    position: relative;    /* CHANGE CECI : de absolute à relative */
     width: 100%; 
-    z-index: 10; 
-    background: white; 
+    background-color: #ffffff !important; /* Force le blanc opaque */
     padding: 20px; 
     border-radius: 15px; 
     border: 2px solid #0056b3; 
-    margin-top: 15px;      /* Espace après la barre */
-    margin-bottom: 20px;   /* Espace avant votre texte "Parcours académique" */
+    margin-top: 15px;      /* Espace après la barre de recherche */
+    margin-bottom: 30px;   /* Espace AVANT le texte "Parcours académique" */
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    z-index: 1;
 }
 
 /* Affichage des liens sous forme de boutons/grille */
