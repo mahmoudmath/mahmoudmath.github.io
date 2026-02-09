@@ -217,15 +217,38 @@ body {
     background: linear-gradient(90deg, #00b09b, #00d4b4);
     border-radius: 2px;
 }
+/* 1. On garde votre fix pour la barre de recherche */
 [data-aos] {
     overflow: visible !important;
-/* LE CORRECTIF : On force l'image du prof et le logo à rester "clippés" */
-.header-photo, .header-photo img {
-    overflow: hidden !important;
-    border-radius: 50%;
 }
 
-/* Faites de même pour le logo à droite si nécessaire */
-.university-logo-container { /* mettez la classe de votre logo */
+/* 2. REPARATION PHOTO DE PROFIL */
+.header-photo {
+    overflow: hidden !important; /* On force le cercle à couper ce qui dépasse */
+    border-radius: 50% !important;
+    background: white; /* Pour éviter les bords transparents */
+}
+
+.header-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Très important : l'image remplira tout le cercle sans laisser de blanc */
+    display: block;
+}
+
+/* 3. REPARATION DU LOGO (à droite) */
+/* On va appliquer la même logique au conteneur du logo. 
+   D'après votre image, c'est l'élément qui a la forme bizarre à droite. */
+
+.professor-header > div:last-child, 
+.header-logo { /* Remplacez .header-logo par la vraie classe du logo si vous la connaissez */
     overflow: hidden !important;
+    border-radius: 50% !important;
+    background: white;
+}
+
+.professor-header > div:last-child img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* 'contain' pour ne pas couper le logo de l'université */
 }
