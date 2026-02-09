@@ -219,9 +219,13 @@ body {
 }
 [data-aos] {
     overflow: visible !important;
+/* LE CORRECTIF : On force l'image du prof et le logo à rester "clippés" */
+.header-photo, .header-photo img {
+    overflow: hidden !important;
+    border-radius: 50%;
 }
-[data-aos].img-container, 
-[data-aos] img,
-.avatar-wrapper {
+
+/* Faites de même pour le logo à droite si nécessaire */
+.university-logo-container { /* mettez la classe de votre logo */
     overflow: hidden !important;
 }
