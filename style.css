@@ -143,81 +143,116 @@ body {
 
 /* ===== DÉCORATION DES TITRES PÉDAGOGIQUES ===== */
 
-/* Style pour le titre COURS */
+/* --- SECTION COURS (Carte 1) --- */
+
+/* 1. L'ICÔNE : On l'agrandit */
+.resource-card:nth-child(1) i {
+    font-size: 2.8rem !important; /* Taille de l'icône agrandie */
+    display: block !important;    /* Pour qu'elle soit bien au-dessus */
+    margin-bottom: 10px !important;
+    color: #6a11cb !important;    /* Couleur assortie au dégradé */
+}
+
+/* 2. LE TEXTE : On le réduit (style académique) */
 .resource-card:nth-child(1) h3 {
     background: linear-gradient(90deg, #6a11cb, #8a2be2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.2em;
-    padding: 10px 0;
+    font-size: 1.4em !important; /* RÉDUIT (était à 2.2em) */
+    padding: 5px 0;
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
+/* 3. LE TRAIT : On le réduit pour qu'il soit proportionnel au texte */
 .resource-card:nth-child(1) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    width: 40px;  /* RÉDUIT (était à 80px) */
+    height: 3px;  /* Un peu plus fin */
     background: linear-gradient(90deg, #6a11cb, #8a2be2);
     border-radius: 2px;
 }
+/* --- SECTION TD (Carte 2) --- */
 
-/* Style pour le titre TD */
+/* 1. L'ICÔNE : On l'agrandit */
+.resource-card:nth-child(2) i {
+    font-size: 2.8rem !important; /* Taille de l'icône agrandie */
+    display: block !important;
+    margin-bottom: 10px !important;
+    color: #2575fc !important;    /* Couleur bleue assortie */
+}
+
+/* 2. LE TEXTE : On le réduit */
 .resource-card:nth-child(2) h3 {
     background: linear-gradient(90deg, #2575fc, #4a9eff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.2em;
-    padding: 10px 0;
+    font-size: 1.4em !important; /* RÉDUIT (était à 2.2em) */
+    padding: 5px 0;
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
+/* 3. LE TRAIT : On le réduit en largeur */
 .resource-card:nth-child(2) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    width: 40px;  /* RÉDUIT (était à 80px) */
+    height: 3px;  /* Plus fin */
     background: linear-gradient(90deg, #2575fc, #4a9eff);
     border-radius: 2px;
 }
+/* --- SECTION EXAMENS (Carte 3) --- */
 
-/* Style pour le titre EXAMENS */
+/* 1. L'ICÔNE : On l'agrandit */
+.resource-card:nth-child(3) i {
+    font-size: 2.8rem !important; /* Taille agrandie */
+    display: block !important;
+    margin-bottom: 10px !important;
+    color: #00b09b !important;    /* Couleur verte assortie */
+}
+
+/* 2. LE TEXTE : On le réduit */
 .resource-card:nth-child(3) h3 {
     background: linear-gradient(90deg, #00b09b, #00d4b4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.2em;
-    padding: 10px 0;
+    font-size: 1.4em !important; /* RÉDUIT (était à 2.2em) */
+    padding: 5px 0;
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
+/* 3. LE TRAIT : On le réduit en largeur */
 .resource-card:nth-child(3) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    width: 40px;  /* RÉDUIT (était à 80px) */
+    height: 3px;  /* Plus fin */
     background: linear-gradient(90deg, #00b09b, #00d4b4);
     border-radius: 2px;
 }
-/* 1. On garde votre fix pour la barre de recherche */
+
+/* On garde bien votre correctif pour la barre de recherche en dessous */
 [data-aos] {
     overflow: visible !important;
 }
