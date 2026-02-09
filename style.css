@@ -221,41 +221,53 @@ body {
 [data-aos] {
     overflow: visible !important;
 }
-/* SOLUTION FORCE */
+/* --- NOUVEAU STYLE ACADÉMIQUE --- */
+
+/* 1. TA PHOTO (Rectangle Portrait) */
 .header-photo {
     overflow: hidden !important;
-    border-radius: 50% !important;
-    position: relative !important;
+    border-radius: 12px !important; /* Coins arrondis mais pas cercle */
+    border: 3px solid white !important; /* Cadre blanc pour faire ressortir sur le bleu */
+    width: 140px !important;
+    height: 170px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+    background: #f0f0f0 !important;
 }
 
 .header-photo img {
-    width: 110% !important;
-    height: 110% !important;
-    object-fit: cover !important;
-    position: absolute !important;
-    top: -5% !important;
-    left: -5% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    transform: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Remplit le rectangle sans déformer */
+    display: block !important;
 }
 
-/* FORCER LE LOGO */
-.professor-header > div:last-child,
-.professor-header .header-logo {
-    border-radius: 0 !important;
-    background: none !important;
-    overflow: visible !important;
-    width: auto !important;
-    min-width: 150px !important;
+/* 2. LE LOGO (Fond blanc pour lisibilité) */
+.professor-header .header-logo,
+.professor-header > div:last-child {
+    background: white !important; /* Indispensable pour voir les détails du logo */
+    padding: 10px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    width: 180px !important; /* Largeur fixe pour le logo */
+    height: 100px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .professor-header .header-logo img,
 .professor-header > div:last-child img {
-    width: auto !important;
-    height: 80px !important;
-    max-width: 250px !important;
-    object-fit: contain !important;
-    display: block !important;
-    border: 2px solid transparent !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: auto !important;
+    object-fit: contain !important; /* Ne déforme jamais le logo */
+}
+
+/* 3. ALIGNEMENT HORIZONTAL (Si ce n'est pas déjà fait) */
+.professor-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 30px !important;
 }
