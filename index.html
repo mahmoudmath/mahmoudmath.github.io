@@ -113,55 +113,53 @@
     <button id="backToTop" title="Retour en haut">↑</button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
+   <script>
+    AOS.init({ duration: 1000, once: true });
 
-        const database = [
-            { key: "analyse 1", results: [ {n: "Cours Analyse 1", u: "cours-25-26.html"}, {n: "TD Analyse 1", u: "td-25-26.html"}, {n: "Examens Analyse 1", u: "examens-25-26.html"} ] },
-            { key: "analyse 2", results: [ {n: "Cours Analyse 2", u: "cours-24-25.html"}, {n: "TD Analyse 2", u: "td-24-25.html"}, {n: "Examens Analyse 2", u: "examens-24-25.html"} ] },
-            { key: "analyse 4", results: [ {n: "Travaux Dirigés Analyse 4", u: "td-24-25.html"} ] },
-            { key: "articles", results: [ {n: "Consulter les Articles Scientifiques", u: "articles.html"} ] },
-            { key: "communications", results: [ {n: "Consulter les Communications", u: "communications.html"} ] }
-        ];
+    const database = [
+        { key: "analyse 1", results: [ {n: "Cours Analyse 1", u: "cours-25-26.html"}, {n: "TD Analyse 1", u: "td-25-26.html"}, {n: "Examens Analyse 1", u: "examens-25-26.html"} ] },
+        { key: "analyse 2", results: [ {n: "Cours Analyse 2", u: "cours-24-25.html"}, {n: "TD Analyse 2", u: "td-24-25.html"}, {n: "Examens Analyse 2", u: "examens-24-25.html"} ] },
+        { key: "analyse 4", results: [ {n: "Travaux Dirigés Analyse 4", u: "td-24-25.html"} ] },
+        { key: "articles", results: [ {n: "Consulter les Articles Scientifiques", u: "articles.html"} ] },
+        { key: "communications", results: [ {n: "Consulter les Communications", u: "communications.html"} ] }
+    ];
 
-        document.getElementById('searchInput').addEventListener('keyup', function() {
-            let filter = this.value.toLowerCase().trim();
-            let box = document.getElementById('searchResultsBox');
-            let container = document.getElementById('linksContainer');
-            container.innerHTML = "";
-            let found = false;
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+        let filter = this.value.toLowerCase().trim();
+        let box = document.getElementById('searchResultsBox');
+        let container = document.getElementById('linksContainer');
+        container.innerHTML = "";
+        let found = false;
 
-            if (filter.length > 1) {
-                database.forEach(item => {
-                    if (item.key.includes(filter)) {
-                        found = true;
-                        item.results.forEach(res => {
-                            let a = document.createElement('a');
-                            a.href = res.u;
-                            a.textContent = "➜ " + res.n;
-                            a.className = "search-link";
-                            container.appendChild(a);
-                        });
-                    }
-                });
-            }
-            box.style.display = found ? "block" : "none";
-            
-            document.querySelectorAll('.search-item').forEach(el => {
-                el.style.opacity = (filter.length > 0) ? "0.3" : "1";
+        if (filter.length > 1) {
+            database.forEach(item => {
+                if (item.key.includes(filter)) {
+                    found = true;
+                    item.results.forEach(res => {
+                        let a = document.createElement('a');
+                        a.href = res.u;
+                        a.textContent = res.n; // Texte propre sans la flèche (gérée par le CSS si besoin)
+                        a.className = "search-link";
+                        container.appendChild(a);
+                    });
+                }
             });
-        });
+        }
+        
+        // Affiche la boîte : elle poussera automatiquement le texte vers le bas
+        box.style.display = found ? "block" : "none";
+        
+        // Suppression de l'effet d'opacité qui rendait le texte illisible
+    });
 
-        // Fermer au clic ailleurs
-        document.addEventListener('click', function(e) {
-            if (!document.getElementById('searchInput').contains(e.target)) {
-                document.getElementById('searchResultsBox').style.display = "none";
-            }
-        });
+    // Fermer si on efface la recherche
+    document.getElementById('searchInput').addEventListener('input', function() {
+        if(this.value === "") document.getElementById('searchResultsBox').style.display = "none";
+    });
 
-        const btt = document.getElementById("backToTop");
-        window.onscroll = () => { btt.style.display = (window.scrollY > 300) ? "block" : "none"; };
-        btt.onclick = () => { window.scrollTo({top: 0, behavior: 'smooth'}); };
-    </script>
+    const btt = document.getElementById("backToTop");
+    window.onscroll = () => { btt.style.display = (window.scrollY > 300) ? "block" : "none"; };
+    btt.onclick = () => { window.scrollTo({top: 0, behavior: 'smooth'}); };
+</script>
 </body>
 </html>
