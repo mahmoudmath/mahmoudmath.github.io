@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pr. Mahmoud El Ahmadi - Espace Académique</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Bibliothèque pour le dynamisme -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- EN-TÊTE PRESTIGIEUX (data-aos ajouté) -->
+        <!-- EN-TÊTE CORRIGÉ (Image entière + Badge Jaune) -->
         <header class="professor-header" data-aos="fade-down">
            <div class="header-photo">
                 <img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi">
@@ -20,7 +19,7 @@
                 <div class="professor-title">Professeur de Mathématiques</div>
                 
                 <div class="institution-badge">
-                    <span class="university-highlight">Faculté des Sciences et Techniques de Fès</span><br>
+                    <span class="faculty-highlight">Faculté des Sciences et Techniques de Fès</span><br>
                     <span style="font-size: 0.95em;">Université Sidi Mohamed Ben Abdellah (USMBA)</span>
                 </div>
             </div>
@@ -43,10 +42,9 @@
             <p style="font-style: italic; font-size: 1.1em; color: #555;">Accédez à vos ressources pédagogiques et suivez l'actualité de nos modules.</p>
         </div>
 
-        <!-- RECHERCHE AMÉLIORÉE -->
+        <!-- RECHERCHE -->
         <div class="search-container" style="position: relative;" data-aos="fade-up">
             <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher : Analyse 1, Analyse 2, Articles, Communications...">
-            
             <div id="searchResultsBox" style="display:none; position: absolute; width: 100%; z-index: 100; background: white; padding: 15px; border-radius: 20px; border: 2px solid #0056b3; margin-top: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
                 <p style="font-weight: bold; color: #0056b3; margin-bottom: 10px;">Résultats trouvés :</p>
                 <div id="linksContainer" style="display: flex; flex-direction: column; gap: 8px;"></div>
@@ -112,16 +110,12 @@
         </footer>
     </div>
 
-    <!-- BOUTON RETOUR EN HAUT -->
     <button id="backToTop" title="Retour en haut">↑</button>
 
-    <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Dynamisme AOS
         AOS.init({ duration: 1000, once: true });
 
-        // Recherche
         const database = [
             { key: "analyse 1", results: [ {n: "Cours Analyse 1", u: "cours-25-26.html"}, {n: "TD Analyse 1", u: "td-25-26.html"}, {n: "Examens Analyse 1", u: "examens-25-26.html"} ] },
             { key: "analyse 2", results: [ {n: "Cours Analyse 2", u: "cours-24-25.html"}, {n: "TD Analyse 2", u: "td-24-25.html"}, {n: "Examens Analyse 2", u: "examens-24-25.html"} ] },
@@ -158,7 +152,6 @@
             });
         });
 
-        // Bouton Back to Top
         const btt = document.getElementById("backToTop");
         window.onscroll = () => {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
