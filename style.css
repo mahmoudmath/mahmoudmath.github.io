@@ -60,25 +60,68 @@ body {
 .resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
 
 /* --- RECHERCHE (STYLE ORIGINAL) --- */
-.search-container { max-width: 700px; margin: 0 auto 30px auto; position: relative; }
-.search-bar { width: 100%; padding: 18px 25px; border-radius: 35px; border: 2px solid #0056b3; outline: none; }
+/* --- NOUVEAU STYLE DE RECHERCHE (MODE POUSSÉE) --- */
+.search-container { 
+    max-width: 800px; 
+    margin: 0 auto 30px auto; 
+}
+
+.search-bar { 
+    width: 100%; 
+    padding: 18px 25px; 
+    border-radius: 35px; 
+    border: 2px solid #0056b3; 
+    outline: none; 
+    font-size: 1.1em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
 #searchResultsBox {
     display:none; 
-    position: absolute; 
+    position: relative; /* Change de absolute à relative pour pousser le texte */
     width: 100%; 
-    z-index: 9999;           /* Augmenté pour passer devant tout le reste */
-    background: #ffffff !important; /* Force le fond blanc pur et opaque */
-    padding: 20px; 
-    border-radius: 15px; 
-    border: 2px solid #0056b3; 
-    margin-top: 10px; 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* Ombre plus forte pour bien détacher du texte */
+    background: #ffffff; 
+    padding: 25px; 
+    border-radius: 20px; 
+    border: 2px dashed #0056b3; 
+    margin-top: 20px; 
+    margin-bottom: 30px; /* Espace avant le texte de présentation */
+    animation: fadeInDown 0.4s ease;
 }
+
+/* Affichage des liens sous forme de boutons/grille */
+#linksContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
 .search-link { 
-    display: block; color: #0056b3; font-weight: bold; background: #f0f7ff; 
-    padding: 12px; border-radius: 8px; margin-bottom: 8px; text-decoration: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0056b3; 
+    font-weight: 600; 
+    background: #f8fbff; 
+    padding: 15px; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    border: 1px solid #e0eefe;
+    transition: 0.3s;
+    text-align: center;
 }
-.search-link:hover { background: #0056b3; color: white; }
+
+.search-link:hover { 
+    background: #0056b3; 
+    color: white; 
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,86,179,0.2);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* --- FOOTER (STYLE ORIGINAL) --- */
 .professor-footer { background: #002d5f; color: white; padding: 50px 40px; margin-top: 60px; border-radius: 20px; text-align: center; }
