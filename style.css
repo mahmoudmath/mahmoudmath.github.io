@@ -4,11 +4,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: #f4f7f9;
-    background-image: 
-        linear-gradient(rgba(0, 86, 179, 0.05) 1.5px, transparent 1.5px),
-        linear-gradient(90deg, rgba(0, 86, 179, 0.05) 1.5px, transparent 1.5px);
-    background-size: 35px 35px; 
+    /* NOUVEAU DÉCOR : Maillage mathématique (Mesh) type recherche scientifique */
+    background-color: #f8fafc;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230056b3' fill-opacity='0.04'%3E%3Cpath opacity='.5' d='M96 95V4L10 66l86 29zm-7 0l-67-23 67-23V95zM10 54L96 4 10 24v30zm7 0l67-23-67-23v46zm0 0L46 40 10 54zM0 100L80 0H0v100zm8-8l64-80H8v80zM0 0l100 100V0H0zm92 8L8 92h84V8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     min-height: 100vh;
     color: #333;
     font-family: 'Inter', sans-serif;
@@ -21,7 +19,7 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-/* --- EN-TÊTE PRESTIGIEUX (CORRIGÉ POUR L'IMAGE ENTIÈRE) --- */
+/* --- EN-TÊTE PRESTIGIEUX (Image Entière + Badge Jaune) --- */
 .professor-header {
     background: linear-gradient(135deg, #004488 0%, #002d5f 100%);
     color: white; 
@@ -35,12 +33,12 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 }
 
 .header-photo, .header-logo {
-    width: 210px; /* Taille identique pour la symétrie */
+    width: 210px; 
     height: 210px; 
     border-radius: 50%;
     border: 6px solid rgba(255, 255, 255, 0.2);
     overflow: hidden; 
-    background: white; /* Fond blanc pour le logo et la photo */
+    background: white; 
     display: flex; 
     align-items: center; 
     justify-content: center;
@@ -48,12 +46,11 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
     flex-shrink: 0;
 }
 
-/* ASTUCE POUR IMAGE ENTIÈRE (Comme votre premier code) */
 .header-photo img { 
     width: auto; 
     height: 100%; 
     max-width: 100%;
-    object-fit: contain; /* L'image ne sera plus JAMAIS coupée */
+    object-fit: contain; /* Correction : Photo entière */
 }
 
 .header-logo img { 
@@ -66,7 +63,6 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 .professor-name { font-size: 3.2em; font-weight: 700; margin-bottom: 8px; }
 .professor-title { font-size: 1.6em; opacity: 0.95; margin-bottom: 15px; font-weight: 400; }
 
-/* Badge Jaune Doré comme sur l'image */
 .institution-badge { 
     background: rgba(255, 255, 255, 0.1); 
     padding: 12px 30px; 
@@ -84,7 +80,7 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .nav-card:hover { background: #0056b3; color: white; transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0, 86, 179, 0.2); }
-.nav-card.active { background: #0056b3; color: white; }
+.nav-card.active { background: #0056b3 !important; color: white !important; }
 
 /* --- RECHERCHE --- */
 .search-container { max-width: 700px; margin: 0 auto 30px auto; position: relative; }
@@ -94,18 +90,34 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* --- SECTIONS --- */
+/* --- SECTIONS ET CARTES (GLASSMORPHISM POUR PÉDAGOGIE) --- */
 .presentation, .resource-card {
-    background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px);
-    padding: 40px; border-radius: 15px; margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(12px); /* Effet verre poli */
+    padding: 40px; 
+    border-radius: 15px; 
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+    border: 1px solid rgba(255,255,255,0.4);
 }
-.presentation { border-left: 8px solid #0056b3; }
-.resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-.resource-card { border-top: 6px solid #0056b3; transition: transform 0.3s ease; }
-.resource-card:hover { transform: translateY(-5px); background: white; }
 
-.resource-list { list-style: none; margin: 20px 0; }
+.presentation { border-left: 8px solid #0056b3; }
+
+.resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+
+.resource-card { 
+    border-top: 6px solid #0056b3; 
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.resource-card:hover { 
+    transform: translateY(-10px); 
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 15px 40px rgba(0, 86, 179, 0.15);
+}
+
+.resource-list { list-style: none; margin: 20px 0; text-align: left; }
 .resource-list li { padding: 10px 0 10px 30px; border-bottom: 1px solid #eee; position: relative; }
 .resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
 
@@ -118,6 +130,7 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 .footer-links a:hover { color: #ffc107; text-decoration: underline; }
 .signature { margin-top: 30px; font-style: italic; opacity: 0.8; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; }
 
+/* Bouton Retour en Haut */
 #backToTop {
     display: none; position: fixed; bottom: 30px; right: 30px;
     background: #0056b3; color: white; border: none; padding: 15px;
