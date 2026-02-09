@@ -275,20 +275,18 @@ body {
     object-fit: cover !important; /* Remplit le rectangle sans déformer */
     display: block !important;
 }
-
 /* FORCER LE LOGO - SYMÉTRIE TOTALE AVEC LA PHOTO */
-.professor-header .header-logo,
-.professor-header > div:last-child {
-    /* DIMENSIONS IDENTIQUES À LA PHOTO */
+/* CORRECTION : On cible UNIQUEMENT la classe .header-logo */
+.professor-header .header-logo {
+    /* DIMENSIONS IDENTIQUES À LA PHOTO (On ne touche pas) */
     width: 140px !important;  
     height: 175px !important; 
     
     background: white !important;
-    border: 2px solid white !important; /* Même bordure */
-    border-radius: 12px !important;    /* Même arrondi */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; /* Même ombre */
+    border: 2px solid white !important; 
+    border-radius: 12px !important;    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; 
     
-    /* Centrage parfait du logo à l'intérieur du rectangle vertical */
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -296,11 +294,11 @@ body {
     overflow: hidden !important;
 }
 
-.professor-header .header-logo img,
-.professor-header > div:last-child img {
+/* On applique le style à l'image du logo uniquement */
+.professor-header .header-logo img {
     width: 100% !important;
     height: auto !important;
-    max-height: 90% !important; /* Pour garder de l'espace en haut et en bas */
+    max-height: 90% !important; 
     object-fit: contain !important;
     border: none !important;
 }
