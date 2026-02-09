@@ -2,18 +2,31 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Sélection Année - Cours</title>
     <link rel="stylesheet" href="style.css">
-    <title>Année - Cours</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h2>Sélectionnez l'année pour les COURS :</h2>
-        <div class="academic-nav">
-            <a href="cours-24-25.html" class="nav-card">📅 2024 - 2025</a>
-            <a href="cours-25-26.html" class="nav-card">📅 2025 - 2026</a>
-            <!-- Bouton Retour ajouté ici -->
-            <a href="pedagogie.html" class="nav-card">⬅ RETOUR</a>
+        <header class="professor-header" data-aos="fade-down">
+            <div class="header-content">
+                <div class="professor-name">Supports de Cours</div>
+                <div class="professor-title">Sélectionnez l'année universitaire</div>
+            </div>
+        </header>
+
+        <div class="presentation" style="max-width: 600px; margin: 40px auto; text-align: center;" data-aos="zoom-in">
+            <h3 style="margin-bottom: 30px; color: #0056b3;">Veuillez choisir une session :</h3>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <a href="cours-24-25.html" class="nav-card">📅 Année 2024 - 2025</a>
+                <a href="cours-25-26.html" class="nav-card">📅 Année 2025 - 2026</a>
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee;">
+                    <a href="pedagogie.html" class="nav-card" style="border-color: #666; color: #666;">⬅ RETOUR</a>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
