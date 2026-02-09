@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Examens 2024-2025</title>
 </head>
 <body>
     <div class="container">
-        <header class="professor-header">
-            <div class="professor-name">Examens & Contrôles</div>
-            <div class="professor-title">Année 2024 - 2025</div>
+        <header class="professor-header" data-aos="fade-down">
+            <div class="header-content">
+                <div class="professor-name">Examens & Contrôles</div>
+                <div class="professor-title">Session 2024 - 2025</div>
+            </div>
         </header>
-        <nav class="academic-nav">
+
+        <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
             <a href="choix-annee-examens.html" class="nav-card">⬅ RETOUR</a>
         </nav>
-        <section class="presentation">
-            <h3 style="color: #ffc107; margin-bottom: 15px;">📊 Analyse II</h3>
+
+        <section class="presentation" data-aos="fade-up">
+            <h3 style="color: #b8860b; margin-bottom: 15px; border-bottom: 2px solid #ffc107; display: inline-block;">📊 Analyse II</h3>
             <ul class="resource-list">
-                <li>Contrôle Continu <a href="assets/pdf/Controle-analyse2-2024-2025.pdf" target="_blank">[PDF]</a></li>
-                <li>Examen (Session Normale) <a href="assets/pdf/Examen-normal-analyse2-2024-2025.pdf" target="_blank">[PDF]</a></li>
-                <li>Examen (Session de Rattrapage) <a href="assets/pdf/Examen-ratt-analyse2-2024-2025.pdf" target="_blank">[PDF]</a></li>
+                <li>Contrôle Continu <a href="assets/pdf/Controle-analyse2-2024-2025.pdf" target="_blank" style="font-weight:bold; margin-left:10px;">[Télécharger PDF]</a></li>
+                <li>Examen (Session Normale) <a href="assets/pdf/Examen-normal-analyse2-2024-2025.pdf" target="_blank" style="font-weight:bold; margin-left:10px;">[Télécharger PDF]</a></li>
+                <li>Examen (Session de Rattrapage) <a href="assets/pdf/Examen-ratt-analyse2-2024-2025.pdf" target="_blank" style="font-weight:bold; margin-left:10px;">[Télécharger PDF]</a></li>
             </ul>
         </section>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
