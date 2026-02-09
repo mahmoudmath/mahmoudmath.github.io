@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pr. Mahmoud El Ahmadi - Espace Académique</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Bibliothèque pour le dynamisme -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- EN-TÊTE PRESTIGIEUX -->
+        <!-- EN-TÊTE -->
         <header class="professor-header" data-aos="fade-down">
-           <div class="header-photo">
-                <img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi">
-            </div>
+           <div class="header-photo"><img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi"></div>
             <div class="header-content">
                 <div class="professor-name">Pr. Mahmoud El Ahmadi</div>
                 <div class="professor-title">Professeur de Mathématiques</div>
@@ -23,9 +20,7 @@
                     <span style="font-size: 0.95em;">Université Sidi Mohamed Ben Abdellah (USMBA)</span>
                 </div>
             </div>
-           <div class="header-logo">
-                <img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST">
-            </div>
+           <div class="header-logo"><img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST"></div>
         </header>
         
         <!-- NAVIGATION -->
@@ -37,23 +32,21 @@
         </nav>
 
         <!-- BIENVENUE -->
-        <div class="presentation" style="text-align: center; border-left: none; margin-bottom: 20px;" data-aos="fade-right">
+        <div class="presentation" style="text-align: center; border-left: none; margin-bottom: 20px;" data-aos="fade-up">
             <h2 style="color: #0056b3;">Bienvenue sur votre plateforme académique</h2>
             <p style="font-style: italic; margin-top: 10px;">Accédez à vos ressources pédagogiques et suivez l'actualité de nos modules.</p>
         </div>
 
-        <!-- RECHERCHE AMÉLIORÉE (BOÎTE FLOTTANTE) -->
-        <div class="search-container" style="position: relative;" data-aos="fade-left">
+        <!-- BARRE DE RECHERCHE -->
+        <div class="search-container" data-aos="fade-up">
             <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher : Analyse 1, Analyse 2, Articles, Communications...">
-            
-            <!-- Zone d'affichage des résultats rapides (Flottante) -->
-            <div id="searchResultsBox" style="display:none; position: absolute; width: 100%; z-index: 999; background: white; padding: 20px; border-radius: 15px; border: 2px solid #0056b3; margin-top: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
-                <p style="font-weight: bold; color: #0056b3; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px;">📍 Ressources trouvées :</p>
-                <div id="linksContainer" style="display: flex; flex-direction: column; gap: 10px;"></div>
+            <div id="searchResultsBox">
+                <p style="font-weight: bold; color: #0056b3; margin-bottom: 15px;">📍 Résultats trouvés :</p>
+                <div id="linksContainer"></div>
             </div>
         </div>
         
-        <!-- PRÉSENTATION (TEXTE ORIGINAL) -->
+        <!-- PRÉSENTATION (VOTRE TEXTE ORIGINAL) -->
         <section class="presentation search-item" data-aos="fade-up">
             <h2>Parcours académique et axes de recherche</h2>
             <p style="font-size: 1.1em; line-height: 1.8; text-align: justify; margin-top: 15px;">
@@ -67,11 +60,11 @@
             </p>
         </section>
         
-        <!-- RESSOURCES -->
+        <!-- VOS CARTES ORIGINALES (RESTAURÉES) -->
         <div class="resources-grid">
-            <div class="resource-card search-item" style="border-top-color: #dc3545;" data-aos="zoom-in">
-                <span class="resource-icon" style="font-size: 2em;">📢</span>
-                <h3>ANNONCES PÉDAGOGIQUES</h3>
+            <div class="resource-card search-item" style="border-top: 6px solid #dc3545;" data-aos="zoom-in">
+                <div style="text-align: center; font-size: 2.5em; margin-bottom: 10px;">📢</div>
+                <h3 style="text-align: center; margin-bottom: 15px;">ANNONCES PÉDAGOGIQUES</h3>
                 <ul class="resource-list">
                     <li><strong>Ressources :</strong> Les supports de cours et les séries de TD sont mis à jour périodiquement selon l'avancement du programme.</li>
                     <li><strong>Communication :</strong> Pour toute correspondance officielle, l'usage de votre adresse institutionnelle <em>(@usmba.ac.ma)</em> est impératif.</li>
@@ -79,9 +72,9 @@
                 </ul>
             </div>
             
-            <div class="resource-card search-item" style="border-top-color: #28a745;" data-aos="zoom-in" data-aos-delay="200">
-                <span class="resource-icon" style="font-size: 2em;">🔗</span>
-                <h3>RÉFÉRENCES UTILES</h3>
+            <div class="resource-card search-item" style="border-top: 6px solid #28a745;" data-aos="zoom-in" data-aos-delay="200">
+                <div style="text-align: center; font-size: 2.5em; margin-bottom: 10px;">🔗</div>
+                <h3 style="text-align: center; margin-bottom: 15px;">RÉFÉRENCES UTILES</h3>
                 <ul class="resource-list">
                     <li><a href="https://ent-fst.usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Espace Numérique (ENT)</a></li>
                     <li><a href="https://elearn.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Plateforme Moodle FST</a></li>
@@ -89,39 +82,27 @@
                     <li><a href="http://exo7.emath.fr/" target="_blank" style="color:#0056b3;">Exo7 : Cours et exercices</a></li>
                     <li><a href="https://www.bibmath.net/" target="_blank" style="color:#0056b3;">BibMath : Bibliothèque des maths</a></li>
                     <li><a href="https://www.wolframalpha.com/" target="_blank" style="color:#0056b3;">Wolfram Alpha – Calcul formel et numérique</a></li>
-
                 </ul>
             </div>
         </div>
         
-        <!-- FOOTER RESTAURÉ (COMPLET) -->
+        <!-- FOOTER (VOTRE TEXTE ORIGINAL) -->
         <footer class="professor-footer" data-aos="fade-up">
             <h3 style="font-size: 1.8em; margin-bottom: 20px;">Département de Mathématiques</h3>
             <p>Faculté des Sciences et Techniques de Fès</p>
-            
             <div class="contact-info">
-                <div class="contact-item">
-                    <h4>📍 Localisation</h4>
-                    <p>FST de Fès, Route d'Imouzzer, BP 2202, Fès</p>
-                </div>
-                
-                <div class="contact-item">
+                <div class="contact-item"><h4>📍 Localisation</h4><p>FST de Fès, Route d'Imouzzer, BP 2202, Fès</p></div>
+               <div class="contact-item">
                     <h4>📧 Correspondance</h4>
                     <p>mahmoud.elahmadi@usmba.ac.ma<br>Réponse sous 48h ouvrées</p>
                 </div>
-                
-                <div class="contact-item">
-                    <h4>🕒 Permanence</h4>
-                    <p>Réception sur rendez-vous<br>à solliciter par courriel institutionnel</p>
-                </div>
+                <div class="contact-item"><h4>🕒 Permanence</h4><p>Réception sur rendez-vous à solliciter par courriel institutionnel</p></div>
             </div>
-
             <div class="footer-links">
-                <a href="http://www.fst-usmba.ac.ma/" target="_blank">🌐 Portail FST Fès</a>
-                <a href="https://www.usmba.ac.ma" target="_blank">🏛️ Université USMBA</a>
-                <a href="https://fst-usmba.ac.ma/emploi-du-temps/" target="_blank">📅 Emplois du Temps</a>
+                <a href="http://www.fst-usmba.ac.ma/" target="_blank" style="color:white; font-weight:bold;">🌐 Portail FST Fès</a>
+                <a href="https://www.usmba.ac.ma" target="_blank" style="color:white; font-weight:bold;">🏛️ Université USMBA</a>
+                <a href="https://fst-usmba.ac.ma/emploi-du-temps/" target="_blank" style="color:white; font-weight:bold;">📅 Emplois du Temps</a>
             </div>
-            
             <div class="signature">
                 <p>"La rigueur mathématique est le fondement de toute pensée scientifique structurée."</p>
                 <p style="margin-top: 15px;">© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
@@ -129,8 +110,7 @@
         </footer>
     </div>
 
-    <!-- BOUTON RETOUR EN HAUT -->
-    <button id="backToTop" title="Retour en haut" style="display: none; position: fixed; bottom: 30px; right: 30px; background: #0056b3; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; font-size: 1.2em; transition: 0.3s;">↑</button>
+    <button id="backToTop" title="Retour en haut">↑</button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -140,7 +120,7 @@
             { key: "analyse 1", results: [ {n: "Cours Analyse 1", u: "cours-25-26.html"}, {n: "TD Analyse 1", u: "td-25-26.html"}, {n: "Examens Analyse 1", u: "examens-25-26.html"} ] },
             { key: "analyse 2", results: [ {n: "Cours Analyse 2", u: "cours-24-25.html"}, {n: "TD Analyse 2", u: "td-24-25.html"}, {n: "Examens Analyse 2", u: "examens-24-25.html"} ] },
             { key: "analyse 4", results: [ {n: "Travaux Dirigés Analyse 4", u: "td-24-25.html"} ] },
-            { key: "articles", results: [ {n: "Consulter les Articles", u: "articles.html"} ] },
+            { key: "articles", results: [ {n: "Consulter les Articles Scientifiques", u: "articles.html"} ] },
             { key: "communications", results: [ {n: "Consulter les Communications", u: "communications.html"} ] }
         ];
 
@@ -159,7 +139,7 @@
                             let a = document.createElement('a');
                             a.href = res.u;
                             a.textContent = "➜ " + res.n;
-                            a.style.cssText = "color: #0056b3; font-weight: bold; background: #f0f7ff; padding: 10px; border-radius: 8px; text-decoration: none;";
+                            a.className = "search-link";
                             container.appendChild(a);
                         });
                     }
@@ -168,12 +148,11 @@
             box.style.display = found ? "block" : "none";
             
             document.querySelectorAll('.search-item').forEach(el => {
-                if (filter.length > 0) { el.style.opacity = "0.3"; } 
-                else { el.style.opacity = "1"; box.style.display = "none"; }
+                el.style.opacity = (filter.length > 0) ? "0.3" : "1";
             });
         });
 
-        // Fermer la recherche si clic extérieur
+        // Fermer au clic ailleurs
         document.addEventListener('click', function(e) {
             if (!document.getElementById('searchInput').contains(e.target)) {
                 document.getElementById('searchResultsBox').style.display = "none";
@@ -181,11 +160,7 @@
         });
 
         const btt = document.getElementById("backToTop");
-        window.onscroll = () => {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btt.style.display = "block";
-            } else { btt.style.display = "none"; }
-        };
+        window.onscroll = () => { btt.style.display = (window.scrollY > 300) ? "block" : "none"; };
         btt.onclick = () => { window.scrollTo({top: 0, behavior: 'smooth'}); };
     </script>
 </body>
