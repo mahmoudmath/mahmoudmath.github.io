@@ -82,3 +82,79 @@ body {
 .signature { margin-top: 30px; font-style: italic; opacity: 0.8; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; }
 
 #backToTop { display: none; position: fixed; bottom: 30px; right: 30px; background: #0056b3; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 1000; }
+/* ===== DÉCORATION DES TITRES PÉDAGOGIQUES ===== */
+
+/* Style pour le titre COURS */
+.resource-card:nth-child(1) h3 {
+    background: linear-gradient(90deg, #6a11cb, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.2em;
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.resource-card:nth-child(1) h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6a11cb, #8a2be2);
+    border-radius: 2px;
+}
+
+/* Style pour le titre TD */
+.resource-card:nth-child(2) h3 {
+    background: linear-gradient(90deg, #2575fc, #4a9eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.2em;
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.resource-card:nth-child(2) h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #2575fc, #4a9eff);
+    border-radius: 2px;
+}
+
+/* Style pour le titre EXAMENS */
+.resource-card:nth-child(3) h3 {
+    background: linear-gradient(90deg, #00b09b, #00d4b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.2em;
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.resource-card:nth-child(3) h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #00b09b, #00d4b4);
+    border-radius: 2px;
+}
