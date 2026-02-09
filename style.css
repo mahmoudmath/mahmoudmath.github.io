@@ -222,40 +222,30 @@ body {
     overflow: visible !important;
 }
 
-/* 2. REPARATION PHOTO DE PROFIL */
+/* PHOTO CARREE EN ROND SANS ESPACE */
 .header-photo {
     overflow: hidden !important;
     border-radius: 50% !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .header-photo img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Remplit tout le cercle */
-    transform: scale(1.05); /* Zoom de 5% pour être sûr qu'aucun bord blanc ne dépasse */
+    object-fit: cover !important;
+    object-position: center center !important;
 }
 
-/* 3. REPARATION DU LOGO (à droite) */
-/* On va appliquer la même logique au conteneur du logo. 
-   D'après votre image, c'est l'élément qui a la forme bizarre à droite. */
-
+/* LOGO CARRE - Afficher tout */
 .professor-header .header-logo, 
 .professor-header > div:last-child {
     overflow: hidden !important;
-    border-radius: 50% !important;
-    background: white !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    border-radius: 0 !important; /* Carré */
 }
 
 .professor-header .header-logo img,
 .professor-header > div:last-child img {
-    width: 85% !important;  /* On réduit à 85% pour laisser de l'air sur les bords */
-    height: 85% !important;
-    object-fit: contain !important; /* 'contain' pour que le logo ne soit jamais coupé */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
 }
 
