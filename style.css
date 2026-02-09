@@ -84,29 +84,39 @@ body {
 #backToTop { display: none; position: fixed; bottom: 30px; right: 30px; background: #0056b3; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 1000; }
 /* ===== DÉCORATION DES TITRES PÉDAGOGIQUES ===== */
 
+/* ===== TITRES PÉDAGOGIQUES GRANDS ET DÉCORÉS ===== */
+
 /* Style pour le titre COURS */
 .resource-card:nth-child(1) h3 {
     background: linear-gradient(90deg, #6a11cb, #8a2be2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.2em;
-    padding: 10px 0;
+    font-size: 2.8em; /* AGRANDI */
+    font-weight: 800;
+    padding: 15px 0;
     position: relative;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.resource-card:nth-child(1) h3::before {
+    content: '📚 ';
+    font-size: 0.9em;
 }
 
 .resource-card:nth-child(1) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    left: 0;
+    width: 100%;
+    height: 5px; /* PLUS ÉPAIS */
     background: linear-gradient(90deg, #6a11cb, #8a2be2);
-    border-radius: 2px;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(106, 17, 203, 0.3);
 }
 
 /* Style pour le titre TD */
@@ -115,23 +125,31 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.2em;
-    padding: 10px 0;
+    font-size: 2.8em; /* AGRANDI */
+    font-weight: 800;
+    padding: 15px 0;
     position: relative;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.resource-card:nth-child(2) h3::before {
+    content: '📝 ';
+    font-size: 0.9em;
 }
 
 .resource-card:nth-child(2) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    left: 0;
+    width: 100%;
+    height: 5px; /* PLUS ÉPAIS */
     background: linear-gradient(90deg, #2575fc, #4a9eff);
-    border-radius: 2px;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(37, 117, 252, 0.3);
 }
 
 /* Style pour le titre EXAMENS */
@@ -140,21 +158,29 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.2em;
-    padding: 10px 0;
+    font-size: 2.8em; /* AGRANDI */
+    font-weight: 800;
+    padding: 15px 0;
     position: relative;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.resource-card:nth-child(3) h3::before {
+    content: '🎓 ';
+    font-size: 0.9em;
 }
 
 .resource-card:nth-child(3) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    left: 0;
+    width: 100%;
+    height: 5px; /* PLUS ÉPAIS */
     background: linear-gradient(90deg, #00b09b, #00d4b4);
-    border-radius: 2px;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(0, 176, 155, 0.3);
 }
