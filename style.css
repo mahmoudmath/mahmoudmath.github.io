@@ -91,10 +91,12 @@ body {
 }
 
 /* Affichage des liens sous forme de boutons/grille */
+/* Style pour transformer la liste en grille de boutons */
 #linksContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
 }
 
 .search-link { 
@@ -103,11 +105,11 @@ body {
     justify-content: center;
     color: #0056b3; 
     font-weight: 600; 
-    background: #f8fbff; 
-    padding: 15px; 
-    border-radius: 12px; 
+    background: #f0f7ff; 
+    padding: 14px; 
+    border-radius: 10px; 
     text-decoration: none; 
-    border: 1px solid #e0eefe;
+    border: 1px solid #d0e4ff;
     transition: 0.3s;
     text-align: center;
 }
@@ -115,8 +117,7 @@ body {
 .search-link:hover { 
     background: #0056b3; 
     color: white; 
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,86,179,0.2);
+    transform: translateY(-2px);
 }
 
 @keyframes fadeInDown {
