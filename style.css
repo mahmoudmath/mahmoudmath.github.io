@@ -255,19 +255,29 @@ body {
     justify-content: center !important;
 }
 
-.professor-header .header-logo img,
-.professor-header > div:last-child img {
-    max-width: 100% !important;
-    max-height: 100% !important;
-    height: auto !important;
-    object-fit: contain !important; /* Ne déforme jamais le logo */
+/* FORCER LE LOGO - STYLE IDENTIQUE À LA PHOTO */
+.professor-header .header-logo,
+.professor-header > div:last-child {
+    background: white !important; /* Fond blanc pour que le logo soit propre */
+    border: 2px solid white !important; /* MÊME BORDURE QUE TA PHOTO */
+    border-radius: 12px !important;    /* MÊME ARRONDI QUE TA PHOTO */
+    
+    width: 160px !important;  /* Largeur équilibrée */
+    height: 110px !important; /* Hauteur équilibrée */
+    
+    padding: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; /* MÊME OMBRE */
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
-/* 3. ALIGNEMENT HORIZONTAL (Si ce n'est pas déjà fait) */
-.professor-header {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 30px !important;
+.professor-header .header-logo img,
+.professor-header > div:last-child img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Pour que le logo ne soit pas déformé */
+    border: none !important; /* On enlève les anciennes bordures de l'image */
 }
