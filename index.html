@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pr. Mahmoud El Ahmadi - Espace Académique</title>
     <link rel="stylesheet" href="style.css">
+    <!-- AJOUT : Bibliothèque pour le dynamisme (Animations au scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- EN-TÊTE (TEXTE ET IMAGES CONSERVÉS) -->
-        <header class="professor-header">
+        <!-- EN-TÊTE (TEXTE ET IMAGES CONSERVÉS + DYNAMISME) -->
+        <header class="professor-header" data-aos="fade-down">
            <div class="header-photo">
                 <img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi">
             </div>
@@ -26,33 +28,32 @@
             </div>
         </header>
         
-        <!-- NAVIGATION (STRICTEMENT IDENTIQUE) -->
-        <nav class="academic-nav">
+        <!-- NAVIGATION (STRICTEMENT IDENTIQUE + DYNAMISME) -->
+        <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html" class="nav-card active">🏠 ACCUEIL</a>
             <a href="recherche.html" class="nav-card">🔬 RECHERCHE</a>
             <a href="pedagogie.html" class="nav-card">👨‍🏫 PÉDAGOGIE</a>
             <a href="contact.html" class="nav-card">✉️ CONTACT</a>
         </nav>
 
-        <!-- MESSAGE DE BIENVENUE -->
-        <div class="presentation" style="text-align: center; border-left: none; margin-bottom: 20px;">
+        <!-- MESSAGE DE BIENVENUE (+ DYNAMISME) -->
+        <div class="presentation" style="text-align: center; border-left: none; margin-bottom: 20px;" data-aos="fade-right">
             <h2 style="color: #0056b3;">Bienvenue sur votre plateforme académique</h2>
             <p style="font-style: italic; margin-top: 10px;">Accédez à vos ressources pédagogiques et suivez l'actualité de nos modules.</p>
         </div>
 
-        <!-- RECHERCHE AMÉLIORÉE (ANALYSE 1, 2, 4, ARTICLES, COMMUNICATIONS) -->
-        <div class="search-container" style="position: relative;">
+        <!-- RECHERCHE AMÉLIORÉE (+ DYNAMISME) -->
+        <div class="search-container" style="position: relative;" data-aos="fade-left">
             <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher : Analyse 1, Analyse 2, Articles, Communications...">
             
-            <!-- Zone d'affichage des résultats rapides -->
             <div id="searchResultsBox" style="display:none; position: absolute; width: 100%; z-index: 100; background: white; padding: 15px; border-radius: 12px; border: 2px solid #0056b3; margin-top: 5px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                 <p style="font-weight: bold; color: #0056b3; margin-bottom: 10px;">Résultats trouvés :</p>
                 <div id="linksContainer" style="display: flex; flex-direction: column; gap: 8px;"></div>
             </div>
         </div>
         
-        <!-- PRÉSENTATION (TEXTE ORIGINAL STRICTEMENT CONSERVÉ) -->
-        <section class="presentation search-item">
+        <!-- PRÉSENTATION (TEXTE ORIGINAL STRICTEMENT CONSERVÉ + DYNAMISME) -->
+        <section class="presentation search-item" data-aos="fade-up">
             <h2>Parcours académique et axes de recherche</h2>
             <p style="font-size: 1.1em; line-height: 1.8; text-align: justify; margin-top: 15px;">
                 Le <strong>Pr. Mahmoud El Ahmadi</strong> est enseignant-chercheur au Département de Mathématiques de la Faculté des Sciences et Techniques (FST) de Fès. Ses activités académiques se concentrent sur l’<strong>Analyse Non Linéaire</strong>, avec une expertise spécifique portée sur l'étude des <strong>équations aux dérivées partielles (EDP)</strong> et des équations différentielles.
@@ -65,9 +66,9 @@
             </p>
         </section>
         
-        <!-- RESSOURCES (TEXTE ORIGINAL STRICTEMENT CONSERVÉ) -->
+        <!-- RESSOURCES (TEXTE ORIGINAL STRICTEMENT CONSERVÉ + DYNAMISME) -->
         <div class="resources-grid">
-            <div class="resource-card search-item" style="border-top-color: #dc3545;">
+            <div class="resource-card search-item" style="border-top-color: #dc3545;" data-aos="zoom-in">
                 <span class="resource-icon">📢</span>
                 <h3>ANNONCES PÉDAGOGIQUES</h3>
                 <ul class="resource-list">
@@ -77,7 +78,7 @@
                 </ul>
             </div>
             
-            <div class="resource-card search-item" style="border-top-color: #28a745;">
+            <div class="resource-card search-item" style="border-top-color: #28a745;" data-aos="zoom-in" data-aos-delay="200">
                 <span class="resource-icon">🔗</span>
                 <h3>RÉFÉRENCES UTILES</h3>
                 <ul class="resource-list">
@@ -91,9 +92,8 @@
             </div>
         </div>
         
-         <!-- FOOTER (Inchangé) -->
-        <footer class="professor-footer">
-            <h3 style="font-size: 1.8em; margin-bottom: 20px;">Département de Mathématiques</h3>
+        <footer class="professor-footer" data-aos="fade-up">
+           <h3 style="font-size: 1.8em; margin-bottom: 20px;">Département de Mathématiques</h3>
             <p>Faculté des Sciences et Techniques de Fès</p>
             
             <div class="contact-info">
@@ -126,8 +126,13 @@
         </footer>
     </div>
 
-    <!-- SCRIPT DE RECHERCHE DYNAMIQUE -->
+
+    <!-- SCRIPTS POUR LE DYNAMISME ET LA RECHERCHE -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialisation du dynamisme
+        AOS.init({ duration: 1000, once: true });
+
         const database = [
             { key: "analyse 1", results: [ {n: "Cours Analyse 1", u: "cours-25-26.html"}, {n: "TD Analyse 1", u: "td-25-26.html"}, {n: "Examens Analyse 1", u: "examens-25-26.html"} ] },
             { key: "analyse 2", results: [ {n: "Cours Analyse 2", u: "cours-24-25.html"}, {n: "TD Analyse 2", u: "td-24-25.html"}, {n: "Examens Analyse 2", u: "examens-24-25.html"} ] },
@@ -159,7 +164,6 @@
             }
             box.style.display = found ? "block" : "none";
             
-            // Filtrer les blocs visuels de la page
             document.querySelectorAll('.search-item').forEach(el => {
                 el.style.display = el.textContent.toLowerCase().includes(filter) ? "" : "none";
             });
