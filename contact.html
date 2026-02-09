@@ -4,112 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Pr. Mahmoud El Ahmadi</title>
+    <!-- On utilise votre fichier CSS commun pour garder la grille de fond et le style -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- HEADER (Cohérence avec l'accueil) -->
+        <!-- HEADER ACADÉMIQUE -->
         <header class="professor-header" data-aos="fade-down">
             <div class="header-content">
                 <div class="professor-name">Contact & Coordonnées</div>
                 <div class="professor-title">Pr. Mahmoud El Ahmadi</div>
             </div>
         </header>
-
+        
         <!-- NAVIGATION -->
         <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
             <a href="pedagogie.html" class="nav-card">👨‍🏫 PÉDAGOGIE</a>
             <a href="contact.html" class="nav-card active">✉️ CONTACT</a>
         </nav>
-
-        <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; margin-top: 30px;">
+        
+        <!-- GRILLE DE CONTACT (2 COLONNES) -->
+        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; margin-top: 30px;" class="contact-grid">
             
-            <!-- COLONNE GAUCHE : INFOS OFFICIELLES -->
+            <!-- GAUCHE : INFOS DE BUREAU -->
             <aside data-aos="fade-right">
-                <div class="presentation" style="height: 100%;">
-                    <h3 style="color: #0056b3; margin-bottom: 20px; border-bottom: 2px solid #0056b3; padding-bottom: 10px;">Informations de contact</h3>
+                <div class="presentation" style="height: 100%; border-left: 8px solid #0056b3;">
+                    <h3 style="color: #0056b3; margin-bottom: 25px;">Coordonnées Officielles</h3>
                     
                     <div style="margin-bottom: 25px;">
-                        <p style="font-weight: bold; color: #333;"><i class="fas fa-map-marker-alt" style="color:#0056b3;"></i> Bureau :</p>
-                        <p style="color: #666;">Département de Mathématiques,<br>FST de Fès, Route d'Imouzzer.</p>
+                        <p style="font-weight: bold;"><i class="fas fa-map-marker-alt" style="color:#0056b3; margin-right: 10px;"></i> Bureau :</p>
+                        <p style="color: #555; margin-top: 5px;">
+                            Département de Mathématiques,<br>
+                            FST de Fès.
+                        </p>
                     </div>
 
                     <div style="margin-bottom: 25px;">
-                        <p style="font-weight: bold; color: #333;"><i class="fas fa-envelope" style="color:#0056b3;"></i> Email Institutionnel :</p>
+                        <p style="font-weight: bold;"><i class="fas fa-envelope" style="color:#0056b3; margin-right: 10px;"></i> Email :</p>
                         <p style="color: #0056b3; font-weight: 600;">mahmoud.elahmadi@usmba.ac.ma</p>
-                        <small style="color: #999;">(Usage impératif pour les étudiants)</small>
                     </div>
 
                     <div style="margin-bottom: 25px;">
-                        <p style="font-weight: bold; color: #333;"><i class="fas fa-clock" style="color:#0056b3;"></i> Permanence :</p>
-                        <p style="color: #666;">Sur rendez-vous uniquement.<br>Veuillez consulter l'emploi du temps affiché au département.</p>
-                    </div>
-
-                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                        <h4 style="margin-bottom: 15px;">Profils Scientifiques</h4>
-                        <div style="display: flex; gap: 15px;">
-                            <a href="#" title="ResearchGate" style="font-size: 1.5rem; color: #00ccbb;"><i class="fab fa-researchgate"></i></a>
-                            <a href="#" title="Google Scholar" style="font-size: 1.5rem; color: #4285F4;"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="#" title="LinkedIn" style="font-size: 1.5rem; color: #0077b5;"><i class="fab fa-linkedin"></i></a>
-                        </div>
+                        <p style="font-weight: bold;"><i class="fas fa-clock" style="color:#0056b3; margin-right: 10px;"></i> Permanence :</p>
+                        <p style="color: #555; margin-top: 5px;">Sur rendez-vous uniquement à solliciter par courriel.</p>
                     </div>
                 </div>
             </aside>
 
-            <!-- COLONNE DROITE : LE FORMULAIRE -->
+            <!-- DROITE : FORMULAIRE -->
             <main data-aos="fade-left">
                 <div class="presentation">
-                    <h3 style="color: #0056b3; margin-bottom: 25px; text-align: center;">Envoyez un message</h3>
+                    <h3 style="text-align: center; color: #0056b3; margin-bottom: 25px;">Envoyez un message</h3>
                     
-                    <!-- Formspree peut être utilisé pour recevoir réellement les mails gratuitement -->
-                    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div>
-                                <label style="display:block; margin-bottom: 5px; font-weight: 600;">Nom</label>
-                                <input type="text" name="nom" placeholder="Votre nom" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
+                    <form action="https://formspree.io/f/xjgekbrr" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                        
+                        <!-- Ligne Nom / Prénom -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <label style="font-weight: 600;">Nom</label>
+                                <input type="text" name="nom" required placeholder="Votre nom" style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none;">
                             </div>
-                            <div>
-                                <label style="display:block; margin-bottom: 5px; font-weight: 600;">Prénom</label>
-                                <input type="text" name="prenom" placeholder="Votre prénom" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <label style="font-weight: 600;">Prénom</label>
+                                <input type="text" name="prenom" required placeholder="Votre prénom" style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none;">
                             </div>
                         </div>
 
-                        <div>
-                            <label style="display:block; margin-bottom: 5px; font-weight: 600;">Email Académique (@usmba.ac.ma)</label>
-                            <input type="email" name="email" placeholder="nom.prenom@usmba.ac.ma" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
+                        <!-- Email -->
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label style="font-weight: 600;">Votre Email</label>
+                            <input type="email" name="email" required placeholder="votre@email.com" style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none;">
                         </div>
 
-                        <div>
-                            <label style="display:block; margin-bottom: 5px; font-weight: 600;">Objet du message</label>
-                            <select name="objet" style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; outline: none; background: white;">
-                                <option>Question sur un cours (Analyse)</option>
-                                <option>Demande de rendez-vous</option>
-                                <option>Projet de recherche / Collaboration</option>
-                                <option>Autre demande</option>
-                            </select>
+                        <!-- Objet -->
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label style="font-weight: 600;">Objet</label>
+                            <input type="text" name="objet" required placeholder="Ex: Question sur l'Analyse I" style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none;">
                         </div>
 
-                        <div>
-                            <label style="display:block; margin-bottom: 5px; font-weight: 600;">Votre Message</label>
-                            <textarea name="message" rows="5" placeholder="Écrivez votre message ici..." required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; outline: none; resize: vertical;"></textarea>
+                        <!-- Message -->
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label style="font-weight: 600;">Message</label>
+                            <textarea name="message" rows="6" required placeholder="Écrivez votre message ici..." style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; resize: vertical;"></textarea>
                         </div>
 
-                        <button type="submit" class="nav-card" style="width:100%; background:#0056b3; color:white; border:none; padding:15px; cursor:pointer; font-size: 1.1em;">
-                            🚀 Envoyer le message officiel
+                        <!-- Bouton d'envoi -->
+                        <button type="submit" style="background: #0056b3; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; font-size: 1.1em; cursor: pointer; transition: 0.3s;">
+                            🚀 Envoyer le message
                         </button>
                     </form>
                 </div>
             </main>
         </div>
 
-        <footer class="professor-footer" style="margin-top: 40px;">
-            <div class="signature"><p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p></div>
+        <footer class="professor-footer">
+            <p>© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
         </footer>
     </div>
 
+    <!-- Scripts pour les animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
 </body>
