@@ -77,16 +77,17 @@ body {
 }
 
 #searchResultsBox {
-    display:none; 
-    position: relative; /* Change de absolute à relative pour pousser le texte */
+    display: none; 
+    position: relative;    /* CHANGEMENT ICI : pousse le contenu au lieu de flotter */
     width: 100%; 
-    background: #ffffff; 
-    padding: 25px; 
-    border-radius: 20px; 
-    border: 2px dashed #0056b3; 
-    margin-top: 20px; 
-    margin-bottom: 30px; /* Espace avant le texte de présentation */
-    animation: fadeInDown 0.4s ease;
+    z-index: 10; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 15px; 
+    border: 2px solid #0056b3; 
+    margin-top: 15px;      /* Espace après la barre */
+    margin-bottom: 20px;   /* Espace avant votre texte "Parcours académique" */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* Affichage des liens sous forme de boutons/grille */
