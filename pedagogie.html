@@ -2,8 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pédagogie - Prof. El Ahmadi</title>
+    <!-- Ajout de FontAwesome pour les icônes professionnelles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -12,18 +15,26 @@
         </nav>
 
         <div class="resources-grid">
+            <!-- CARTE COURS -->
             <div class="resource-card">
-                <h3>📘 COURS</h3>
+                <div class="academic-icon"><i class="fas fa-university"></i></div>
+                <h3>COURS</h3>
                 <p>Supports magistraux</p>
                 <a href="choix-annee-cours.html" class="btn-resource">Accéder →</a>
             </div>
+
+            <!-- CARTE TD -->
             <div class="resource-card">
-                <h3>📝 TD</h3>
+                <div class="academic-icon"><i class="fas fa-file-signature"></i></div>
+                <h3>TD</h3>
                 <p>Travaux Dirigés</p>
                 <a href="choix-annee-td.html" class="btn-resource">Accéder →</a>
             </div>
+
+            <!-- CARTE EXAMENS -->
             <div class="resource-card">
-                <h3>📊 EXAMENS</h3>
+                <div class="academic-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>EXAMENS</h3>
                 <p>Contrôles & Examens</p>
                 <a href="choix-annee-examens.html" class="btn-resource">Accéder →</a>
             </div>
