@@ -37,10 +37,10 @@
             <p style="font-style: italic; margin-top: 10px;">Accédez à vos ressources pédagogiques et suivez l'actualité de nos modules.</p>
         </div>
 
-        <!-- BARRE DE RECHERCHE -->
-        <div class="search-container" data-aos="fade-up">
+        <!-- BARRE DE RECHERCHE (MODIFIÉE POUR L'OPACITÉ ET LE POSITIONNEMENT) -->
+        <div class="search-container" data-aos="fade-up" style="position: relative;">
             <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher : Analyse 1, Analyse 2, Articles, Communications...">
-            <div id="searchResultsBox">
+            <div id="searchResultsBox" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: white; border: 1.5px solid #0056b3; border-radius: 15px; padding: 20px; z-index: 1000; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-top: 5px; box-sizing: border-box;">
                 <p style="font-weight: bold; color: #0056b3; margin-bottom: 15px;">📍 Résultats trouvés :</p>
                 <div id="linksContainer"></div>
             </div>
