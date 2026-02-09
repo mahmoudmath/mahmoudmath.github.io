@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pr. Mahmoud El Ahmadi - Espace Académique</title>
+    <!-- Bibliothèques pour les icônes et animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- EN-TÊTE MODIFIÉ AVEC PHOTOS -->
-        <header class="professor-header">
-            <!-- Photo à gauche -->
-           <div class="header-photo">
-        <img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi">
-    </div>
+        <!-- EN-TÊTE -->
+        <header class="professor-header" data-aos="fade-down">
+            <div class="header-photo">
+                <img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi">
+            </div>
 
-            <!-- Votre texte (inchangé) -->
             <div class="header-content">
                 <div class="professor-name">Pr. Mahmoud El Ahmadi</div>
                 <div class="professor-title">Professeur de Mathématiques</div>
@@ -25,93 +26,90 @@
                 </div>
             </div>
 
-            <!-- Logo à droite -->
-           <div class="header-logo">
-        <img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST">
-    </div>
+            <div class="header-logo">
+                <img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST">
+            </div>
         </header>
         
-        <!-- NAVIGATION PRINCIPALE (Inchangée) -->
-        <nav class="academic-nav">
+        <!-- NAVIGATION PRINCIPALE -->
+        <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html" class="nav-card active">🏠 ACCUEIL</a>
             <a href="recherche.html" class="nav-card">🔬 RECHERCHE</a>
             <a href="pedagogie.html" class="nav-card">👨‍🏫 PÉDAGOGIE</a>
             <a href="contact.html" class="nav-card">✉️ CONTACT</a>
         </nav>
+
+        <!-- BARRE DE RECHERCHE -->
+        <div class="search-container" data-aos="fade-up">
+            <input type="text" id="searchInput" class="search-bar" placeholder="Rechercher un cours, un sujet, ou une annonce...">
+        </div>
         
-        <!-- PRÉSENTATION (Inchangée) -->
-        <section class="presentation">
+        <!-- PRÉSENTATION -->
+        <section class="presentation" data-aos="fade-right">
             <h2>Parcours académique et axes de recherche</h2>
-            <p style="font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                Le <strong>Pr. Mahmoud El Ahmadi</strong> est enseignant-chercheur au Département de Mathématiques de la Faculté des Sciences et Techniques (FST) de Fès. Ses activités académiques se concentrent sur l’<strong>Analyse Non Linéaire</strong>, avec une expertise spécifique portée sur l'étude des <strong>équations aux dérivées partielles (EDP)</strong> et des équations différentielles.
+            <p style="text-align: justify; margin-bottom: 15px;">
+                Le <strong>Pr. Mahmoud El Ahmadi</strong> est enseignant-chercheur au Département de Mathématiques de la FST de Fès. Ses activités se concentrent sur l’<strong>Analyse Non Linéaire</strong> et l'étude des <strong>équations aux dérivées partielles (EDP)</strong>.
             </p>
-            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                Affilié au <strong>Laboratoire de Modélisation et Structures Mathématiques (LMSM)</strong>, il mène des recherches théoriques et qualitatives sur des problèmes complexes issus des mathématiques appliquées et des sciences de l’ingénieur, privilégiant l'approche par modélisation mathématique.
-            </p>
-            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                Cette plateforme académique est dédiée à la diffusion de ressources pédagogiques (Cours, Travaux Dirigés et Annales d’Examens) à destination des étudiants de <strong>Licence et de Master</strong>. Elle a pour vocation de soutenir la formation universitaire, de favoriser l’autonomie intellectuelle des étudiants et de garantir un accès structuré et pérenne aux documents scientifiques de référence.
+            <p style="text-align: justify;">
+                Affilié au <strong>LMSM</strong>, il travaille sur la modélisation mathématique appliquée aux problèmes complexes de l'ingénieur.
             </p>
         </section>
         
         <div class="resources-grid">
-            <div class="resource-card" style="border-top-color: #dc3545;">
-                <span class="resource-icon">📢</span>
-                <h3>ANNONCES PÉDAGOGIQUES</h3>
+            <div class="resource-card" data-aos="zoom-in" style="border-top-color: #dc3545;">
+                <h3>📢 ANNONCES PÉDAGOGIQUES</h3>
                 <ul class="resource-list">
-                    <li><strong>Ressources :</strong> Les supports de cours et les séries de TD sont mis à jour périodiquement selon l'avancement du programme.</li>
-                    <li><strong>Communication :</strong> Pour toute correspondance officielle, l'usage de votre adresse institutionnelle <em>(@usmba.ac.ma)</em> est impératif.</li>
-                    <li><strong>Méthodologie :</strong> La préparation rigoureuse des exercices de TD est une condition nécessaire à la validation des modules.</li>
+                    <li><strong>Ressources :</strong> Mis à jour selon l'avancement du programme.</li>
+                    <li><strong>Communication :</strong> Utilisez l'adresse <em>@usmba.ac.ma</em>.</li>
+                    <li><strong>Méthodologie :</strong> La préparation des TD est indispensable.</li>
                 </ul>
             </div>
             
-            <div class="resource-card" style="border-top-color: #28a745;">
-                <span class="resource-icon">🔗</span>
-                <h3>RÉFÉRENCES UTILES</h3>
+            <div class="resource-card" data-aos="zoom-in" data-aos-delay="200" style="border-top-color: #28a745;">
+                <h3>🔗 RÉFÉRENCES UTILES</h3>
                 <ul class="resource-list">
-                    <li><a href="https://ent-fst.usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Espace Numérique (ENT)</a></li>
-                    <li><a href="https://elearn.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Plateforme Moodle FST</a></li>
-                    <li><a href="https://memoirepfe.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">
-    Bibliothèque FST Fès (Mémoires PFE)</a></li>
-                    <li><a href="http://exo7.emath.fr/" target="_blank" style="color:#0056b3;">Exo7 : Cours et exercices</a></li>
-                    <li><a href="https://www.bibmath.net/" target="_blank" style="color:#0056b3;">BibMath : Bibliothèque des maths</a></li>
-                    <li><a href="https://www.wolframalpha.com/" target="_blank" style="color:#0056b3;">Wolfram Alpha – Calcul formel et numérique</a></li>
+                    <li><a href="https://ent-fst.usmba.ac.ma/" target="_blank">Espace Numérique (ENT)</a></li>
+                    <li><a href="https://elearn.fst-usmba.ac.ma/" target="_blank">Plateforme Moodle FST</a></li>
+                    <li><a href="https://www.bibmath.net/" target="_blank">BibMath : Bibliothèque des maths</a></li>
+                    <li><a href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a></li>
                 </ul>
             </div>
         </div>
         
-        <!-- FOOTER (Inchangé) -->
-        <footer class="professor-footer">
-            <h3 style="font-size: 1.8em; margin-bottom: 20px;">Département de Mathématiques</h3>
-            <p>Faculté des Sciences et Techniques de Fès</p>
-            
+        <!-- FOOTER -->
+        <footer class="professor-footer" data-aos="fade-up">
+            <h3>Département de Mathématiques</h3>
             <div class="contact-info">
                 <div class="contact-item">
                     <h4>📍 Localisation</h4>
-                    <p>FST de Fès, Route d'Imouzzer, BP 2202, Fès</p>
+                    <p>FST de Fès, Route d'Imouzzer, BP 2202</p>
                 </div>
-                
                 <div class="contact-item">
                     <h4>📧 Correspondance</h4>
-                    <p>mahmoud.elahmadi@usmba.ac.ma<br>Réponse sous 48h ouvrées</p>
-                </div>
-                
-                <div class="contact-item">
-                    <h4>🕒 Permanence</h4>
-                    <p>Réception sur rendez-vous<br>à solliciter par courriel institutionnel</p>
+                    <p>mahmoud.elahmadi@usmba.ac.ma</p>
                 </div>
             </div>
-
-            <div class="footer-links">
-                <a href="http://www.fst-usmba.ac.ma/" target="_blank">🌐 Portail FST Fès</a>
-                <a href="https://www.usmba.ac.ma" target="_blank">🏛️ Université USMBA</a>
-                <a href="https://fst-usmba.ac.ma/emploi-du-temps/" target="_blank">📅 Emplois du Temps</a>
-            </div>
-            
             <div class="signature">
                 <p>"La rigueur mathématique est le fondement de toute pensée scientifique structurée."</p>
-                <p style="margin-top: 15px;">© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
+                <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
             </div>
         </footer>
     </div>
+
+    <!-- SCRIPTS POUR ANIMATIONS ET RECHERCHE -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Script de recherche interne
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let filter = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.resource-card, .presentation');
+            cards.forEach(card => {
+                let text = card.innerText.toLowerCase();
+                card.style.display = text.includes(filter) ? "block" : "none";
+            });
+        });
+    </script>
 </body>
 </html>
