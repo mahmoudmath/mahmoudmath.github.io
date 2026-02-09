@@ -1,418 +1,84 @@
-/* ==================== */
-/* AMÉLIORATIONS VISUELLES PROFESSIONNELLES */
-/* ==================== */
+/* --- IMPORTATION DES POLICES --- */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@300;400;600&display=swap');
 
-/* --- NAVIGATION PRINCIPALE AMÉLIORÉE --- */
-.academic-nav {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin: 40px 0;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* --- AJOUT DES MARGES : DEFINITION DU CONTAINER --- */
+.container {
+    max-width: 1200px; /* Limite la largeur pour créer les marges à gauche et à droite */
+    margin: 0 auto;    /* Centre tout le bloc au milieu de l'écran */
+    padding: 0 20px;   /* Sécurité pour ne pas toucher les bords sur mobile */
 }
 
-.nav-card {
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
-    border: 2px solid transparent;
-    border-radius: 16px;
-    padding: 28px 20px;
-    text-align: center;
-    text-decoration: none;
+body {
+    background-color: #f4f7f9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230056b3' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95V4L10 66l86 29zm-7 0l-67-23 67-23V95zM10 54L96 4 10 24v30zm7 0l67-23-67-23v46zm0 0L46 40 10 54zM0 100L80 0H0v100zm8-8l64-80H8v80zM0 0l100 100V0H0zm92 8L8 92h84V8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    min-height: 100vh;
     color: #333;
-    font-weight: 700;
-    font-size: 1.1em;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 130px;
-    letter-spacing: 0.5px;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Effet de brillance subtile */
-.nav-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    transition: left 0.7s ease;
-    z-index: 1;
+/* --- EN-TÊTE (STYLE ORIGINAL) --- */
+.professor-header {
+    background: linear-gradient(135deg, #004488 0%, #002d5f 100%);
+    color: white; padding: 40px 50px; border-radius: 20px;
+    margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0, 45, 95, 0.3);
+    display: flex; align-items: center; justify-content: space-between;
 }
+.header-photo, .header-logo {
+    width: 210px; height: 210px; border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden; background: white; display: flex; 
+    align-items: center; justify-content: center; flex-shrink: 0;
+}
+.header-photo img { width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+.header-logo img { width: 85%; height: auto; object-fit: contain; }
+.header-content { flex: 1; text-align: center; padding: 0 30px; }
+.professor-name { font-size: 3.2em; font-weight: 700; font-family: 'Crimson Pro', serif; }
+.institution-badge { background: rgba(255, 255, 255, 0.1); padding: 12px 30px; border-radius: 50px; display: inline-block; border: 1px solid rgba(255, 255, 255, 0.2); margin-top: 10px;}
+.faculty-highlight { color: #ffcc00; font-weight: 700; }
 
-.nav-card:hover::before {
-    left: 100%;
+/* --- NAVIGATION (STYLE ORIGINAL) --- */
+.academic-nav { display: flex; justify-content: center; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
+.nav-card {
+    background: white; color: #0056b3; padding: 15px 30px; border-radius: 12px;
+    font-weight: 600; border: 2px solid #0056b3; min-width: 180px; text-align: center; transition: 0.3s;
+    text-decoration: none; /* Ajouté pour éviter le soulignement des liens */
 }
+.nav-card:hover { background: #0056b3; color: white; transform: translateY(-5px); }
+.nav-card.active { background: #0056b3; color: white; }
 
-/* Contenu au-dessus de l'effet de brillance */
-.nav-card > * {
-    position: relative;
-    z-index: 2;
+/* --- CARTES ET PRÉSENTATION (STYLE ORIGINAL) --- */
+.presentation, .resource-card {
+    background: white; padding: 40px; border-radius: 15px; margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
+.presentation { border-left: 8px solid #0056b3; }
+.resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.resource-list { list-style: none; margin: 20px 0; }
+.resource-list li { padding: 10px 0 10px 30px; border-bottom: 1px solid #eee; position: relative; }
+.resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
 
-/* Bordures colorées spécifiques pour chaque carte */
-.nav-card:nth-child(1) { /* ACCUEIL */
-    border-color: #0056b3;
-    background: linear-gradient(135deg, #e6f0ff, #ffffff);
-}
-.nav-card:nth-child(2) { /* RECHERCHE */
-    border-color: #28a745;
-    background: linear-gradient(135deg, #e6ffed, #ffffff);
-}
-.nav-card:nth-child(3) { /* PÉDAGOGIE */
-    border-color: #6f42c1;
-    background: linear-gradient(135deg, #f0e6ff, #ffffff);
-}
-.nav-card:nth-child(4) { /* CONTACT */
-    border-color: #fd7e14;
-    background: linear-gradient(135deg, #fff3e6, #ffffff);
-}
-
-/* Effets au survol */
-.nav-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* Carte active (ACCUEIL) */
-.nav-card.active {
-    border-width: 3px;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 86, 179, 0.25);
-}
-
-/* Icônes dans les cartes de navigation */
-.nav-card::after {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    display: block;
-}
-
-/* Texte des cartes de navigation */
-.nav-card span {
-    font-size: 1.15em;
-    font-weight: 700;
-    background: linear-gradient(90deg, #0056b3, #007bff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* --- CARTES DE RESSOURCES AMÉLIORÉES (ANNONCES et RÉFÉRENCES) --- */
-.resources-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 35px;
-    margin: 45px 0;
-}
-
-.resource-card {
-    background: white;
-    border-radius: 18px;
-    padding: 35px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-    border-top: 8px solid;
-}
-
-/* Effet de brillance au survol pour les cartes de ressources */
-.resource-card::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 1%, transparent 20%);
-    transform: scale(0);
-    transition: transform 0.6s ease;
-    z-index: 1;
-}
-
-.resource-card:hover::after {
-    transform: scale(1);
-}
-
-/* Contenu au-dessus de l'effet de brillance */
-.resource-card > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Première carte - ANNONCES PÉDAGOGIQUES */
-.resource-card:nth-child(1) {
-    border-top-color: #dc3545;
-    background: linear-gradient(145deg, #fff5f5, #ffffff);
-}
-
-.resource-card:nth-child(1):hover {
-    box-shadow: 0 15px 40px rgba(220, 53, 69, 0.18);
-    transform: translateY(-8px);
-}
-
-.resource-card:nth-child(1) h3 {
-    color: #dc3545;
-    font-size: 1.85em;
-    margin-bottom: 25px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.resource-card:nth-child(1) .resource-list li {
-    border-left: 4px solid #dc3545;
-    padding-left: 18px;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-    line-height: 1.6;
-}
-
-.resource-card:nth-child(1) .resource-list li:hover {
-    background: rgba(220, 53, 69, 0.05);
-    padding-left: 22px;
-}
-
-/* Deuxième carte - RÉFÉRENCES UTILES */
-.resource-card:nth-child(2) {
-    border-top-color: #28a745;
-    background: linear-gradient(145deg, #f5fff7, #ffffff);
-}
-
-.resource-card:nth-child(2):hover {
-    box-shadow: 0 15px 40px rgba(40, 167, 69, 0.18);
-    transform: translateY(-8px);
-}
-
-.resource-card:nth-child(2) h3 {
-    color: #28a745;
-    font-size: 1.85em;
-    margin-bottom: 25px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.resource-card:nth-child(2) .resource-list li {
-    border-left: 4px solid #28a745;
-    padding-left: 18px;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
-    line-height: 1.6;
-}
-
-.resource-card:nth-child(2) .resource-list li:hover {
-    background: rgba(40, 167, 69, 0.05);
-    padding-left: 22px;
-}
-
-/* Liens dans la carte Références */
-.resource-card:nth-child(2) a {
-    color: #0056b3;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    padding: 2px 0;
-    border-bottom: 1px dotted transparent;
-}
-
-.resource-card:nth-child(2) a:hover {
-    color: #003d82;
-    border-bottom-color: #0056b3;
-    transform: translateX(3px);
-}
-
-/* Icônes des cartes de ressources */
-.resource-card > div:first-child {
-    text-align: center;
-    font-size: 2.8em;
-    margin-bottom: 20px;
-    transition: transform 0.4s ease;
-}
-
-.resource-card:hover > div:first-child {
-    transform: scale(1.1);
-}
-
-/* --- AMÉLIORATION DE LA SECTION DE PRÉSENTATION --- */
-.presentation {
-    border-left: 8px solid #0056b3;
-    padding: 45px;
-    margin-bottom: 45px;
-    background: linear-gradient(to right, #ffffff, #f8fafc);
-    position: relative;
-    overflow: hidden;
-}
-
-.presentation::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, rgba(0, 86, 179, 0.05) 0%, transparent 70%);
-    border-radius: 0 0 0 100%;
-}
-
-.presentation h2 {
-    color: #0056b3;
-    font-size: 2.1em;
-    margin-bottom: 25px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.presentation h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #0056b3, #007bff);
-    border-radius: 2px;
-}
-
-/* --- BOUTON RETOUR EN HAUT AMÉLIORÉ --- */
-#backToTop {
-    display: none;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background: linear-gradient(135deg, #0056b3, #007bff);
-    color: white;
-    border: none;
-    padding: 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1000;
-    font-size: 1.2em;
-    box-shadow: 0 5px 20px rgba(0, 86, 179, 0.4);
-    transition: all 0.3s ease;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#backToTop:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 86, 179, 0.6);
-    background: linear-gradient(135deg, #004a9e, #0069d9);
-}
-
-/* --- RECHERCHE AMÉLIORÉE --- */
-.search-bar {
-    width: 100%;
-    padding: 18px 25px;
-    border-radius: 35px;
-    border: 2px solid #0056b3;
-    outline: none;
-    font-size: 1.05em;
-    background: white;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.1);
-}
-
-.search-bar:focus {
-    border-color: #007bff;
-    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
-    transform: translateY(-2px);
-}
-
+/* --- RECHERCHE (STYLE ORIGINAL) --- */
+.search-container { max-width: 700px; margin: 0 auto 30px auto; position: relative; }
+.search-bar { width: 100%; padding: 18px 25px; border-radius: 35px; border: 2px solid #0056b3; outline: none; }
 #searchResultsBox {
-    display: none;
-    position: absolute;
-    width: 100%;
-    z-index: 2000;
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    border: 2px solid #0056b3;
-    margin-top: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    animation: fadeIn 0.3s ease;
+    display:none; position: absolute; width: 100%; z-index: 2000; 
+    background: white; padding: 20px; border-radius: 15px; 
+    border: 2px solid #0056b3; margin-top: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
+.search-link { 
+    display: block; color: #0056b3; font-weight: bold; background: #f0f7ff; 
+    padding: 12px; border-radius: 8px; margin-bottom: 8px; text-decoration: none; 
+}
+.search-link:hover { background: #0056b3; color: white; }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+/* --- FOOTER (STYLE ORIGINAL) --- */
+.professor-footer { background: #002d5f; color: white; padding: 50px 40px; margin-top: 60px; border-radius: 20px; text-align: center; }
+.contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 30px 0; }
+.contact-item { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; }
+.contact-item h4 { color: #ffc107; margin-bottom: 10px; }
+.footer-links { display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap; }
+.signature { margin-top: 30px; font-style: italic; opacity: 0.8; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; }
 
-.search-link {
-    display: block;
-    color: #0056b3;
-    font-weight: 600;
-    background: #f0f7ff;
-    padding: 14px 18px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-left: 4px solid #0056b3;
-}
-
-.search-link:hover {
-    background: #0056b3;
-    color: white;
-    transform: translateX(5px);
-    border-left-color: white;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 992px) {
-    .resources-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .academic-nav {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .professor-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-    }
-    
-    .header-photo, .header-logo {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 20px;
-    }
-    
-    .header-content {
-        padding: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .academic-nav {
-        grid-template-columns: 1fr;
-    }
-    
-    .nav-card {
-        min-height: 110px;
-        padding: 22px 15px;
-    }
-    
-    .resource-card {
-        padding: 25px;
-    }
-    
-    .presentation {
-        padding: 30px;
-    }
-    
-    .search-bar {
-        padding: 15px 20px;
-    }
-}
+#backToTop { display: none; position: fixed; bottom: 30px; right: 30px; background: #0056b3; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 1000; }
