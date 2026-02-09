@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recherche - Pr. Mahmoud El Ahmadi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header class="professor-header">
+        <header class="professor-header" data-aos="fade-down">
             <div class="professor-name">Activités de Recherche</div>
-            <div class="professor-title">Sélectionnez une catégorie</div>
+            <div class="professor-title">EDP et Analyse Non Linéaire</div>
         </header>
 
-        <nav class="academic-nav">
+        <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
+            <a href="recherche.html" class="nav-card active">🔬 RECHERCHE</a>
         </nav>
 
+        <!-- SECTION PROFILS SCIENTIFIQUES (VOS LIENS ICI) -->
+        <div class="presentation" data-aos="fade-up" style="text-align: center; border-left: none; border-top: 4px solid #0056b3;">
+            <h3>Profils Scientifiques Officiels</h3>
+            <div class="research-links">
+                <!-- METTEZ VOTRE LIEN GOOGLE SCHOLAR CI-DESSOUS -->
+                <a href="https://scholar.google.com/VOTRE_PROFIL" target="_blank" class="btn-scientific">
+                    <i class="fa-solid fa-graduation-cap" style="color: #4285F4; font-size: 1.5em;"></i> Google Scholar
+                </a>
+                
+                <!-- METTEZ VOTRE LIEN RESEARCHGATE CI-DESSOUS -->
+                <a href="https://www.researchgate.net/profile/VOTRE_PROFIL" target="_blank" class="btn-scientific">
+                    <i class="fa-brands fa-researchgate" style="color: #00ccbb; font-size: 1.5em;"></i> ResearchGate
+                </a>
+            </div>
+        </div>
+
         <div class="resources-grid">
-            <!-- CASE 1 : ARTICLES -->
-            <a href="articles.html" class="resource-card" style="text-decoration: none; color: inherit; border-top-color: #0056b3;">
-                <span class="resource-icon">📄</span>
+            <a href="articles.html" class="resource-card" data-aos="zoom-in">
+                <span style="font-size: 2em;">📄</span>
                 <h3>ARTICLES</h3>
                 <p>Revues Indexées (Scopus / WoS)</p>
-                <span style="color: #0056b3; font-weight: bold; display: block; margin-top: 10px;">Accéder →</span>
+                <span style="color: #0056b3; font-weight: bold; display: block; margin-top: 15px;">Consulter la liste →</span>
             </a>
 
-            <!-- CASE 2 : COMMUNICATIONS -->
-            <a href="communications.html" class="resource-card" style="text-decoration: none; color: inherit; border-top-color: #28a745;">
-                <span class="resource-icon">🎤</span>
+            <a href="communications.html" class="resource-card" data-aos="zoom-in" data-aos-delay="200" style="border-top-color: #28a745;">
+                <span style="font-size: 2em;">🎤</span>
                 <h3>COMMUNICATIONS</h3>
                 <p>Congrès Nationaux & Internationaux</p>
-                <span style="color: #28a745; font-weight: bold; display: block; margin-top: 10px;">Accéder →</span>
+                <span style="color: #28a745; font-weight: bold; display: block; margin-top: 15px;">Consulter la liste →</span>
             </a>
         </div>
 
         <footer class="professor-footer">
-            <div class="signature">
-                <p>© 2025 Pr. Mahmoud El Ahmadi - USMBA, FST de Fès</p>
-            </div>
+            <p>© 2026 Pr. Mahmoud El Ahmadi - Laboratoire LMSM</p>
         </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
