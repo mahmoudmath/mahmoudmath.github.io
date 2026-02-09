@@ -224,31 +224,38 @@ body {
 
 /* 2. REPARATION PHOTO DE PROFIL */
 .header-photo {
-    overflow: hidden !important; /* On force le cercle à couper ce qui dépasse */
+    overflow: hidden !important;
     border-radius: 50% !important;
-    background: white; /* Pour éviter les bords transparents */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-photo img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Très important : l'image remplira tout le cercle sans laisser de blanc */
-    display: block;
+    object-fit: cover !important; /* Remplit tout le cercle */
+    transform: scale(1.05); /* Zoom de 5% pour être sûr qu'aucun bord blanc ne dépasse */
 }
 
 /* 3. REPARATION DU LOGO (à droite) */
 /* On va appliquer la même logique au conteneur du logo. 
    D'après votre image, c'est l'élément qui a la forme bizarre à droite. */
 
-.professor-header > div:last-child, 
-.header-logo { /* Remplacez .header-logo par la vraie classe du logo si vous la connaissez */
+.professor-header .header-logo, 
+.professor-header > div:last-child {
     overflow: hidden !important;
     border-radius: 50% !important;
-    background: white;
+    background: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
+.professor-header .header-logo img,
 .professor-header > div:last-child img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* 'contain' pour ne pas couper le logo de l'université */
+    width: 85% !important;  /* On réduit à 85% pour laisser de l'air sur les bords */
+    height: 85% !important;
+    object-fit: contain !important; /* 'contain' pour que le logo ne soit jamais coupé */
 }
+
