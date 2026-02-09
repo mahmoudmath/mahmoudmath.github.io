@@ -3,11 +3,11 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* --- AJOUT DES MARGES ET DU CENTRAGE --- */
+/* --- AJOUT DES MARGES : DEFINITION DU CONTAINER --- */
 .container {
-    max-width: 1200px; /* Largeur maximale pour créer les marges à gauche et à droite */
-    margin: 0 auto;    /* Centre tout le bloc sur la page */
-    padding: 0 20px;   /* Sécurité pour les petits écrans */
+    max-width: 1200px; /* Limite la largeur pour créer les marges à gauche et à droite */
+    margin: 0 auto;    /* Centre tout le bloc au milieu de l'écran */
+    padding: 0 20px;   /* Sécurité pour ne pas toucher les bords sur mobile */
 }
 
 body {
@@ -16,11 +16,9 @@ body {
     min-height: 100vh;
     color: #333;
     font-family: 'Inter', sans-serif;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
-/* --- EN-TÊTE (VOTRE STYLE ORIGINAL) --- */
+/* --- EN-TÊTE (STYLE ORIGINAL) --- */
 .professor-header {
     background: linear-gradient(135deg, #004488 0%, #002d5f 100%);
     color: white; padding: 40px 50px; border-radius: 20px;
@@ -40,17 +38,17 @@ body {
 .institution-badge { background: rgba(255, 255, 255, 0.1); padding: 12px 30px; border-radius: 50px; display: inline-block; border: 1px solid rgba(255, 255, 255, 0.2); margin-top: 10px;}
 .faculty-highlight { color: #ffcc00; font-weight: 700; }
 
-/* --- NAVIGATION (VOTRE STYLE ORIGINAL) --- */
+/* --- NAVIGATION (STYLE ORIGINAL) --- */
 .academic-nav { display: flex; justify-content: center; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
 .nav-card {
     background: white; color: #0056b3; padding: 15px 30px; border-radius: 12px;
     font-weight: 600; border: 2px solid #0056b3; min-width: 180px; text-align: center; transition: 0.3s;
-    text-decoration: none;
+    text-decoration: none; /* Ajouté pour éviter le soulignement des liens */
 }
 .nav-card:hover { background: #0056b3; color: white; transform: translateY(-5px); }
 .nav-card.active { background: #0056b3; color: white; }
 
-/* --- CARTES ET PRÉSENTATION (VOTRE STYLE ORIGINAL) --- */
+/* --- CARTES ET PRÉSENTATION (STYLE ORIGINAL) --- */
 .presentation, .resource-card {
     background: white; padding: 40px; border-radius: 15px; margin-bottom: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -61,7 +59,7 @@ body {
 .resource-list li { padding: 10px 0 10px 30px; border-bottom: 1px solid #eee; position: relative; }
 .resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
 
-/* --- RECHERCHE (VOTRE STYLE ORIGINAL) --- */
+/* --- RECHERCHE (STYLE ORIGINAL) --- */
 .search-container { max-width: 700px; margin: 0 auto 30px auto; position: relative; }
 .search-bar { width: 100%; padding: 18px 25px; border-radius: 35px; border: 2px solid #0056b3; outline: none; }
 #searchResultsBox {
@@ -75,7 +73,7 @@ body {
 }
 .search-link:hover { background: #0056b3; color: white; }
 
-/* --- FOOTER (VOTRE STYLE ORIGINAL) --- */
+/* --- FOOTER (STYLE ORIGINAL) --- */
 .professor-footer { background: #002d5f; color: white; padding: 50px 40px; margin-top: 60px; border-radius: 20px; text-align: center; }
 .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 30px 0; }
 .contact-item { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; }
