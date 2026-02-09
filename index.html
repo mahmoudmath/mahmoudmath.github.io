@@ -10,16 +10,21 @@
 </head>
 <body>
     <div class="container">
+        <!-- EN-TÊTE -->
         <header class="professor-header" data-aos="fade-down">
             <div class="header-photo"><img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi"></div>
             <div class="header-content">
                 <div class="professor-name">Pr. Mahmoud El Ahmadi</div>
                 <div class="professor-title">Professeur de Mathématiques</div>
-                <div class="institution"><span class="university">Faculté des Sciences et Techniques de Fès</span><br>Université Sidi Mohamed Ben Abdellah (USMBA)</div>
+                <div class="institution">
+                    <span class="university">Faculté des Sciences et Techniques de Fès</span><br>
+                    Université Sidi Mohamed Ben Abdellah (USMBA)
+                </div>
             </div>
             <div class="header-logo"><img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST"></div>
         </header>
         
+        <!-- NAVIGATION -->
         <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html" class="nav-card active">🏠 ACCUEIL</a>
             <a href="recherche.html" class="nav-card">🔬 RECHERCHE</a>
@@ -27,51 +32,73 @@
             <a href="contact.html" class="nav-card">✉️ CONTACT</a>
         </nav>
 
+        <!-- MESSAGE DE BIENVENUE -->
+        <div class="presentation" data-aos="fade-up" style="border-left: none; border-bottom: 5px solid #0056b3; text-align: center; background: rgba(0, 86, 179, 0.03); margin-bottom: 30px;">
+            <h2 style="color: #0056b3; margin-bottom: 10px; font-family: 'Crimson Pro', serif;">Bienvenue sur votre plateforme académique</h2>
+            <p style="font-size: 1.15em; color: #444; font-style: italic;">
+                "Un espace dédié à la transmission du savoir mathématique et à l'accompagnement des étudiants vers l'excellence."
+            </p>
+        </div>
+
+        <!-- BARRE DE RECHERCHE AMÉLIORÉE -->
         <div class="search-container" data-aos="fade-up">
-            <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher un cours, une référence, une annonce...">
+            <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher : Analyse 1, EDP, Série 2, Examen 2025...">
+            <p id="noResults" style="display:none; color: #dc3545; text-align: center; margin-top: 20px; font-weight: bold; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                Aucun résultat ne correspond à votre recherche. Essayez avec d'autres mots-clés (ex: Analyse, TD, Examens).
+            </p>
         </div>
         
-        <section class="presentation" data-aos="fade-right">
+        <!-- PARCOURS ET RECHERCHE (Section Chercheur) -->
+        <section class="presentation search-item" data-aos="fade-right">
             <h2>Parcours académique et axes de recherche</h2>
             <p style="font-size: 1.1em; line-height: 1.8; text-align: justify; margin-top: 15px;">
-                Le <strong>Pr. Mahmoud El Ahmadi</strong> est enseignant-chercheur au Département de Mathématiques de la Faculté des Sciences et Techniques (FST) de Fès. Ses activités académiques se concentrent sur l’<strong>Analyse Non Linéaire</strong>, avec une expertise spécifique portée sur l'étude des <strong>équations aux dérivées partielles (EDP)</strong> et des équations différentielles.
+                Le <strong>Pr. Mahmoud El Ahmadi</strong> est enseignant-chercheur au Département de Mathématiques de la FST de Fès. Ses activités se concentrent sur l’<strong>Analyse Non Linéaire</strong>, l'étude des <strong>équations aux dérivées partielles (EDP)</strong> et des équations différentielles.
             </p>
             <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                Affilié au <strong>Laboratoire de Modélisation et Structures Mathématiques (LMSM)</strong>, il mène des recherches théoriques et qualitatives sur des problèmes complexes issus des mathématiques appliquées et des sciences de l’ingénieur, privilégiant l'approche par modélisation mathématique.
+                Affilié au <strong>LMSM</strong>, il privilégie l'approche par modélisation mathématique pour résoudre des problèmes complexes issus des sciences de l'ingénieur.
             </p>
-            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                Cette plateforme académique est dédiée à la diffusion de ressources pédagogiques (Cours, Travaux Dirigés et Annales d’Examens) à destination des étudiants de <strong>Licence et de Master</strong>. Elle a pour vocation de soutenir la formation universitaire, de favoriser l’autonomie intellectuelle des étudiants et de garantir un accès structuré et pérenne aux documents scientifiques de référence.
-            </p>
+            <!-- LISTE DE MOTS CLÉS POUR LA RECHERCHE (CACHÉE) -->
+            <span class="hidden-keywords" style="display:none;">
+                recherche articles communications chercheur lmsm laboratoire edp equations derivees partielles analyse non lineaire modelisation mathématique equations differentielles doctorat parcours biographie
+            </span>
         </section>
         
         <div class="resources-grid">
-            <div class="resource-card" data-aos="zoom-in" style="border-top-color: #dc3545;">
+            <!-- CARTE PÉDAGOGIE (La plus importante pour les étudiants) -->
+            <div class="resource-card search-item" data-aos="zoom-in" style="border-top-color: #dc3545;">
                 <span style="font-size: 1.5em;">📢</span>
                 <h3>ANNONCES PÉDAGOGIQUES</h3>
                 <ul class="resource-list">
-                    <li><strong>Ressources :</strong> Les supports de cours et les séries de TD sont mis à jour périodiquement selon l'avancement du programme.</li>
-                    <li><strong>Communication :</strong> Pour toute correspondance officielle, l'usage de votre adresse institutionnelle <em>(@usmba.ac.ma)</em> est impératif.</li>
-                    <li><strong>Méthodologie :</strong> La préparation rigoureuse des exercices de TD est une condition nécessaire à la validation des modules.</li>
+                    <li><strong>Ressources :</strong> Supports de cours, séries de TD et examens mis à jour.</li>
+                    <li><strong>Communication :</strong> Contact via adresse institutionnelle @usmba.ac.ma.</li>
+                    <li><strong>Méthodologie :</strong> Importance de la préparation des exercices de TD.</li>
                 </ul>
+                <!-- MOTS CLÉS EXHAUSTIFS POUR LES ÉTUDIANTS -->
+                <span class="hidden-keywords" style="display:none;">
+                    pedagogie cours td travaux dirigés exercices séries serie 1 serie 2 serie 3 serie 4 examens controles annales rattrapage sessions 
+                    analyse 1 analyse i analyse 2 analyse ii analyse 4 analyse iv 
+                    2024 2025 2026 semestre s1 s2 s3 s4 licence master supports ressources
+                </span>
             </div>
             
-            <div class="resource-card" data-aos="zoom-in" data-aos-delay="200" style="border-top-color: #28a745;">
+            <!-- CARTE RÉFÉRENCES -->
+            <div class="resource-card search-item" data-aos="zoom-in" data-aos-delay="200" style="border-top-color: #28a745;">
                 <span style="font-size: 1.5em;">🔗</span>
                 <h3>RÉFÉRENCES UTILES</h3>
                 <ul class="resource-list">
-                    <li><a href="https://ent-fst.usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Espace Numérique (ENT)</a></li>
-                    <li><a href="https://elearn.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Plateforme Moodle FST</a></li>
-                    <li><a href="https://memoirepfe.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Bibliothèque FST Fès (Mémoires PFE)</a></li>
-                    <li><a href="http://exo7.emath.fr/" target="_blank" style="color:#0056b3;">Exo7 : Cours et exercices</a></li>
-                    <li><a href="https://www.bibmath.net/" target="_blank" style="color:#0056b3;">BibMath : Bibliothèque des maths</a></li>
-                    <li><a href="https://www.wolframalpha.com/" target="_blank" style="color:#0056b3;">Wolfram Alpha – Calcul formel et numérique</a></li>
+                    <li><a href="https://ent-fst.usmba.ac.ma/" target="_blank">Espace Numérique (ENT)</a></li>
+                    <li><a href="https://elearn.fst-usmba.ac.ma/" target="_blank">Plateforme Moodle FST</a></li>
+                    <li><a href="https://www.bibmath.net/" target="_blank">BibMath : Bibliothèque des maths</a></li>
                 </ul>
+                <!-- MOTS CLÉS POUR LES RÉFÉRENCES -->
+                <span class="hidden-keywords" style="display:none;">
+                    liens utiles ent moodle bibliothèque pfe memoires memoire fst usmba wolfram alpha exo7 ressources en ligne aide
+                </span>
             </div>
         </div>
         
         <footer class="professor-footer" data-aos="fade-up">
             <h3 style="font-size: 1.8em; margin-bottom: 20px;">Département de Mathématiques</h3>
-            <p>Faculté des Sciences et Techniques de Fès</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <h4>📍 Localisation</h4>
@@ -79,35 +106,54 @@
                 </div>
                 <div class="contact-item">
                     <h4>📧 Correspondance</h4>
-                    <p>mahmoud.elahmadi@usmba.ac.ma<br>Réponse sous 48h ouvrées</p>
+                    <p>mahmoud.elahmadi@usmba.ac.ma</p>
                 </div>
-                <div class="contact-item">
-                    <h4>🕒 Permanence</h4>
-                    <p>Réception sur rendez-vous<br>à solliciter par courriel institutionnel</p>
-                </div>
-            </div>
-            <div class="footer-links">
-                <a href="http://www.fst-usmba.ac.ma/" target="_blank">🌐 Portail FST Fès</a>
-                <a href="https://www.usmba.ac.ma" target="_blank">🏛️ Université USMBA</a>
-                <a href="https://fst-usmba.ac.ma/emploi-du-temps/" target="_blank">📅 Emplois du Temps</a>
             </div>
             <div class="signature">
                 <p>"La rigueur mathématique est le fondement de toute pensée scientifique structurée."</p>
-                <p style="margin-top: 15px;">© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
+                <p style="margin-top: 15px;">© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
             </div>
         </footer>
     </div>
+
+    <!-- SCRIPT DE RECHERCHE DYNAMIQUE -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialisation des animations
         AOS.init({ duration: 1000, once: true });
-        document.getElementById('searchInput').addEventListener('keyup', function() {
-            let filter = this.value.toLowerCase();
-            let cards = document.querySelectorAll('.resource-card, .presentation p');
-            cards.forEach(card => {
-                let text = card.innerText.toLowerCase();
-                card.closest('.resource-card, .presentation') ? card.style.display = text.includes(filter) ? "block" : "none" : null;
+
+        // Logique de recherche
+        const searchInput = document.getElementById('searchInput');
+        const searchItems = document.querySelectorAll('.search-item');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            let found = false;
+
+            searchItems.forEach(item => {
+                // On récupère tout le texte (visible + mots-clés cachés)
+                const content = item.textContent.toLowerCase();
+                
+                if (content.includes(query)) {
+                    item.style.display = ""; // On affiche
+                    item.style.animation = "fadeIn 0.5s";
+                    found = true;
+                } else {
+                    item.style.display = "none"; // On cache
+                }
             });
+
+            // Affichage du message si rien n'est trouvé
+            noResults.style.display = (found || query === "") ? "none" : "block";
         });
     </script>
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </body>
 </html>
