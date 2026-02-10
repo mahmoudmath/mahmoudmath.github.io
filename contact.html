@@ -24,78 +24,79 @@
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
         </nav>
 
-        <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; margin-top: 30px;">
+       <!-- CONTACT GRID MODIFIÉ -->
+<div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch;">
+    
+    <!-- COLONNE GAUCHE : INFOS OFFICIELLES -->
+    <aside data-aos="fade-right" style="display: flex;">
+        <!-- Ajout de flex: 1 et display flex pour remplir la hauteur -->
+        <div class="presentation" style="flex: 1; border-left: 8px solid #0056b3; display: flex; flex-direction: column; width: 100%;">
+            <h3 style="color: #0056b3; margin-bottom: 25px; border-bottom: 2px solid #0056b3; padding-bottom: 10px;">Coordonnées</h3>
             
-            <!-- COLONNE GAUCHE : INFOS OFFICIELLES -->
-            <aside data-aos="fade-right">
-                <div class="presentation" style="height: 100%; border-left: 8px solid #0056b3;">
-                    <h3 style="color: #0056b3; margin-bottom: 25px; border-bottom: 2px solid #0056b3; padding-bottom: 10px;">Coordonnées</h3>
-                    
-                    <div style="margin-bottom: 25px;">
-                        <p style="font-weight: bold; color: #333;"><i class="fas fa-map-marker-alt" style="color:#0056b3; margin-right: 10px;"></i> Bureau :</p>
-                        <p style="color: #555; margin-top: 5px;">Département de Mathématiques,<br>FST de Fès.</p>
-                    </div>
+            <div style="margin-bottom: 25px;">
+                <p style="font-weight: bold; color: #333;"><i class="fas fa-map-marker-alt" style="color:#0056b3; margin-right: 10px;"></i> Bureau :</p>
+                <p style="color: #555; margin-top: 5px;">Département de Mathématiques,<br>FST de Fès.</p>
+            </div>
 
-                    <div style="margin-bottom: 25px;">
-                        <p style="font-weight: bold; color: #333;"><i class="fas fa-envelope" style="color:#0056b3; margin-right: 10px;"></i> Email :</p>
-                        <p style="color: #0056b3; font-weight: 600;">mahmoud.elahmadi@usmba.ac.ma</p>
-                    </div>
+            <div style="margin-bottom: 25px;">
+                <p style="font-weight: bold; color: #333;"><i class="fas fa-envelope" style="color:#0056b3; margin-right: 10px;"></i> Email :</p>
+                <p style="color: #0056b3; font-weight: 600; word-break: break-all;">mahmoud.elahmadi@usmba.ac.ma</p>
+            </div>
 
-                    <div style="margin-bottom: 25px;">
-                        <p style="font-weight: bold; color: #333;"><i class="fas fa-clock" style="color:#0056b3; margin-right: 10px;"></i> Permanence :</p>
-                        <p style="color: #555; margin-top: 5px;">Sur rendez-vous ou pendant les séances d’enseignement.<br>Veuillez consulter mon emploi du temps sur le site de la FST.</p>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- COLONNE DROITE : FORMULAIRE COMPLET -->
-            <main data-aos="fade-left">
-                <div class="presentation">
-                    <h3 style="color: #0056b3; margin-bottom: 25px; text-align: center;">Envoyez un message</h3>
-                    
-                    <!-- Votre action Formspree corrigée -->
-                    <form action="https://formspree.io/f/xjgekbrr" method="POST" style="display: flex; flex-direction: column; gap: 18px;">
-                        
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div style="display: flex; flex-direction: column; gap: 5px;">
-                                <label style="font-weight: 600;">Nom</label>
-                                <input type="text" name="nom" placeholder="Votre nom" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 5px;">
-                                <label style="font-weight: 600;">Prénom</label>
-                                <input type="text" name="prenom" placeholder="Votre prénom" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
-                            </div>
-                        </div>
-
-                        <div style="display: flex; flex-direction: column; gap: 5px;">
-                            <label style="font-weight: 600;">Votre Email</label>
-                            <input type="email" name="email" placeholder="votre@email.com" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
-                        </div>
-
-                        <!-- MENU DÉROULANT POUR L'OBJET -->
-                        <div style="display: flex; flex-direction: column; gap: 5px;">
-                            <label style="font-weight: 600;">Objet du message</label>
-                            <select name="objet" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none; background: white; cursor: pointer;">
-                                <option value="" disabled selected>-- Sélectionnez un sujet --</option>
-                                <option value="Question Analyse">Question sur un cours (Analyse)</option>
-                                <option value="Rendez-vous">Demande de rendez-vous</option>
-                                <option value="Collaboration">Collaboration / Recherche Scientifique</option>
-                                <option value="Autre">Autre demande</option>
-                            </select>
-                        </div>
-
-                        <div style="display: flex; flex-direction: column; gap: 5px;">
-                            <label style="font-weight: 600;">Message</label>
-                            <textarea name="message" rows="5" placeholder="Écrivez votre message ici..." required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none; resize: vertical;"></textarea>
-                        </div>
-
-                        <button type="submit" style="background:#0056b3; color:white; border:none; padding:15px; border-radius:8px; cursor:pointer; font-size: 1.1em; font-weight: bold; transition: 0.3s;">
-                            🚀 Envoyer le message
-                        </button>
-                    </form>
-                </div>
-            </main>
+            <div style="margin-bottom: 25px;">
+                <p style="font-weight: bold; color: #333;"><i class="fas fa-clock" style="color:#0056b3; margin-right: 10px;"></i> Permanence :</p>
+                <p style="color: #555; margin-top: 5px;">Sur rendez-vous ou pendant les séances d’enseignement.<br>Veuillez consulter mon emploi du temps sur le site de la FST.</p>
+            </div>
         </div>
+    </aside>
+
+    <!-- COLONNE DROITE : FORMULAIRE COMPLET -->
+    <main data-aos="fade-left" style="display: flex;">
+        <!-- Ajout de flex: 1 et de la bordure bleue pour être identique à gauche -->
+        <div class="presentation" style="flex: 1; border-left: 8px solid #0056b3; display: flex; flex-direction: column; width: 100%;">
+            <h3 style="color: #0056b3; margin-bottom: 25px; text-align: center;">Envoyez un message</h3>
+            
+            <form action="https://formspree.io/f/xjgekbrr" method="POST" style="display: flex; flex-direction: column; gap: 18px; flex: 1;">
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <label style="font-weight: 600;">Nom</label>
+                        <input type="text" name="nom" placeholder="Votre nom" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <label style="font-weight: 600;">Prénom</label>
+                        <input type="text" name="prenom" placeholder="Votre prénom" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label style="font-weight: 600;">Votre Email</label>
+                    <input type="email" name="email" placeholder="votre@email.com" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label style="font-weight: 600;">Objet du message</label>
+                    <select name="objet" required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none; background: white; cursor: pointer;">
+                        <option value="" disabled selected>-- Sélectionnez un sujet --</option>
+                        <option value="Question Analyse">Question sur un cours (Analyse)</option>
+                        <option value="Rendez-vous">Demande de rendez-vous</option>
+                        <option value="Collaboration">Collaboration / Recherche Scientifique</option>
+                        <option value="Autre">Autre demande</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 5px; flex: 1;">
+                    <label style="font-weight: 600;">Message</label>
+                    <textarea name="message" placeholder="Écrivez votre message ici..." required style="padding:12px; border-radius:8px; border:1px solid #ddd; outline: none; resize: none; height: 100%; min-height: 120px;"></textarea>
+                </div>
+
+                <button type="submit" style="background:#0056b3; color:white; border:none; padding:15px; border-radius:8px; cursor:pointer; font-size: 1.1em; font-weight: bold; transition: 0.3s; margin-top: auto;">
+                    🚀 Envoyer le message
+                </button>
+            </form>
+        </div>
+    </main>
+</div>
 
         <footer class="professor-footer" style="margin-top: 40px;">
             <div class="signature"><p>© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p></div>
