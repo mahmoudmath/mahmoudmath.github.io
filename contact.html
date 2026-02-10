@@ -106,50 +106,60 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+    AOS.init();
 
-        // --- SCRIPT POUR LE MESSAGE DE SUCCÈS ---
-        const form = document.getElementById("contact-form");
-        const status = document.getElementById("contact-status");
-        const button = document.getElementById("submit-button");
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("contact-status");
+    const button = document.getElementById("submit-button");
 
-        form.addEventListener("submit", async function(event) {
-            event.preventDefault(); // Empêche le rechargement de la page
-            const data = new FormData(event.target);
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
 
-            // Interface "En cours"
-            button.disabled = true;
-            button.innerHTML = "⌛ Envoi en cours...";
+        // État initial lors du clic
+        button.disabled = true;
+        button.innerHTML = "⌛ Envoi en cours...";
 
-            fetch(event.target.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    // MESSAGE DE SUCCÈS
-                    status.style.display = "block";
-                    status.style.backgroundColor = "#d4edda"; // Vert clair
-                    status.style.color = "#155724"; // Vert foncé
-                    status.innerHTML = "✅ Merci ! Votre message a été envoyé avec succès.";
-                    form.reset(); // Vide le formulaire
-                    button.style.display = "none"; // Cache le bouton après succès
-                } else {
-                    // MESSAGE D'ERREUR
-                    status.style.display = "block";
-                    status.style.backgroundColor = "#f8d7da"; // Rouge clair
-                    status.style.color = "#721c24";
-                    status.innerHTML = "❌ Oups ! Un problème est survenu lors de l'envoi.";
-                    button.disabled = false;
-                    button.innerHTML = "🚀 Réessayer l'envoi";
-                }
-            }).catch(error => {
+        fetch(event.target.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                // 1. AFFICHER LE MESSAGE DE SUCCÈS
+                status.style.display = "block";
+                status.style.backgroundColor = "#d4edda";
+                status.style.color = "#155724";
+                status.innerHTML = "✅ Merci ! Votre message a été envoyé avec succès.";
+                
+                form.reset(); // Vide les champs
+                button.style.display = "none"; // Cache le bouton temporairement
+
+                // 2. DISPARAÎTRE APRÈS 3 SECONDES (3000 ms)
+                setTimeout(() => {
+                    status.style.display = "none";      // Cache le message vert
+                    button.style.display = "block";     // Réaffiche le bouton
+                    button.disabled = false;            // Réactive le bouton
+                    button.innerHTML = "🚀 Envoyer le message"; // Remet le texte original
+                }, 3000);
+
+            } else {
+                // GESTION ERREUR
                 status.style.display = "block";
                 status.style.backgroundColor = "#f8d7da";
-                status.innerHTML = "❌ Erreur de connexion au serveur.";
+                status.style.color = "#721c24";
+                status.innerHTML = "❌ Oups ! Un problème est survenu.";
                 button.disabled = false;
-            });
+                button.innerHTML = "🚀 Réessayer l'envoi";
+            }
+        }).catch(error => {
+            status.style.display = "block";
+            status.style.backgroundColor = "#f8d7da";
+            status.innerHTML = "❌ Erreur de connexion.";
+            button.disabled = false;
+            button.innerHTML = "🚀 Réessayer l'envoi";
         });
-    </script>
+    });
+</script>
 </body>
 </html>
