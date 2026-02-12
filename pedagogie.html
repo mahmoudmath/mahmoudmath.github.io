@@ -10,12 +10,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pédagogie - Prof. El Ahmadi</title>
+    <title>Pédagogie - Pr. Mahmoud El Ahmadi</title>
     <meta name="description" content="Espace pédagogique du Pr. Mahmoud El Ahmadi. Accédez aux supports de cours, séries de travaux dirigés (TD) et annales d'examens de mathématiques pour les étudiants de la FST de Fès.">
     <meta name="keywords" content="Cours Mathématiques, TD, Examens, FST Fès, USMBA, Mahmoud El Ahmadi, Analyse, Ressources Pédagogiques, Exercices Corrigés">
     <meta name="author" content="Pr. Mahmoud El Ahmadi">
-    <!-- Ajout de FontAwesome pour les icônes professionnelles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,19 +25,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <div class="container">
-        <!-- HEADER AJOUTÉ -->
+        <!-- ENTÊTE (Style identique à Recherche) -->
         <header class="professor-header" data-aos="fade-down">
             <div class="professor-name">Espace Pédagogique</div>
-            <div style="clear: both;"></div>
+            <div class="professor-title">Ressources Mathématique</div>
         </header>
 
-        <nav class="academic-nav">
+        <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
         </nav>
 
         <div class="resources-grid">
             <!-- CARTE COURS -->
-            <div class="resource-card">
+            <div class="resource-card" data-aos="zoom-in">
                 <div class="academic-icon"><i class="fas fa-university"></i></div>
                 <h3>COURS</h3>
                 <p>Supports magistraux</p>
@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <!-- CARTE TD -->
-            <div class="resource-card">
+            <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="academic-icon"><i class="fas fa-file-signature"></i></div>
                 <h3>TD</h3>
                 <p>Travaux Dirigés</p>
@@ -53,13 +53,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <!-- CARTE EXAMENS -->
-            <div class="resource-card">
+            <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="academic-icon"><i class="fas fa-graduation-cap"></i></div>
                 <h3>EXAMENS</h3>
                 <p>Contrôles & Examens</p>
                 <a href="choix-annee-examens.html" class="btn-resource">Accéder →</a>
             </div>
         </div>
+        
+        <!-- PIED DE PAGE (Ajouté selon votre demande) -->
+        <footer class="professor-footer">
+            <div class="signature">
+                <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
+            </div>
+        </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
