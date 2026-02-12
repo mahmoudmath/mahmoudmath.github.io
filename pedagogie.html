@@ -18,7 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Pour pousser le footer en bas */
+        /* Pour pousser le footer en bas tout en gardant la même largeur */
         html, body {
             height: 100%;
             margin: 0;
@@ -32,17 +32,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         .container {
             flex: 1 0 auto;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 30px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .resources-grid {
+            margin-bottom: 40px;
         }
         
         .professor-footer {
-            flex-shrink: 0;
-            width: 100%;
-            margin-top: 60px;
+            margin-top: auto;
             padding-top: 25px;
-            padding-bottom: 25px;
             border-top: 1px solid #eaeaea;
             text-align: center;
+            width: 100%;
+        }
+        
+        .signature {
+            font-size: 0.9rem;
+            color: #777;
         }
     </style>
 </head>
@@ -88,13 +100,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="choix-annee-examens.html" class="btn-resource">Accéder →</a>
             </div>
         </div>
-    </div>
 
-    <!-- FOOTER EN DEHORS DU CONTAINER POUR ÊTRE TOUT EN BAS -->
-    <footer class="professor-footer">
-        <div class="signature">
-            <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
-        </div>
-    </footer>
+        <!-- FOOTER DANS LE CONTAINER AVEC margin-top: auto -->
+        <footer class="professor-footer">
+            <div class="signature">
+                <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
