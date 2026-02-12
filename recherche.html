@@ -16,7 +16,275 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="author" content="Pr. Mahmoud El Ahmadi">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Style académique - version améliorée locale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Palatino, serif;
+            background-color: #faf9f7;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        /* Header académique */
+        .academic-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0d6d2;
+            position: relative;
+        }
+
+        .institution {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6a5c56;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .professor-name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1e1e1e;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .professor-title {
+            font-size: 1.1rem;
+            color: #5e4b44;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .laboratory {
+            font-size: 0.9rem;
+            color: #7a6a64;
+            margin-top: 5px;
+        }
+
+        .academic-separator {
+            width: 70px;
+            height: 2px;
+            background-color: #8b1e3f;
+            margin-top: 15px;
+        }
+
+        /* Navigation académique */
+        .academic-nav {
+            display: flex;
+            gap: 35px;
+            margin: 40px 0 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2dcd9;
+        }
+
+        .academic-nav a {
+            text-decoration: none;
+            color: #4a4a4a;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            padding: 5px 0;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .academic-nav a:hover {
+            color: #8b1e3f;
+            border-bottom-color: #8b1e3f;
+        }
+
+        .academic-nav a.active {
+            color: #8b1e3f;
+            border-bottom-color: #8b1e3f;
+            font-weight: 600;
+        }
+
+        /* Section profils scientifiques */
+        .presentation {
+            background-color: white;
+            padding: 35px 30px;
+            margin-bottom: 45px;
+            border: 1px solid #ede8e5;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+
+        .presentation h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #1e3a5f;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .research-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn-scientific {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 25px;
+            background-color: #f5f3f2;
+            border: 1px solid #dbd3d0;
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 1rem;
+            transition: all 0.2s;
+            border-radius: 2px;
+        }
+
+        .btn-scientific:hover {
+            background-color: white;
+            border-color: #8b1e3f;
+            color: #8b1e3f;
+            transform: translateY(-2px);
+        }
+
+        /* Grille ressources */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            margin: 50px 0;
+        }
+
+        .resource-card {
+            background-color: white;
+            padding: 35px 30px;
+            text-decoration: none;
+            border: 1px solid #eae5e2;
+            transition: all 0.25s;
+            position: relative;
+            display: block;
+        }
+
+        .resource-card:hover {
+            border-color: #c0b7b2;
+            box-shadow: 0 10px 25px rgba(106, 76, 62, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .resource-card i {
+            font-size: 2.2rem;
+            color: #8b1e3f;
+            margin-bottom: 15px;
+        }
+
+        .resource-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .resource-card p {
+            color: #5e6b7a;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            background-color: #f0ecea;
+            color: #4e5b68;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            border: 1px solid #d9d2ce;
+            text-transform: uppercase;
+        }
+
+        .badge-scopus {
+            background-color: #f1e6e4;
+            border-color: #d4bcb6;
+            color: #8b1e3f;
+        }
+
+        .btn-access {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #8b1e3f;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
+            transition: border 0.2s;
+        }
+
+        .resource-card:hover .btn-access {
+            border-bottom-color: #8b1e3f;
+        }
+
+        .btn-access i {
+            font-size: 0.8rem;
+            margin-left: 8px;
+            color: #8b1e3f;
+        }
+
+        /* Footer */
+        .professor-footer {
+            margin-top: 70px;
+            padding-top: 25px;
+            border-top: 1px solid #e2dcd9;
+            text-align: center;
+        }
+
+        .signature {
+            font-size: 0.9rem;
+            color: #6f7d8a;
+            font-style: normal;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .academic-nav {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            .professor-name {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -24,45 +292,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-        <header class="professor-header" data-aos="fade-down">
+        <!-- Header académique avec institution -->
+        <div class="academic-header">
+            <div class="institution">Université Sidi Mohamed Ben Abdellah</div>
             <div class="professor-name">Activités de Recherche</div>
             <div class="professor-title">Analyse Non Linéaire et Théorie des EDP</div>
-        </header>
+            <div class="laboratory">Laboratoire LSI · FST Fès</div>
+            <div class="academic-separator"></div>
+        </div>
 
-        <nav class="academic-nav" data-aos="fade-up">
-            <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
+        <!-- Navigation académique complète -->
+        <nav class="academic-nav">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="recherche.html">Recherche</a>
+            <a href="publications.html">Publications</a>
+            <a href="communications.html">Communications</a>
+            <a href="cv.html">CV</a>
         </nav>
 
-        <div class="presentation" data-aos="fade-up" style="text-align: center; border-left: none; border-top: 4px solid #0056b3;">
+        <!-- Section profils scientifiques -->
+        <div class="presentation" data-aos="fade-up">
             <h3>Profils Scientifiques Officiels</h3>
             <div class="research-links">
-                <!-- METTEZ VOS LIENS ICI -->
                 <a href="https://scholar.google.com/citations?user=UxwjIW8AAAAJ&hl=fr" target="_blank" class="btn-scientific">
-                    <i class="fa-solid fa-graduation-cap" style="color: #4285F4; font-size: 1.4em;"></i> Google Scholar
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar
                 </a>
                 <a href="https://www.researchgate.net/profile/Mahmoud-El-Ahmadi" target="_blank" class="btn-scientific">
-                    <i class="fa-brands fa-researchgate" style="color: #00ccbb; font-size: 1.4em;"></i> ResearchGate
+                    <i class="fa-brands fa-researchgate"></i> ResearchGate
                 </a>
             </div>
         </div>
 
+        <!-- Grille des ressources académiques -->
         <div class="resources-grid">
-            <a href="articles.html" class="resource-card" data-aos="zoom-in" style="text-decoration:none;">
-                <span style="font-size: 2em;">📄</span>
+            <!-- Articles -->
+            <a href="articles.html" class="resource-card" data-aos="zoom-in">
+                <i class="fa-solid fa-book"></i>
                 <h3>ARTICLES</h3>
-                <p>Revues Indexées (Scopus / WoS)</p>
-                <span style="color: #0056b3; font-weight: bold; display: block; margin-top: 15px;">Accéder →</span>
+                <p>Revues indexées Scopus / Web of Science</p>
+                <div class="badge-container">
+                    <span class="badge badge-scopus">Scopus Q1</span>
+                    <span class="badge badge-scopus">WoS IF</span>
+                    <span class="badge">Peer reviewed</span>
+                </div>
+                <span class="btn-access">Accéder <i class="fa-solid fa-arrow-right"></i></span>
             </a>
-            <a href="communications.html" class="resource-card" data-aos="zoom-in" data-aos-delay="200" style="text-decoration:none; border-top-color: #28a745;">
-                <span style="font-size: 2em;">🎤</span>
+
+            <!-- Communications -->
+            <a href="communications.html" class="resource-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-chalkboard-user"></i>
                 <h3>COMMUNICATIONS</h3>
-                <p>Congrès Nationaux & Internationaux</p>
-                <span style="color: #28a745; font-weight: bold; display: block; margin-top: 15px;">Accéder →</span>
+                <p>Congrès nationaux & internationaux</p>
+                <div class="badge-container">
+                    <span class="badge">Conférences plénières</span>
+                    <span class="badge">Colloques</span>
+                </div>
+                <span class="btn-access">Accéder <i class="fa-solid fa-arrow-right"></i></span>
             </a>
         </div>
-        <footer class="professor-footer"><div class="signature"><p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p></div></footer>
+
+        <!-- Footer -->
+        <footer class="professor-footer">
+            <div class="signature">
+                <p>© 2026 Pr. Mahmoud El Ahmadi · USMBA · FST Fès</p>
+            </div>
+        </footer>
     </div>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>
