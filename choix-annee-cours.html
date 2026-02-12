@@ -9,9 +9,100 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5HG84LR9');</script>
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sélection Année - Cours</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+    /* ===== STYLE LOCAL - PAGE CHOIX ANNÉE ===== */
+    
+    /* EN-TÊTE BLEU + BLANC (homogène) */
+    .professor-header {
+        background: #003366;
+        padding: 40px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .professor-name {
+        color: white !important;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .professor-title {
+        color: white !important;
+        font-size: 1.2rem;
+        font-style: italic;
+        opacity: 0.9;
+    }
+
+    /* TITRE "Veuillez choisir une session" */
+    h3 {
+        color: #003366;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    /* BOUTONS ANNÉES - CARTES BLANCHES */
+    .nav-card {
+        display: block;
+        background: white;
+        color: #003366;
+        padding: 20px 25px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: 1px solid #e0e7ef;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        transition: all 0.3s ease;
+    }
+
+    .nav-card:hover {
+        background: #f0f7ff;
+        border-color: #003366;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0,51,102,0.1);
+    }
+
+    /* BOUTON RETOUR (plus discret) */
+    .nav-card:last-child {
+        color: #6c757d;
+        border-color: #dee2e6;
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+
+    .nav-card:last-child:hover {
+        background: #f8f9fa;
+        border-color: #6c757d;
+        color: #495057;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .professor-name {
+            font-size: 1.8rem;
+        }
+        
+        .professor-title {
+            font-size: 1rem;
+        }
+        
+        h3 {
+            font-size: 1.2rem;
+        }
+        
+        .nav-card {
+            padding: 16px 20px;
+            font-size: 1.1rem;
+        }
+    }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -27,12 +118,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </header>
 
         <div class="presentation" style="max-width: 600px; margin: 40px auto; text-align: center;" data-aos="zoom-in">
-            <h3 style="margin-bottom: 30px; color: #0056b3;">Veuillez choisir une session :</h3>
+            <h3 style="margin-bottom: 30px;">📋 Veuillez choisir une session :</h3>
             <div style="display: flex; flex-direction: column; gap: 20px;">
                 <a href="cours-24-25.html" class="nav-card">📅 Année 2024 - 2025</a>
                 <a href="cours-25-26.html" class="nav-card">📅 Année 2025 - 2026</a>
-                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee;">
-                    <a href="pedagogie.html" class="nav-card" style="border-color: #666; color: #666;">⬅ RETOUR</a>
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e7ef;">
+                    <a href="pedagogie.html" class="nav-card">⬅ RETOUR</a>
                 </div>
             </div>
         </div>
