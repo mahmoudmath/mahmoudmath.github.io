@@ -15,7 +15,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="keywords" content="Cours Mathématiques, TD, Examens, FST Fès, USMBA, Mahmoud El Ahmadi, Analyse, Ressources Pédagogiques, Exercices Corrigés">
     <meta name="author" content="Pr. Mahmoud El Ahmadi">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
         /* Style académique épuré - fond blanc */
         * {
@@ -35,6 +34,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 30px;
+        }
+
+        /* Header identique à la page Recherche */
+        .professor-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .professor-name {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .professor-title {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .professor-subtitle {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: normal;
         }
 
         /* Navigation centrée */
@@ -155,6 +183,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateX(3px);
         }
 
+        /* Footer */
+        .professor-footer {
+            margin-top: 80px;
+            padding-top: 25px;
+            border-top: 1px solid #eaeaea;
+            text-align: center;
+        }
+
+        .signature {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
         /* Responsive */
         @media (max-width: 900px) {
             .resources-grid {
@@ -171,6 +212,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding: 30px 20px;
             }
             
+            .professor-name {
+                font-size: 1.8rem;
+            }
+            
             .resource-card {
                 padding: 35px 25px;
             }
@@ -183,10 +228,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="container">
+        <!-- Header identique à la page Recherche -->
+        <header class="professor-header">
+            <div class="professor-name">Espace Pédagogique</div>
+            <div class="professor-title">Ressources Mathématiques • Analyse • EDP</div>
+            <div class="professor-subtitle">Supports de cours, travaux dirigés et examens pour les étudiants de la FST de Fès</div>
+        </header>
+
+        <!-- Navigation centrée -->
         <nav class="academic-nav">
             <a href="index.html">🏠 ACCUEIL</a>
         </nav>
 
+        <!-- Grille des ressources pédagogiques -->
         <div class="resources-grid">
             <!-- CARTE COURS -->
             <div class="resource-card">
@@ -218,6 +272,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="choix-annee-examens.html" class="btn-resource">Accéder →</a>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="professor-footer">
+            <div class="signature">
+                © 2026 Pr. Mahmoud El Ahmadi - USMBA · FST Fès
+            </div>
+        </footer>
     </div>
 </body>
 </html>
