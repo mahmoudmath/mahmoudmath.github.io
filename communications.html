@@ -13,24 +13,122 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>Communications - Pr. Mahmoud El Ahmadi</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    .year-title {
-        /* On réduit la taille pour faire plus "pro" */
-        font-size: 1.4rem !important; 
+    /* ===== STYLE LOCAL - PAGE COMMUNICATIONS ===== */
+    
+    /* EN-TÊTE - BLANC SUR BLEU (comme articles) */
+    .professor-header {
+        background: #003366;
+        padding: 30px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .professor-name {
+        color: white !important;
+        font-size: 2.2rem;
         font-weight: 700;
-        
-        /* Couleur plus sobre (un vert plus foncé ou garder le tien) */
-        color: #1e7e34; 
-        
-        /* Un trait plus fin et plus discret */
-        border-bottom: 2px solid #ffc107; 
-        
+        margin-bottom: 5px;
+    }
+
+    .professor-title {
+        color: white !important;
+        font-size: 1.2rem;
+        font-style: italic;
+        opacity: 0.9;
+    }
+    
+    /* TITRE ANNÉE */
+    .year-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #1e7e34;
+        border-bottom: 2px solid #ffc107;
         display: inline-block;
         margin: 25px 0 15px 0;
+        padding-bottom: 5px;
         padding-right: 15px;
-        text-transform: uppercase; /* Donne un aspect plus structuré */
+        text-transform: uppercase;
         letter-spacing: 1px;
     }
-</style>
+
+    /* LISTE DES COMMUNICATIONS - CARTES BLANCHES */
+    .resource-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .resource-list li {
+        background: white;
+        padding: 16px 20px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid transparent;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        transition: all 0.2s;
+        line-height: 1.5;
+    }
+
+    .resource-list li:hover {
+        border-left-color: #ffc107;
+        background: #fefcf5;
+        box-shadow: 0 2px 8px rgba(0,86,179,0.05);
+    }
+
+    /* VOTRE NOM EN BLEU */
+    .resource-list li strong {
+        color: #0a4b7a;
+        font-weight: 700;
+    }
+
+    /* NOMS DES CONFÉRENCES EN ITALIQUE */
+    .resource-list li em {
+        color: #2d5a7a;
+        font-style: italic;
+    }
+
+    /* BADGE ANNÉE OPTIONNEL (si vous voulez ajouter) */
+    .year-badge {
+        display: inline-block;
+        background: #e9ecef;
+        color: #495057;
+        padding: 2px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-left: 8px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .professor-name {
+            font-size: 1.8rem;
+        }
+        
+        .professor-title {
+            font-size: 1rem;
+        }
+        
+        .year-title {
+            font-size: 1.2rem;
+        }
+        
+        .resource-list li {
+            padding: 14px;
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .professor-name {
+            font-size: 1.5rem;
+        }
+        
+        .resource-list li {
+            padding: 12px;
+        }
+    }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -53,12 +151,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="resource-list">
                 <li><strong>M. El Ahmadi</strong>, "Existence of homoclinic solutions for discrete fractional p-Laplacian equations via the Nehari manifold approach", <em>FICDS-C&RF25</em>, Fès, (2025).</li>
                 <li><strong>M. El Ahmadi</strong>, "Some new results on double phase problems with mixed boundary value conditions", <em>Workshop on Mathematical Modeling and its Applications</em>, Nador, (2024).</li>
-                <li><strong>M. El Ahmadi</strong>, "Some results for a kind of Kirchhoff-type problems involving the p(x)-biharmonic operator", <em>ICAMAI'24</em>, (2024).</li>
-                <li><strong>M. El Ahmadi</strong>, "Existence and multiplicity results for Kirchhoff-type superlinear problems involving the fractional p(x)-Laplacian satisfying (C)-condition", <em>JIAMA'24</em>, (2024).</li>
+                <li><strong>M. El Ahmadi</strong>, "Some results for a kind of Kirchhoff-type problems involving the p(x)-biharmonic operator", <em>ICAMAI'24</em>, Fès, (2024).</li>
+                <li><strong>M. El Ahmadi</strong>, "Existence and multiplicity results for Kirchhoff-type superlinear problems involving the fractional p(x)-Laplacian satisfying (C)-condition", <em>JIAMA'24</em>, Oujda, (2024).</li>
                 <li><strong>M. El Ahmadi</strong>, "On the superlinear Kirchhoff problem involving the double phase operator with variable exponents", <em>CIMAM’2023</em>, Oujda, (2023).</li>
                 <li><strong>M. El Ahmadi</strong>, "Existence and multiplicity of solutions for a class of double phase variable exponent problems with nonlinear boundary condition", <em>CIMAM’2022</em>, Oujda, (2022).</li>
                 <li><strong>M. El Ahmadi</strong>, "Existence of two solutions for Kirchhoff-double phase problems with a small perturbation without (AR)-condition", <em>Béni Mellal</em>, (2022).</li>
-                <li><strong>M. El Ahmadi</strong>, "Robin problem involving the p(x)-Laplacian operator without Ambrosetti-Rabinowitz condition", <em>JNMAM’22</em>, (2022).</li>
+                <li><strong>M. El Ahmadi</strong>, "Robin problem involving the p(x)-Laplacian operator without Ambrosetti-Rabinowitz condition", <em>JIMAM’22</em>, Oujda, (2022).</li>
                 <li><strong>M. El Ahmadi</strong>, "Existence of solutions for a class of Kirchhoff-double phase type problems without the Ambrosetti-Rabinowitz condition", <em>JIMAM’2021</em>, Oujda, (2021).</li>
                 <li><strong>M. El Ahmadi</strong>, "Existence of solutions for a class of Kirchhoff-double phase type problems without the Ambrosetti-Rabinowitz condition", <em>Khouribga</em>, (2021).</li>
                 <li><strong>M. El Ahmadi</strong>, "Existence and multiplicity of solution for a class of p(x)-Biharmonic problems without the Ambrosetti-Rabinowitz condition", <em>Chefchaouen</em>, (2021).</li>
