@@ -15,8 +15,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="keywords" content="Cours Mathématiques, TD, Examens, FST Fès, USMBA, Mahmoud El Ahmadi, Analyse, Ressources Pédagogiques, Exercices Corrigés">
     <meta name="author" content="Pr. Mahmoud El Ahmadi">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Style académique épuré - fond blanc */
+        /* Copié exactement depuis la page Recherche */
         * {
             margin: 0;
             padding: 0;
@@ -36,7 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 40px 30px;
         }
 
-        /* Header identique à la page Recherche */
+        /* Header identique à Recherche */
         .professor-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
@@ -56,136 +57,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: #4a4a4a;
             font-weight: 400;
             font-style: italic;
-            margin-bottom: 8px;
         }
 
-        .professor-subtitle {
-            font-size: 0.95rem;
-            color: #666;
-            font-style: normal;
-        }
-
-        /* Navigation centrée */
+        /* Navigation identique à Recherche */
         .academic-nav {
-            margin: 20px 0 50px;
-            text-align: center;
+            margin: 25px 0 30px;
         }
 
         .academic-nav a {
             text-decoration: none;
             color: #1a1a1a;
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             font-weight: 500;
-            padding: 8px 25px;
+            padding: 5px 0;
+            transition: color 0.2s;
             display: inline-block;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s;
         }
 
         .academic-nav a:hover {
             color: #0056b3;
-            border-bottom-color: #0056b3;
         }
 
-        /* Grille des ressources */
+        /* Grille ressources - identique à Recherche */
         .resources-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 35px;
-            margin: 30px 0;
+            margin: 40px 0 30px;
         }
 
-        /* Cartes pédagogiques */
+        /* Cartes identiques à Recherche */
         .resource-card {
             background-color: white;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid #f0f0f0;
+            padding: 35px 30px;
+            text-decoration: none;
+            border: 1px solid #ededed;
             transition: all 0.25s ease;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            border-radius: 2px;
+            align-items: flex-start;
         }
 
         .resource-card:hover {
-            border-color: #0056b3;
+            border-color: #c0c0c0;
             box-shadow: 0 10px 25px rgba(0,86,179,0.04);
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
-        /* Icônes académiques */
-        .academic-icon {
-            width: 80px;
-            height: 80px;
-            background-color: #f8fbfe;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 25px;
-            border: 1px solid #eaeef2;
-            transition: all 0.25s;
-        }
-
-        .resource-card:hover .academic-icon {
-            background-color: #eef4fa;
-            border-color: #0056b3;
-        }
-
-        .academic-icon i {
+        .resource-card i {
             font-size: 2.2rem;
             color: #0056b3;
-            transition: all 0.25s;
+            margin-bottom: 20px;
         }
 
-        .resource-card:hover .academic-icon i {
-            transform: scale(1.05);
-        }
-
-        /* Titres */
         .resource-card h3 {
             font-size: 1.5rem;
             font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 12px;
-            letter-spacing: 1.5px;
-            border-bottom: 2px solid transparent;
-            display: inline-block;
-            padding-bottom: 5px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
         .resource-card p {
             color: #5a5a5a;
             font-size: 0.95rem;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             font-style: italic;
         }
 
-        /* Bouton Accéder */
-        .btn-resource {
+        .btn-access {
             display: inline-block;
-            text-decoration: none;
-            color: #0056b3;
+            margin-top: 15px;
             font-size: 0.9rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            padding: 8px 0;
+            color: #0056b3;
             border-bottom: 2px solid transparent;
-            transition: all 0.2s;
+            padding-bottom: 4px;
+            transition: border 0.2s;
+            text-decoration: none;
         }
 
-        .btn-resource:hover {
+        .resource-card:hover .btn-access {
             border-bottom-color: #0056b3;
-            transform: translateX(3px);
         }
 
-        /* Footer */
+        .btn-access i {
+            font-size: 0.8rem;
+            margin-left: 8px;
+            color: #0056b3;
+        }
+
+        /* Footer identique à Recherche */
         .professor-footer {
-            margin-top: 80px;
+            margin-top: 60px;
             padding-top: 25px;
             border-top: 1px solid #eaeaea;
             text-align: center;
@@ -203,21 +171,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .resources-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 30px 20px;
             }
             
             .professor-name {
                 font-size: 1.8rem;
             }
             
-            .resource-card {
-                padding: 35px 25px;
+            .container {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -228,57 +192,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-        <!-- Header identique à la page Recherche -->
-        <header class="professor-header">
+        <!-- Header identique à Recherche - modifié pour Pédagogie -->
+        <header class="professor-header" data-aos="fade-down">
             <div class="professor-name">Espace Pédagogique</div>
-            <div class="professor-title">Ressources Mathématiques • Analyse • EDP</div>
-            <div class="professor-subtitle">Supports de cours, travaux dirigés et examens pour les étudiants de la FST de Fès</div>
+            <div class="professor-title">Ressources Mathématiques</div>
         </header>
 
-        <!-- Navigation centrée -->
-        <nav class="academic-nav">
+        <!-- Navigation identique à Recherche -->
+        <nav class="academic-nav" data-aos="fade-up">
             <a href="index.html">🏠 ACCUEIL</a>
         </nav>
 
-        <!-- Grille des ressources pédagogiques -->
+        <!-- Grille des ressources pédagogiques - 3 cartes -->
         <div class="resources-grid">
-            <!-- CARTE COURS -->
-            <div class="resource-card">
-                <div class="academic-icon">
-                    <i class="fas fa-book-open"></i>
-                </div>
+            <!-- COURS -->
+            <a href="choix-annee-cours.html" class="resource-card" data-aos="zoom-in">
+                <i class="fa-solid fa-book-open"></i>
                 <h3>COURS</h3>
                 <p>Supports magistraux</p>
-                <a href="choix-annee-cours.html" class="btn-resource">Accéder →</a>
-            </div>
+                <span class="btn-access">Accéder <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
 
-            <!-- CARTE TD -->
-            <div class="resource-card">
-                <div class="academic-icon">
-                    <i class="fas fa-pencil-alt"></i>
-                </div>
+            <!-- TD -->
+            <a href="choix-annee-td.html" class="resource-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-pencil-alt"></i>
                 <h3>TD</h3>
                 <p>Travaux Dirigés</p>
-                <a href="choix-annee-td.html" class="btn-resource">Accéder →</a>
-            </div>
+                <span class="btn-access">Accéder <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
 
-            <!-- CARTE EXAMENS -->
-            <div class="resource-card">
-                <div class="academic-icon">
-                    <i class="fas fa-file-alt"></i>
-                </div>
+            <!-- EXAMENS -->
+            <a href="choix-annee-examens.html" class="resource-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-file-alt"></i>
                 <h3>EXAMENS</h3>
                 <p>Contrôles & Examens</p>
-                <a href="choix-annee-examens.html" class="btn-resource">Accéder →</a>
-            </div>
+                <span class="btn-access">Accéder <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
         </div>
 
-        <!-- Footer -->
+        <!-- Footer identique à Recherche -->
         <footer class="professor-footer">
             <div class="signature">
-                © 2026 Pr. Mahmoud El Ahmadi - USMBA · FST Fès
+                <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
             </div>
         </footer>
     </div>
+
+    <!-- Scripts identiques à Recherche -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600,
+            once: true
+        });
+    </script>
 </body>
 </html>
