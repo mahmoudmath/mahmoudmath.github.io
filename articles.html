@@ -13,52 +13,138 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>Articles - Pr. Mahmoud El Ahmadi</title>
     <link rel="stylesheet" href="style.css">
    <style>
-    /* 1. TITRE DE L'ANNÉE (ex: 2024) */
+    /* ===== STYLE LOCAL - PAGE ARTICLES SEULEMENT ===== */
+    
+    /* TITRES D'ANNÉES (2026, 2025, etc.) */
     .year-title {
-        color: #0056b3;
-        font-size: 1.3rem !important; /* RÉDUIT pour plus d'élégance */
+        color: #0a4b7a;
+        font-size: 1.3rem;
         font-weight: 700;
-        border-bottom: 2px solid #ffc107; /* Trait plus fin (2px au lieu de 3px) */
+        border-bottom: 2px solid #ffc107;
         display: inline-block;
-        margin: 25px 0 15px 0;
+        margin: 30px 0 15px 0;
+        padding-bottom: 5px;
         padding-right: 15px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
 
-    /* 2. BOUTON DOI (Lien vers l'article) */
+    /* BOUTONS DOI */
     .link-doi {
         display: inline-block;
-        background: #f8f9fa; /* Fond plus clair, plus neutre */
-        color: #0056b3;
-        padding: 3px 10px; /* Plus compact */
-        border-radius: 4px;
+        background: #f0f7ff;
+        color: #0a4b7a;
+        padding: 4px 12px;
+        border-radius: 20px;
         text-decoration: none;
-        font-size: 0.8rem; /* Un peu plus petit */
+        font-size: 0.75rem;
         font-weight: 600;
-        border: 1px solid #0056b3;
-        margin-top: 8px;
-        transition: all 0.3s ease;
+        border: 1px solid #0a4b7a;
+        margin-left: 8px;
+        transition: all 0.2s ease;
     }
 
     .link-doi:hover {
-        background: #0056b3;
+        background: #0a4b7a;
         color: white;
-        text-decoration: none;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-color: #0a4b7a;
     }
 
-    /* 3. TITRE PRINCIPAL DE LA PAGE (Articles) */
-    /* Ajoutez ceci pour réduire le titre "ARTICLES" en haut de page */
+    /* TITRE PRINCIPAL DE LA PAGE */
     h1 {
-        font-size: 1.8rem !important; 
+        font-size: 1.8rem;
         color: #003366;
         text-align: center;
         margin: 20px 0;
         font-weight: 800;
         text-transform: uppercase;
     }
-</style>
+
+    /* LISTE DES ARTICLES */
+    .resource-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .resource-list li {
+        background: white;
+        padding: 16px 20px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid transparent;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        transition: all 0.2s;
+        line-height: 1.5;
+    }
+
+    .resource-list li:hover {
+        border-left-color: #ffc107;
+        background: #fefcf5;
+        box-shadow: 0 2px 8px rgba(0,86,179,0.05);
+    }
+
+    /* NOMS DES AUTEURS EN GRAS */
+    .resource-list li strong {
+        color: #0a4b7a;
+        font-weight: 700;
+    }
+
+    /* TITRES DES REVUES EN ITALIQUE */
+    .resource-list li em {
+        color: #2d5a7a;
+        font-style: italic;
+    }
+
+    /* EN-TÊTE PAGE */
+    .professor-header {
+        margin-bottom: 20px;
+    }
+
+    .professor-name {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #003366;
+    }
+
+    .professor-title {
+        font-size: 1.1rem;
+        color: #666;
+        font-style: italic;
+    }
+
+    /* RESPONSIVE POUR MOBILES */
+    @media (max-width: 768px) {
+        .year-title {
+            font-size: 1.1rem;
+        }
+        
+        .resource-list li {
+            padding: 14px;
+            font-size: 0.95rem;
+        }
+        
+        .link-doi {
+            display: inline-block;
+            margin-top: 6px;
+            margin-left: 0;
+        }
+        
+        .professor-name {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .resource-list li {
+            padding: 12px;
+        }
+        
+        .link-doi {
+            padding: 3px 10px;
+            font-size: 0.7rem;
+        }
+    }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -82,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="resource-list">
                 <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "On a p(x)-biharmonic problem without the Ambrosetti-Rabinowitz condition", <em>Rend. Mat. Appl. (7)</em>, Volume 47 (2026), 29–46.</li>
                 <li>Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, Barghouthe Mohammed, Omar Darhouche, "Some existence results for a class of parabolic equations with nonlinear boundary conditions", <em>Studia Universitatis Babes-Bolyai Matematica</em> 70(4):643-655.
-                    <a href="https://doi.org/10.24193/subbmath.2025.4.08"  target="_blank" class="link-doi">DOI</a></li>
+                    <a href="https://doi.org/10.24193/subbmath.2025.4.08" target="_blank" class="link-doi">DOI</a></li>
             </ul>
 
             <!-- 2025 -->
