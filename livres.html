@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google Tag Manager (Gardez votre script habituel ici) -->
     <meta charset="UTF-8">
     <title>Bibliothèque par Module - Pr. Mahmoud El Ahmadi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
     <style>
         .container { display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* GRILLE : On aligne 4 colonnes pour que les 4 premiers soient ensemble */
+        /* ALIGNEMENT : 4 colonnes pour bien aligner les 4 premiers modules */
         .resources-grid { 
             flex-grow: 1; 
             display: grid; 
@@ -20,17 +21,16 @@
 
         .resource-card i { font-size: 40px !important; margin-bottom: 15px; display: block; }
 
-        /* TITRE : 1 seule ligne, couleur identique au texte */
+        /* STYLE DE LA LIGNE : Couleur identique au mot et épaisseur uniforme */
         .resource-card h3 { 
             display: inline-block !important; 
             padding-bottom: 5px !important; 
             margin-bottom: 15px !important; 
             text-decoration: none !important; 
-            border-bottom: 3px solid currentColor !important; /* La ligne prend la couleur du mot */
-            background: none !important; /* Supprime les effets bizarres du style.css */
+            border-bottom: 3px solid currentColor !important; 
         }
 
-        /* SUPPRESSION DE LA DOUBLE LIGNE (After/Before) */
+        /* SUPPRESSION DE LA DOUBLE LIGNE (DÉCORATION PARASITE) */
         .resource-card h3::after, 
         .resource-card h3::before { 
             content: none !important; 
@@ -39,8 +39,8 @@
 
         .resource-card a { color: #6c3483 !important; font-weight: bold; text-decoration: underline; display: block; margin-top: 10px; }
 
-        /* Responsive : 2 colonnes sur tablettes, 1 sur mobile */
-        @media (max-width: 1100px) { .resources-grid { grid-template-columns: repeat(2, 1fr); } }
+        /* Ajustement pour tablettes et mobiles */
+        @media (max-width: 1024px) { .resources-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .resources-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -56,31 +56,31 @@
         </nav>
 
         <div class="resources-grid">
-            <!-- 1. ANALYSE RÉELLE -->
+            <!-- ANALYSE RÉELLE -->
             <div class="resource-card" data-aos="zoom-in">
                 <i class="fas fa-chart-line" style="color: #2980b9;"></i>
-                <h3 style="color: #2980b9;">Analyse Réelle</h3>
+                <h3 style="color: #2980b9; white-space: nowrap;">Analyse Réelle</h3>
                 <p>Suites, Séries, Fonctions</p>
                 <a href="livres-analyse.html">Voir les livres →</a>
             </div>
 
-            <!-- 2. ALGÈBRE -->
+            <!-- ALGÈBRE -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
                 <i class="fas fa-square-root-variable" style="color: #27ae60;"></i>
-                <h3 style="color: #27ae60;">Algèbre</h3>
+                <h3 style="color: #27ae60; white-space: nowrap;">Algèbre</h3>
                 <p>Linéaire, Structures, Groupes</p>
                 <a href="livres-algebre.html">Voir les livres →</a>
             </div>
 
-            <!-- 3. TOPOLOGIE -->
+            <!-- TOPOLOGIE -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-project-diagram" style="color: #e67e22;"></i>
-                <h3 style="color: #e67e22;">Topologie</h3>
+                <h3 style="color: #e67e22; white-space: nowrap;">Topologie</h3>
                 <p>Espaces Métriques, Compacts</p>
                 <a href="livres-topologie.html">Voir les livres →</a>
             </div>
 
-            <!-- 4. MESURE & INTÉGRATION -->
+            <!-- MESURE & INTÉGRATION -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="300">
                 <i class="fas fa-infinity" style="color: #c0392b;"></i>
                 <h3 style="color: #c0392b;">Mesure & Int.</h3>
@@ -88,7 +88,7 @@
                 <a href="livres-mesure.html">Voir les livres →</a>
             </div>
 
-            <!-- 5. ANALYSE COMPLEXE -->
+            <!-- ANALYSE COMPLEXE -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="400">
                 <i class="fas fa-atom" style="color: #8e44ad;"></i>
                 <h3 style="color: #8e44ad;">Analyse Complexe</h3>
@@ -96,7 +96,7 @@
                 <a href="livres-complexe.html">Voir les livres →</a>
             </div>
 
-            <!-- 6. CALCUL DIFFÉRENTIEL -->
+            <!-- CALCUL DIFFÉRENTIEL -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="500">
                 <i class="fas fa-vector-square" style="color: #2c3e50;"></i>
                 <h3 style="color: #2c3e50;">Calcul Diff.</h3>
