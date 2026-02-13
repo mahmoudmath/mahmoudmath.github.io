@@ -10,24 +10,27 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .container { display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* ALIGNEMENT : 4 colonnes pour bien aligner les 4 premiers modules */
         .resources-grid { 
             flex-grow: 1; 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            grid-template-columns: repeat(4, 1fr); 
             gap: 20px; padding: 30px; 
         }
+
         .resource-card i { font-size: 40px !important; margin-bottom: 15px; display: block; }
 
-        /* FIX : STYLE UNIFORME POUR LES TITRES */
+        /* STYLE DE LA LIGNE : Couleur identique au mot et épaisseur uniforme */
         .resource-card h3 { 
             display: inline-block !important; 
             padding-bottom: 5px !important; 
             margin-bottom: 15px !important; 
             text-decoration: none !important; 
-            border-bottom: 3px solid !important; /* Force la ligne simple */
+            border-bottom: 3px solid currentColor !important; 
         }
 
-        /* SUPPRIME LA DEUXIÈME LIGNE DÉCORATIVE VENANT DE STYLE.CSS */
+        /* SUPPRESSION DE LA DOUBLE LIGNE (DÉCORATION PARASITE) */
         .resource-card h3::after, 
         .resource-card h3::before { 
             content: none !important; 
@@ -35,6 +38,10 @@
         }
 
         .resource-card a { color: #6c3483 !important; font-weight: bold; text-decoration: underline; display: block; margin-top: 10px; }
+
+        /* Ajustement pour tablettes et mobiles */
+        @media (max-width: 1024px) { .resources-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .resources-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -52,7 +59,7 @@
             <!-- ANALYSE RÉELLE -->
             <div class="resource-card" data-aos="zoom-in">
                 <i class="fas fa-chart-line" style="color: #2980b9;"></i>
-                <h3 style="color: #2980b9; border-color: #2980b9; white-space: nowrap;">Analyse Réelle</h3>
+                <h3 style="color: #2980b9; white-space: nowrap;">Analyse Réelle</h3>
                 <p>Suites, Séries, Fonctions</p>
                 <a href="livres-analyse.html">Voir les livres →</a>
             </div>
@@ -60,7 +67,7 @@
             <!-- ALGÈBRE -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
                 <i class="fas fa-square-root-variable" style="color: #27ae60;"></i>
-                <h3 style="color: #27ae60; border-color: #27ae60; white-space: nowrap;">Algèbre</h3>
+                <h3 style="color: #27ae60; white-space: nowrap;">Algèbre</h3>
                 <p>Linéaire, Structures, Groupes</p>
                 <a href="livres-algebre.html">Voir les livres →</a>
             </div>
@@ -68,7 +75,7 @@
             <!-- TOPOLOGIE -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-project-diagram" style="color: #e67e22;"></i>
-                <h3 style="color: #e67e22; border-color: #e67e22; white-space: nowrap;">Topologie</h3>
+                <h3 style="color: #e67e22; white-space: nowrap;">Topologie</h3>
                 <p>Espaces Métriques, Compacts</p>
                 <a href="livres-topologie.html">Voir les livres →</a>
             </div>
@@ -76,7 +83,7 @@
             <!-- MESURE & INTÉGRATION -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="300">
                 <i class="fas fa-infinity" style="color: #c0392b;"></i>
-                <h3 style="color: #c0392b; border-color: #c0392b;">Mesure & Int.</h3>
+                <h3 style="color: #c0392b;">Mesure & Int.</h3>
                 <p>Mesure de Lebesgue, Tribu (&sigma;-algèbre)</p>
                 <a href="livres-mesure.html">Voir les livres →</a>
             </div>
@@ -84,7 +91,7 @@
             <!-- ANALYSE COMPLEXE -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="400">
                 <i class="fas fa-atom" style="color: #8e44ad;"></i>
-                <h3 style="color: #8e44ad; border-color: #8e44ad;">Analyse Complexe</h3>
+                <h3 style="color: #8e44ad;">Analyse Complexe</h3>
                 <p>séries de Laurent, Fonctions Holomorphes</p>
                 <a href="livres-complexe.html">Voir les livres →</a>
             </div>
@@ -92,7 +99,7 @@
             <!-- CALCUL DIFFÉRENTIEL -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="500">
                 <i class="fas fa-vector-square" style="color: #2c3e50;"></i>
-                <h3 style="color: #2c3e50; border-color: #2c3e50;">Calcul Diff.</h3>
+                <h3 style="color: #2c3e50;">Calcul Diff.</h3>
                 <p>Extrema, Formes Différentielles</p>
                 <a href="livres-caldiff.html">Voir les livres →</a>
             </div>
