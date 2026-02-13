@@ -17,7 +17,23 @@
             gap: 20px; padding: 30px; 
         }
         .resource-card i { font-size: 40px !important; margin-bottom: 15px; display: block; }
-        .resource-card h3 { display: inline-block; padding-bottom: 5px; margin-bottom: 15px; text-decoration: none !important; border-bottom: 3px solid; }
+
+        /* FIX : STYLE UNIFORME POUR LES TITRES */
+        .resource-card h3 { 
+            display: inline-block !important; 
+            padding-bottom: 5px !important; 
+            margin-bottom: 15px !important; 
+            text-decoration: none !important; 
+            border-bottom: 3px solid !important; /* Force la ligne simple */
+        }
+
+        /* SUPPRIME LA DEUXIÈME LIGNE DÉCORATIVE VENANT DE STYLE.CSS */
+        .resource-card h3::after, 
+        .resource-card h3::before { 
+            content: none !important; 
+            display: none !important; 
+        }
+
         .resource-card a { color: #6c3483 !important; font-weight: bold; text-decoration: underline; display: block; margin-top: 10px; }
     </style>
 </head>
