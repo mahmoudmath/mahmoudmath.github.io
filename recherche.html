@@ -11,18 +11,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <title>Recherche - Pr. Mahmoud El Ahmadi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Activités de recherche et publications scientifiques du Pr. Mahmoud El Ahmadi (USMBA). Spécialiste en Analyse Non Linéaire et Théorie des Équations aux Dérivées Partielles (EDP).">
-    <meta name="keywords" content="Recherche Scientifique, Mathématiques, Analyse Non Linéaire, EDP, Mahmoud El Ahmadi, USMBA, FST Fès, Publications, Google Scholar, ResearchGate, Mathématiques Appliquées">
-    <meta name="author" content="Pr. Mahmoud El Ahmadi">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* --- STYLE PERSONNALISÉ POUR LES PROFILS SCIENTIFIQUES --- */
+        .research-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Espace généreux entre les deux boutons */
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn-scientific {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 50px; /* Forme arrondie très moderne */
+            text-decoration: none !important; /* Enlève le soulignement */
+            color: #333;
+            font-weight: 600;
+            font-family: sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn-scientific:hover {
+            transform: translateY(-3px); /* Petit saut au survol */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border-color: #0056b3;
+            background-color: #f8fbff;
+        }
+
+        .btn-scientific i {
+            margin-right: 12px; /* Espace entre l'icône et le texte */
+        }
+
+        .presentation h3 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
     <div class="container">
         <header class="professor-header" data-aos="fade-down">
             <div class="professor-name">Activités de Recherche</div>
@@ -33,13 +75,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
         </nav>
 
-        <div class="presentation" data-aos="fade-up" style="text-align: center; border-left: none; border-top: 4px solid #0056b3;">
+        <div class="presentation" data-aos="fade-up" style="text-align: center; border-left: none; border-top: 4px solid #0056b3; padding: 30px;">
             <h3>Profils Scientifiques Officiels</h3>
             <div class="research-links">
-                <!-- METTEZ VOS LIENS ICI -->
+                <!-- Google Scholar -->
                 <a href="https://scholar.google.com/citations?user=UxwjIW8AAAAJ&hl=fr" target="_blank" class="btn-scientific">
                     <i class="fa-solid fa-graduation-cap" style="color: #4285F4; font-size: 1.4em;"></i> Google Scholar
                 </a>
+                <!-- ResearchGate -->
                 <a href="https://www.researchgate.net/profile/Mahmoud-El-Ahmadi" target="_blank" class="btn-scientific">
                     <i class="fa-brands fa-researchgate" style="color: #00ccbb; font-size: 1.4em;"></i> ResearchGate
                 </a>
@@ -47,18 +90,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="resources-grid">
-            <!-- ARTICLES -->
             <div class="resource-card" data-aos="zoom-in">
                 <i class="fa-solid fa-file-alt"></i>
                 <h3>ARTICLES</h3>
                 <p>Revues Indexées (Scopus / WoS)</p>
-                <div class="badge-container"></div>
                 <a href="articles.html" style="color: #0056b3; font-weight: bold; display: block; margin-top: 15px; text-decoration: none;">
                     Accéder →
                 </a>
             </div>
 
-            <!-- COMMUNICATIONS -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fa-solid fa-microphone"></i>
                 <h3>COMMUNICATIONS</h3>
@@ -69,7 +109,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         
-        <footer class="professor-footer"><div class="signature"><p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p></div></footer>
+        <footer class="professor-footer">
+            <div class="signature">
+                <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
+            </div>
+        </footer>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
