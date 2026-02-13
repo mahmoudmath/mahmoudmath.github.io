@@ -43,27 +43,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .btn-scientific:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            border-color: #0056b3;
-            background-color: #fcfdfe;
         }
 
-        .btn-scientific i {
-            margin-right: 8px;
-        }
-
-        /* --- LE CARRÉ ORANGE "SC" OFFICIEL --- */
         .scopus-badge {
-            background-color: #eb7121; /* Orange officiel */
-            color: white;               /* Lettres en blanc */
+            background-color: #eb7121;
+            color: white;
             font-family: "Arial Black", sans-serif;
             font-weight: 900;
             font-size: 10px;
             padding: 3px 5px;
-            border-radius: 2px;        /* Très léger arrondi pour faire propre */
+            border-radius: 2px;
             margin-right: 8px;
             line-height: 1;
             display: inline-block;
-            text-transform: uppercase; /* Force les majuscules */
+            text-transform: uppercase;
+        }
+
+        /* --- CORRECTION POUR LES TITRES ET ICONES --- */
+        
+        /* 1. Taille des icônes de la grille */
+        .resource-card i {
+            font-size: 50px !important;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* 2. Barre complète sous les mots et suppression double ligne */
+        .resource-card h3 {
+            font-size: 1.5rem !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+            padding-bottom: 5px !important;
+            margin: 10px 0 !important;
+            text-decoration: none !important;
+            border: none !important;
+        }
+
+        /* Supprime la petite barre courte venant du style.css */
+        .resource-card h3::after, .resource-card h3::before {
+            display: none !important;
+            content: "" !important;
+        }
+
+        /* 3. Style des liens Accéder */
+        .resource-card a {
+            font-weight: bold !important;
+            text-decoration: underline !important;
+            display: block !important;
+            margin-top: 15px !important;
         }
 
         .presentation h3 {
@@ -74,6 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <div class="container">
         <header class="professor-header" data-aos="fade-down">
             <div class="professor-name">Activités de Recherche</div>
@@ -87,22 +116,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="presentation" data-aos="fade-up" style="text-align: center; border-left: none; border-top: 4px solid #0056b3; padding: 30px;">
             <h3>Profils Scientifiques Officiels</h3>
             <div class="research-links">
-                <!-- Google Scholar -->
                 <a href="https://scholar.google.com/citations?user=UxwjIW8AAAAJ&hl=fr" target="_blank" class="btn-scientific">
                     <i class="fa-solid fa-graduation-cap" style="color: #4285F4; font-size: 1.2em;"></i> Google Scholar
                 </a>
-                
-                <!-- ResearchGate -->
                 <a href="https://www.researchgate.net/profile/Mahmoud-El-Ahmadi" target="_blank" class="btn-scientific">
                     <i class="fa-brands fa-researchgate" style="color: #00ccbb; font-size: 1.2em;"></i> ResearchGate
                 </a>
-
-                <!-- ORCID -->
                 <a href="https://orcid.org/0000-0002-6493-3219" target="_blank" class="btn-scientific">
                     <i class="fa-brands fa-orcid" style="color: #A6CE39; font-size: 1.2em;"></i> ORCID
                 </a>
-
-                <!-- SCOPUS AVEC LE CARRÉ ORANGE "SC" -->
                 <a href="https://www.scopus.com/authid/detail.uri?authorId=58917396500" target="_blank" class="btn-scientific">
                     <span class="scopus-badge">SC</span> Scopus
                 </a>
@@ -110,18 +132,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
 
         <div class="resources-grid">
+            <!-- ARTICLES -->
             <div class="resource-card" data-aos="zoom-in">
-                <i class="fa-solid fa-file-alt"></i>
-                <h3>ARTICLES</h3>
+                <i class="fa-solid fa-file-alt" style="color: #8e44ad;"></i>
+                <h3 style="color: #8e44ad; border-bottom: 3px solid #8e44ad !important;">ARTICLES</h3>
                 <p>Revues Indexées (Scopus / WoS)</p>
-                <a href="articles.html" style="color: #0056b3; font-weight: bold; display: block; margin-top: 15px; text-decoration: none;">Accéder →</a>
+                <a href="articles.html" style="color: #8e44ad;">Accéder →</a>
             </div>
 
+            <!-- COMMUNICATIONS -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fa-solid fa-microphone"></i>
-                <h3>COMMUNICATIONS</h3>
+                <i class="fa-solid fa-microphone" style="color: #2e86de;"></i>
+                <h3 style="color: #2e86de; border-bottom: 3px solid #2e86de !important;">COMMUNICATIONS</h3>
                 <p>Congrès Nationaux & Internationaux</p>
-                <a href="communications.html" style="color: #28a745; font-weight: bold; display: block; margin-top: 15px; text-decoration: none;">Accéder →</a>
+                <a href="communications.html" style="color: #2e86de;">Accéder →</a>
             </div>
         </div>
         
