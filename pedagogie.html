@@ -35,29 +35,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 30px;
             width: 100%;
             box-sizing: border-box;
+            text-align: center; /* Aligne tout le contenu au centre de la carte */
         }
 
-        /* TAILLE UNIQUE DES ICONES */
+        /* TAILLE UNIQUE ET ALIGNEMENT DES ICONES */
         .academic-icon {
             font-size: 50px !important; 
-            margin-bottom: 15px;
-            display: block;
+            height: 65px; /* FORCE la même hauteur pour tous les conteneurs */
+            display: flex !important;
+            align-items: center;    /* Centre l'icône verticalement dans ses 65px */
+            justify-content: center; /* Centre l'icône horizontalement */
+            margin-bottom: 10px;    /* Espace fixe identique sous chaque icône */
         }
 
-        /* RESET TOTAL DES TITRES POUR SUPPRIMER LA DOUBLE LIGNE */
+        /* RESET TOTAL DES TITRES */
         .resource-card h3 {
             font-size: 1.5rem !important;
             font-weight: bold !important;
-            margin: 10px 0 !important;
+            margin: 0 0 10px 0 !important; /* On met 0 en haut pour garder la distance de l'icône */
             display: inline-block !important;
             padding-bottom: 5px !important;
-            /* On tue toutes les lignes possibles venant du style.css */
             text-decoration: none !important;
             border: none !important;
             box-shadow: none !important;
         }
 
-        /* Supprime les petits rectangles de décoration cachés (::after) */
+        /* Supprime les petits rectangles de décoration cachés */
         .resource-card h3::after, .resource-card h3::before {
             display: none !important;
             content: "" !important;
