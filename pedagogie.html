@@ -39,47 +39,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* TAILLE UNIQUE DES ICONES */
         .academic-icon {
-            font-size: 50px; 
+            font-size: 50px !important; 
             margin-bottom: 15px;
             display: block;
         }
 
-        /* SUPPRESSION DE LA DEUXIÈME LIGNE SUR LES TITRES */
+        /* RESET TOTAL DES TITRES POUR SUPPRIMER LA DOUBLE LIGNE */
         .resource-card h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 10px 0;
-            display: inline-block;
-            padding-bottom: 5px;
-            text-decoration: none !important; /* Supprime la ligne de texte */
+            font-size: 1.5rem !important;
+            font-weight: bold !important;
+            margin: 10px 0 !important;
+            display: inline-block !important;
+            padding-bottom: 5px !important;
+            /* On tue toutes les lignes possibles venant du style.css */
+            text-decoration: none !important;
+            border: none !important;
+            box-shadow: none !important;
         }
 
-        /* STYLE DES LIENS ACCÉDER (Violet comme l'image) */
+        /* Supprime les petits rectangles de décoration cachés (::after) */
+        .resource-card h3::after, .resource-card h3::before {
+            display: none !important;
+            content: "" !important;
+        }
+
+        /* STYLE DES LIENS ACCÉDER (Violet) */
         .resource-card a {
             color: #6c3483 !important; 
-            font-weight: bold;
-            text-decoration: underline;
-            display: block;
-            margin-top: 15px;
+            font-weight: bold !important;
+            text-decoration: underline !important;
+            display: block !important;
+            margin-top: 15px !important;
         }
 
         /* RESPONSIVE */
-        @media (max-width: 1100px) {
-            .resources-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 650px) {
-            .resources-grid { grid-template-columns: 1fr; }
-        }
-
-        .professor-footer {
-            width: 100%;
-            margin-top: auto;
-        }
+        @media (max-width: 1100px) { .resources-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 650px) { .resources-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="container">
         <header class="professor-header" data-aos="fade-down">
@@ -95,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- COURS -->
             <div class="resource-card" data-aos="zoom-in">
                 <div class="academic-icon" style="color: #8e44ad;"><i class="fas fa-university"></i></div>
-                <h3 style="color: #8e44ad; border-bottom: 3px solid #8e44ad; text-decoration: none;">COURS</h3>
+                <h3 style="color: #8e44ad; border-bottom: 3px solid #8e44ad !important;">COURS</h3>
                 <p>Supports magistraux</p>
                 <a href="choix-annee-cours.html">Accéder →</a>
             </div>
@@ -103,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- TD -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="academic-icon" style="color: #2e86de;"><i class="fas fa-file-signature"></i></div>
-                <h3 style="color: #2e86de; border-bottom: 3px solid #2e86de; text-decoration: none;">TD</h3>
+                <h3 style="color: #2e86de; border-bottom: 3px solid #2e86de !important;">TD</h3>
                 <p>Travaux Dirigés</p>
                 <a href="choix-annee-td.html">Accéder →</a>
             </div>
@@ -111,24 +110,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- EXAMENS -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="academic-icon" style="color: #1abc9c;"><i class="fas fa-graduation-cap"></i></div>
-                <h3 style="color: #1abc9c; border-bottom: 3px solid #1abc9c; text-decoration: none;">EXAMENS</h3>
+                <h3 style="color: #1abc9c; border-bottom: 3px solid #1abc9c !important;">EXAMENS</h3>
                 <p>Contrôles & Examens</p>
                 <a href="choix-annee-examens.html">Accéder →</a>
             </div>
 
-            <!-- LIVRES (IDENTIQUE AUX AUTRES) -->
+            <!-- LIVRES -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="300">
                 <div class="academic-icon" style="color: #e67e22;"><i class="fas fa-book"></i></div>
-                <h3 style="color: #e67e22; border-bottom: 3px solid #e67e22; text-decoration: none;">LIVRES</h3>
+                <h3 style="color: #e67e22; border-bottom: 3px solid #e67e22 !important;">LIVRES</h3>
                 <p>Ouvrages conseillés</p>
                 <a href="livres.html">Accéder →</a>
             </div>
         </div>
         
         <footer class="professor-footer">
-            <div class="signature">
-                <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
-            </div>
+            <div class="signature"><p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p></div>
         </footer>
     </div>
 
