@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .research-links {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Espacement ajusté pour 4 boutons */
+            gap: 15px;
             flex-wrap: wrap; 
             margin-top: 20px;
         }
@@ -45,6 +45,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             box-shadow: 0 6px 12px rgba(0,0,0,0.1);
             border-color: #0056b3;
             background-color: #fcfdfe;
+        }
+
+        /* Style pour l'icône Scopus SVG */
+        .scopus-icon {
+            width: 1.3em;
+            height: 1.3em;
+            margin-right: 8px;
+            fill: #ff6600; /* Couleur officielle Scopus */
         }
 
         .btn-scientific i {
@@ -87,9 +95,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <i class="fa-brands fa-orcid" style="color: #A6CE39; font-size: 1.2em;"></i> ORCID
                 </a>
 
-                <!-- Scopus (Nouveau) -->
+                <!-- Scopus avec Icône Officielle SVG -->
                 <a href="https://www.scopus.com/authid/detail.uri?authorId=58917396500" target="_blank" class="btn-scientific">
-                    <i class="fa-solid fa-magnifying-glass-chart" style="color: #ff6600; font-size: 1.2em;"></i> Scopus
+                    <svg class="scopus-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.25 17.5c-3.452 0-6.25-2.798-6.25-6.25S7.298 5 10.75 5c1.865 0 3.535.815 4.673 2.103l-2.012 1.487C12.75 7.844 11.812 7.5 10.75 7.5c-2.071 0-3.75 1.679-3.75 3.75s1.679 3.75 3.75 3.75c1.062 0 2-.344 2.661-1.09l2.012 1.487C14.285 16.685 12.615 17.5 10.75 17.5zm7.5-3.125l-1.875-1.25v-2.5l1.875-1.25 1.875 1.25v2.5l-1.875 1.25z"/>
+                    </svg>
+                    Scopus
                 </a>
             </div>
         </div>
