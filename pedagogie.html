@@ -16,7 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Ajustement minimal pour le bas de page sans toucher aux dimensions */
         html, body {
             height: 100%;
             margin: 0;
@@ -24,30 +23,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .container {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Toute la hauteur de l'écran */
+            min-height: 100vh;
         }
+        /* Configuration pour aligner les 4 cartes sur une seule ligne sur ordinateur */
         .resources-grid {
-            flex-grow: 1; /* Remplit l'espace vide sans changer la largeur des cartes */
-            /* Ajout pour l'alignement des 4 cartes */
+            flex-grow: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr); /* Force 4 colonnes égales */
             gap: 20px;
-            align-content: start;
+            padding: 20px;
+            align-items: start;
         }
+
+        /* Adaptation pour les tablettes (2x2) et mobiles (1x4) */
+        @media (max-width: 992px) {
+            .resources-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .resources-grid { grid-template-columns: 1fr; }
+        }
+
         .professor-footer {
-            width: 100%; /* Garde la même largeur */
-            margin-top: 50px; /* Un peu d'espace au-dessus pour respirer */
+            width: 100%;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
     <div class="container">
-        <!-- HEADER IDENTIQUE À RECHERCHE -->
         <header class="professor-header" data-aos="fade-down">
             <div class="professor-name">Espace Pédagogique</div>
             <div class="professor-title">Ressources Mathématique</div>
@@ -57,8 +63,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
         </nav>
 
-        <!-- GRILLE DE RESSOURCES (4 cartes alignées) -->
         <div class="resources-grid">
+            <!-- CARTE COURS -->
             <div class="resource-card" data-aos="zoom-in">
                 <div class="academic-icon"><i class="fas fa-university"></i></div>
                 <h3>COURS</h3>
@@ -66,6 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="choix-annee-cours.html" class="btn-resource">Accéder →</a>
             </div>
 
+            <!-- CARTE TD -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="academic-icon"><i class="fas fa-file-signature"></i></div>
                 <h3>TD</h3>
@@ -73,6 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="choix-annee-td.html" class="btn-resource">Accéder →</a>
             </div>
 
+            <!-- CARTE EXAMENS -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="academic-icon"><i class="fas fa-graduation-cap"></i></div>
                 <h3>EXAMENS</h3>
@@ -80,16 +88,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="choix-annee-examens.html" class="btn-resource">Accéder →</a>
             </div>
 
-            <!-- QUATRIÈME CARTE : LIVRES -->
+            <!-- CARTE LIVRES (Nouvelle carte ajoutée) -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="300">
-                <div class="academic-icon"><i class="fas fa-book"></i></div>
+                <!-- Icône orange pour se différencier -->
+                <div class="academic-icon" style="color: #e67e22;"><i class="fas fa-book"></i></div>
                 <h3>LIVRES</h3>
                 <p>Ouvrages conseillés</p>
                 <a href="livres.html" class="btn-resource">Accéder →</a>
             </div>
         </div>
         
-        <!-- FOOTER IDENTIQUE À RECHERCHE -->
         <footer class="professor-footer">
             <div class="signature">
                 <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
