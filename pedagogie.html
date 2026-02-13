@@ -39,18 +39,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* TAILLE UNIQUE DES ICONES */
         .academic-icon {
-            font-size: 50px; /* Taille fixe pour toutes les icônes */
+            font-size: 50px; 
             margin-bottom: 15px;
             display: block;
         }
 
-        /* TAILLE UNIQUE DES TITRES (COURS, TD, etc.) */
+        /* SUPPRESSION DE LA DEUXIÈME LIGNE SUR LES TITRES */
         .resource-card h3 {
             font-size: 1.5rem;
             font-weight: bold;
             margin: 10px 0;
             display: inline-block;
             padding-bottom: 5px;
+            text-decoration: none !important; /* Supprime la ligne de texte */
         }
 
         /* STYLE DES LIENS ACCÉDER (Violet comme l'image) */
@@ -60,7 +61,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             text-decoration: underline;
             display: block;
             margin-top: 15px;
-            font-size: 0.95rem;
         }
 
         /* RESPONSIVE */
@@ -95,7 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- COURS -->
             <div class="resource-card" data-aos="zoom-in">
                 <div class="academic-icon" style="color: #8e44ad;"><i class="fas fa-university"></i></div>
-                <h3 style="color: #8e44ad; border-bottom: 3px solid #8e44ad;">COURS</h3>
+                <h3 style="color: #8e44ad; border-bottom: 3px solid #8e44ad; text-decoration: none;">COURS</h3>
                 <p>Supports magistraux</p>
                 <a href="choix-annee-cours.html">Accéder →</a>
             </div>
@@ -103,7 +103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- TD -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="academic-icon" style="color: #2e86de;"><i class="fas fa-file-signature"></i></div>
-                <h3 style="color: #2e86de; border-bottom: 3px solid #2e86de;">TD</h3>
+                <h3 style="color: #2e86de; border-bottom: 3px solid #2e86de; text-decoration: none;">TD</h3>
                 <p>Travaux Dirigés</p>
                 <a href="choix-annee-td.html">Accéder →</a>
             </div>
@@ -111,15 +111,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- EXAMENS -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="academic-icon" style="color: #1abc9c;"><i class="fas fa-graduation-cap"></i></div>
-                <h3 style="color: #1abc9c; border-bottom: 3px solid #1abc9c;">EXAMENS</h3>
+                <h3 style="color: #1abc9c; border-bottom: 3px solid #1abc9c; text-decoration: none;">EXAMENS</h3>
                 <p>Contrôles & Examens</p>
                 <a href="choix-annee-examens.html">Accéder →</a>
             </div>
 
-            <!-- LIVRES (TAILLE ET STYLE IDENTIQUES) -->
+            <!-- LIVRES (IDENTIQUE AUX AUTRES) -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="300">
                 <div class="academic-icon" style="color: #e67e22;"><i class="fas fa-book"></i></div>
-                <h3 style="color: #e67e22; border-bottom: 3px solid #e67e22;">LIVRES</h3>
+                <h3 style="color: #e67e22; border-bottom: 3px solid #e67e22; text-decoration: none;">LIVRES</h3>
                 <p>Ouvrages conseillés</p>
                 <a href="livres.html">Accéder →</a>
             </div>
