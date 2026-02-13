@@ -11,12 +11,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pédagogie - Pr. Mahmoud El Ahmadi</title>
-    <meta name="description" content="Espace pédagogique du Pr. Mahmoud El Ahmadi. Accédez aux supports de cours, séries de travaux dirigés (TD) et annales d'examens de mathématiques pour les étudiants de la FST de Fès.">
-    <meta name="keywords" content="Cours Mathématiques, TD, Examens, FST Fès, USMBA, Mahmoud El Ahmadi, Analyse, Ressources Pédagogiques, Exercices Corrigés">
-    <meta name="author" content="Pr. Mahmoud El Ahmadi">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Ajustement minimal pour le bas de page sans toucher aux dimensions */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Toute la hauteur de l'écran */
+        }
+        .resources-grid {
+            flex-grow: 1; /* Remplit l'espace vide sans changer la largeur des cartes */
+        }
+        .professor-footer {
+            width: 100%; /* Garde la même largeur */
+            margin-top: 50px; /* Un peu d'espace au-dessus pour respirer */
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -25,7 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <div class="container">
-        <!-- ENTÊTE (Style identique à Recherche) -->
+        <!-- HEADER IDENTIQUE À RECHERCHE -->
         <header class="professor-header" data-aos="fade-down">
             <div class="professor-name">Espace Pédagogique</div>
             <div class="professor-title">Ressources Mathématique</div>
@@ -35,8 +52,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
         </nav>
 
+        <!-- GRILLE DE RESSOURCES (Dimensions préservées) -->
         <div class="resources-grid">
-            <!-- CARTE COURS -->
             <div class="resource-card" data-aos="zoom-in">
                 <div class="academic-icon"><i class="fas fa-university"></i></div>
                 <h3>COURS</h3>
@@ -44,7 +61,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="choix-annee-cours.html" class="btn-resource">Accéder →</a>
             </div>
 
-            <!-- CARTE TD -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="academic-icon"><i class="fas fa-file-signature"></i></div>
                 <h3>TD</h3>
@@ -52,7 +68,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="choix-annee-td.html" class="btn-resource">Accéder →</a>
             </div>
 
-            <!-- CARTE EXAMENS -->
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="academic-icon"><i class="fas fa-graduation-cap"></i></div>
                 <h3>EXAMENS</h3>
@@ -61,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         
-        <!-- PIED DE PAGE (Ajouté selon votre demande) -->
+        <!-- FOOTER IDENTIQUE À RECHERCHE -->
         <footer class="professor-footer">
             <div class="signature">
                 <p>© 2026 Pr. Mahmoud El Ahmadi - USMBA</p>
