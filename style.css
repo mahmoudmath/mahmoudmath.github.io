@@ -43,7 +43,7 @@ body {
 .nav-card {
     background: white; color: #0056b3; padding: 15px 30px; border-radius: 12px;
     font-weight: 600; border: 2px solid #0056b3; min-width: 180px; text-align: center; transition: 0.3s;
-    text-decoration: none; /* Ajouté pour éviter le soulignement des liens */
+    text-decoration: none;
 }
 .nav-card:hover { background: #0056b3; color: white; transform: translateY(-5px); }
 .nav-card.active { background: #0056b3; color: white; }
@@ -60,14 +60,12 @@ body {
 .resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
 
 /* --- RECHERCHE (STYLE ORIGINAL) --- */
-/* --- NOUVEAU STYLE DE RECHERCHE (MODE POUSSÉE) --- */
 .search-container { 
     max-width: 800px; 
     margin: 0 auto 30px auto; 
     position: relative;
     z-index: 10;
 }
-
 .search-bar { 
     width: 100%; 
     padding: 18px 25px; 
@@ -77,31 +75,26 @@ body {
     font-size: 1.1em;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
-
 #searchResultsBox {
     display: none; 
     position: absolute;
     z-index: 9999;    
     width: 100%; 
-    background-color: #ffffff !important; /* Force le blanc opaque */
+    background-color: #ffffff !important;
     padding: 20px; 
     border-radius: 15px; 
     border: 2px solid #0056b3; 
-    margin-top: 15px;      /* Espace après la barre de recherche */
-    margin-bottom: 30px;   /* Espace AVANT le texte "Parcours académique" */
+    margin-top: 15px;
+    margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     z-index: 1;
 }
-
-/* Affichage des liens sous forme de boutons/grille */
-/* Style pour transformer la liste en grille de boutons */
 #linksContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 12px;
     margin-top: 10px;
 }
-
 .search-link { 
     display: flex;
     align-items: center;
@@ -116,16 +109,13 @@ body {
     transition: 0.3s;
     text-align: center;
 }
-
 .search-link:hover { 
     background: #0056b3; 
     color: white; 
     transform: translateY(-2px);
 }
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+[data-aos] {
+    overflow: visible !important;
 }
 
 /* --- FOOTER (STYLE ORIGINAL) --- */
@@ -135,170 +125,87 @@ body {
 .contact-item h4 { color: #ffc107; margin-bottom: 10px; }
 .footer-links { display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap; }
 .signature { margin-top: 30px; font-style: italic; opacity: 0.8; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; }
-
 #backToTop { display: none; position: fixed; bottom: 30px; right: 30px; background: #0056b3; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 1000; }
-/* ===== DÉCORATION DES TITRES PÉDAGOGIQUES ===== */
-
-/* ===== TITRES PÉDAGOGIQUES GRANDS ET DÉCORÉS ===== */
 
 /* ===== DÉCORATION DES TITRES PÉDAGOGIQUES ===== */
 
-/* --- SECTION COURS (Carte 1) --- */
-
-/* 1. L'ICÔNE : On l'agrandit */
-.resource-card:nth-child(1) i {
-    font-size: 2.8rem !important; /* Taille de l'icône agrandie */
-    display: block !important;    /* Pour qu'elle soit bien au-dessus */
-    margin-bottom: 10px !important;
-    color: #6a11cb !important;    /* Couleur assortie au dégradé */
-}
-
-/* 2. LE TEXTE : On le réduit (style académique) */
+/* --- SECTION ANALYSE RÉELLE (Carte 1) --- */
+.resource-card:nth-child(1) i { font-size: 2.8rem !important; display: block !important; margin-bottom: 10px !important; color: #6a11cb !important; }
 .resource-card:nth-child(1) h3 {
     background: linear-gradient(90deg, #6a11cb, #8a2be2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 1.4em !important; /* RÉDUIT (était à 2.2em) */
+    font-size: 1.4em !important;
     padding: 5px 0;
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
     font-weight: 700;
 }
-
-/* 3. LE TRAIT : On le réduit pour qu'il soit proportionnel au texte */
 .resource-card:nth-child(1) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;  /* RÉDUIT (était à 80px) */
-    height: 3px;  /* Un peu plus fin */
+    left: 0;
+    width: 100%;
+    height: 3px;
     background: linear-gradient(90deg, #6a11cb, #8a2be2);
     border-radius: 2px;
-}
-/* --- SECTION TD (Carte 2) --- */
-
-/* 1. L'ICÔNE : On l'agrandit */
-.resource-card:nth-child(2) i {
-    font-size: 2.8rem !important; /* Taille de l'icône agrandie */
-    display: block !important;
-    margin-bottom: 10px !important;
-    color: #2575fc !important;    /* Couleur bleue assortie */
+    transform: none;
 }
 
-/* 2. LE TEXTE : On le réduit */
+/* --- SECTION ALGÈBRE (Carte 2) --- */
+.resource-card:nth-child(2) i { font-size: 2.8rem !important; display: block !important; margin-bottom: 10px !important; color: #2575fc !important; }
 .resource-card:nth-child(2) h3 {
     background: linear-gradient(90deg, #2575fc, #4a9eff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 1.4em !important; /* RÉDUIT (était à 2.2em) */
+    font-size: 1.4em !important;
     padding: 5px 0;
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
     font-weight: 700;
 }
-
-/* 3. LE TRAIT : On le réduit en largeur */
 .resource-card:nth-child(2) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;  /* RÉDUIT (était à 80px) */
-    height: 3px;  /* Plus fin */
+    left: 0;
+    width: 100%;
+    height: 3px;
     background: linear-gradient(90deg, #2575fc, #4a9eff);
     border-radius: 2px;
-}
-/* --- SECTION EXAMENS (Carte 3) --- */
-
-/* 1. L'ICÔNE : On l'agrandit */
-.resource-card:nth-child(3) i {
-    font-size: 2.8rem !important; /* Taille agrandie */
-    display: block !important;
-    margin-bottom: 10px !important;
-    color: #00b09b !important;    /* Couleur verte assortie */
+    transform: none;
 }
 
-/* 2. LE TEXTE : On le réduit */
+/* --- SECTION TOPOLOGIE (Carte 3) --- */
+.resource-card:nth-child(3) i { font-size: 2.8rem !important; display: block !important; margin-bottom: 10px !important; color: #00b09b !important; }
 .resource-card:nth-child(3) h3 {
     background: linear-gradient(90deg, #00b09b, #00d4b4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 1.4em !important; /* RÉDUIT (était à 2.2em) */
+    font-size: 1.4em !important;
     padding: 5px 0;
     position: relative;
     display: inline-block;
     margin-bottom: 15px;
     font-weight: 700;
 }
-
-/* 3. LE TRAIT : On le réduit en largeur */
 .resource-card:nth-child(3) h3::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;  /* RÉDUIT (était à 80px) */
-    height: 3px;  /* Plus fin */
+    left: 0;
+    width: 100%;
+    height: 3px;
     background: linear-gradient(90deg, #00b09b, #00d4b4);
     border-radius: 2px;
+    transform: none;
 }
 
-/* On garde bien votre correctif pour la barre de recherche en dessous */
-[data-aos] {
-    overflow: visible !important;
-}
-/* --- NOUVEAU STYLE ACADÉMIQUE --- */
-
-/* 1. TA PHOTO (Rectangle Portrait) */
-.header-photo {
-    overflow: hidden !important;
-    border-radius: 12px !important; /* Coins arrondis mais pas cercle */
-    border: 3px solid white !important; /* Cadre blanc pour faire ressortir sur le bleu */
-    width: 140px !important;
-    height: 170px !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
-    background: #f0f0f0 !important;
-}
-
-.header-photo img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Remplit le rectangle sans déformer */
-    display: block !important;
-}
-/* FORCER LE LOGO - SYMÉTRIE TOTALE AVEC LA PHOTO */
-/* CORRECTION : On cible UNIQUEMENT la classe .header-logo */
-.professor-header .header-logo {
-    /* DIMENSIONS IDENTIQUES À LA PHOTO (On ne touche pas) */
-    width: 140px !important;  
-    height: 175px !important; 
-    
-    background: white !important;
-    border: 2px solid white !important; 
-    border-radius: 12px !important;    
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; 
-    
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 10px !important;
-    overflow: hidden !important;
-}
-
-/* On applique le style à l'image du logo uniquement */
-.professor-header .header-logo img {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 90% !important; 
-    object-fit: contain !important;
-    border: none !important;
-}
+/* --- AUTRES STYLES INCHANGÉS (Mesure, Complexe, Calcul Diff.) --- */
+/* Tu gardes le reste de ton CSS tel quel pour les autres modules et éléments du site */
