@@ -16,11 +16,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* --- STYLE PERSONNALISÉ POUR LES PROFILS SCIENTIFIQUES --- */
+        /* --- STYLE DES PROFILS SCIENTIFIQUES --- */
         .research-links {
             display: flex;
             justify-content: center;
-            gap: 30px; /* Espace généreux entre les deux boutons */
+            gap: 20px;
             flex-wrap: wrap;
             margin-top: 20px;
         }
@@ -28,34 +28,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .btn-scientific {
             display: inline-flex;
             align-items: center;
-            padding: 12px 25px;
+            padding: 10px 22px;
             background: white;
             border: 1px solid #e0e0e0;
-            border-radius: 50px; /* Forme arrondie très moderne */
-            text-decoration: none !important; /* Enlève le soulignement */
+            border-radius: 50px;
+            text-decoration: none !important;
             color: #333;
             font-weight: 600;
-            font-family: sans-serif;
+            font-size: 0.95em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
         }
 
         .btn-scientific:hover {
-            transform: translateY(-3px); /* Petit saut au survol */
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
             border-color: #0056b3;
-            background-color: #f8fbff;
+            background-color: #fcfdfe;
         }
 
         .btn-scientific i {
-            margin-right: 12px; /* Espace entre l'icône et le texte */
+            margin-right: 10px;
         }
 
         .presentation h3 {
             color: #2c3e50;
             margin-bottom: 25px;
             font-weight: 700;
-            letter-spacing: 0.5px;
         }
     </style>
 </head>
@@ -80,11 +79,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="research-links">
                 <!-- Google Scholar -->
                 <a href="https://scholar.google.com/citations?user=UxwjIW8AAAAJ&hl=fr" target="_blank" class="btn-scientific">
-                    <i class="fa-solid fa-graduation-cap" style="color: #4285F4; font-size: 1.4em;"></i> Google Scholar
+                    <i class="fa-solid fa-graduation-cap" style="color: #4285F4; font-size: 1.3em;"></i> Google Scholar
                 </a>
+                
                 <!-- ResearchGate -->
                 <a href="https://www.researchgate.net/profile/Mahmoud-El-Ahmadi" target="_blank" class="btn-scientific">
-                    <i class="fa-brands fa-researchgate" style="color: #00ccbb; font-size: 1.4em;"></i> ResearchGate
+                    <i class="fa-brands fa-researchgate" style="color: #00ccbb; font-size: 1.3em;"></i> ResearchGate
+                </a>
+
+                <!-- ORCID (Lien corrigé) -->
+                <a href="https://orcid.org/0000-0002-6493-3219" target="_blank" class="btn-scientific">
+                    <i class="fa-brands fa-orcid" style="color: #A6CE39; font-size: 1.3em;"></i> ORCID
                 </a>
             </div>
         </div>
@@ -94,18 +99,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fa-solid fa-file-alt"></i>
                 <h3>ARTICLES</h3>
                 <p>Revues Indexées (Scopus / WoS)</p>
-                <a href="articles.html" style="color: #0056b3; font-weight: bold; display: block; margin-top: 15px; text-decoration: none;">
-                    Accéder →
-                </a>
+                <a href="articles.html" style="color: #0056b3; font-weight: bold; display: block; margin-top: 15px; text-decoration: none;">Accéder →</a>
             </div>
 
             <div class="resource-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fa-solid fa-microphone"></i>
                 <h3>COMMUNICATIONS</h3>
                 <p>Congrès Nationaux & Internationaux</p>
-                <a href="communications.html" style="color: #28a745; font-weight: bold; display: block; margin-top: 15px; text-decoration: none;">
-                    Accéder →
-                </a>
+                <a href="communications.html" style="color: #28a745; font-weight: bold; display: block; margin-top: 15px; text-decoration: none;">Accéder →</a>
             </div>
         </div>
         
@@ -115,6 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </footer>
     </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
 </body>
