@@ -11,7 +11,7 @@
     <style>
         .container { display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* ALIGNEMENT : 4 colonnes pour bien aligner les 4 premiers modules */
+        /* ALIGNEMENT : 4 colonnes strictes pour aligner les 4 premiers */
         .resources-grid { 
             flex-grow: 1; 
             display: grid; 
@@ -21,25 +21,30 @@
 
         .resource-card i { font-size: 40px !important; margin-bottom: 15px; display: block; }
 
-        /* STYLE DE LA LIGNE : Couleur identique au mot et épaisseur uniforme */
+        /* FORCE LA COULEUR DE LA LIGNE = COULEUR DU MOT */
         .resource-card h3 { 
             display: inline-block !important; 
             padding-bottom: 5px !important; 
             margin-bottom: 15px !important; 
             text-decoration: none !important; 
+            /* On utilise currentColor pour copier la couleur du texte */
             border-bottom: 3px solid currentColor !important; 
+            /* On tue les éventuels dégradés de fond du fichier style.css */
+            background: none !important;
+            background-image: none !important;
         }
 
-        /* SUPPRESSION DE LA DOUBLE LIGNE (DÉCORATION PARASITE) */
+        /* ON TUE COMPLÈTEMENT LA DEUXIÈME LIGNE DÉCORATIVE (pseudo-éléments) */
         .resource-card h3::after, 
         .resource-card h3::before { 
             content: none !important; 
-            display: none !important; 
+            display: none !important;
+            background: none !important;
         }
 
         .resource-card a { color: #6c3483 !important; font-weight: bold; text-decoration: underline; display: block; margin-top: 10px; }
 
-        /* Ajustement pour tablettes et mobiles */
+        /* Responsive */
         @media (max-width: 1024px) { .resources-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .resources-grid { grid-template-columns: 1fr; } }
     </style>
