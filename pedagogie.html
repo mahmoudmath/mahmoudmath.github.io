@@ -28,6 +28,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         .resources-grid {
             flex-grow: 1; /* Remplit l'espace vide sans changer la largeur des cartes */
+            /* Ajout pour l'alignement des 4 cartes */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            align-content: start;
         }
         .professor-footer {
             width: 100%; /* Garde la même largeur */
@@ -52,7 +57,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
         </nav>
 
-        <!-- GRILLE DE RESSOURCES (Dimensions préservées) -->
+        <!-- GRILLE DE RESSOURCES (4 cartes alignées) -->
         <div class="resources-grid">
             <div class="resource-card" data-aos="zoom-in">
                 <div class="academic-icon"><i class="fas fa-university"></i></div>
@@ -73,6 +78,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>EXAMENS</h3>
                 <p>Contrôles & Examens</p>
                 <a href="choix-annee-examens.html" class="btn-resource">Accéder →</a>
+            </div>
+
+            <!-- QUATRIÈME CARTE : LIVRES -->
+            <div class="resource-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="academic-icon"><i class="fas fa-book"></i></div>
+                <h3>LIVRES</h3>
+                <p>Ouvrages conseillés</p>
+                <a href="livres.html" class="btn-resource">Accéder →</a>
             </div>
         </div>
         
