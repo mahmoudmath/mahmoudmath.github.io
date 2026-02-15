@@ -85,12 +85,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         padding: 16px 20px;
         margin-bottom: 10px;
         border-radius: 8px;
-        border-left: 6px solid #28a745;
         box-shadow: 0 2px 6px rgba(0,0,0,0.03);
         display: flex;
         align-items: center;
         justify-content: space-between;
         transition: all 0.2s;
+        border-left: 6px solid #28a745; /* Garde le vert pour le style général */
     }
 
     .resource-list li:hover {
@@ -169,7 +169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="choix-annee-td.html" class="nav-card">⬅ RETOUR</a>
         </nav>
 
-        <!-- SECTION ANALYSE I (VERT) -->
+        <!-- ANALYSE I - TITRE VERT -->
         <section class="presentation" data-aos="fade-up">
             <h3 style="color: #28a745; border-bottom: 3px solid #28a745;">📊 Analyse I</h3>
             <ul class="resource-list">
@@ -204,19 +204,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </ul>
         </section>
 
-        <!-- SECTION ANALYSE II (BLEU) -->
+        <!-- ANALYSE II - TITRE ROUGE -->
         <section class="presentation" data-aos="fade-up">
-            <h3 style="color: #003366; border-bottom: 3px solid #003366;">📊 Analyse II</h3>
+            <h3 style="color: #e63946; border-bottom: 3px solid #e63946;">📊 Analyse II</h3>
             <ul class="resource-list">
-                <li style="border-left: 6px solid #003366;">
+                <li>
                     <span style="display: flex; align-items: center;">
-                        <input type="checkbox" style="accent-color: #003366;">
+                        <input type="checkbox">
                         Série 1 - Analyse II
                     </span>
                     <a href="assets/pdf/serie1-analyse2-2025-2026.pdf" target="_blank">📄 PDF</a>
                 </li>
             </ul>
         </section>
+
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
