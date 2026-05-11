@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,177 +8,1033 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-KGXYVP14W5');
 </script>
-    <meta name="google-site-verification" content="7lDNYsoVl7UIm6LRlAp9KK4LQ04oAV41MRLYEEkWzUY" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pr. Mahmoud El Ahmadi - Espace Académique</title>
-    <meta name="description" content="Site officiel du Pr. Mahmoud El Ahmadi, enseignant-chercheur au Département de Mathématiques de la FST de Fès (USMBA). Retrouvez ses cours, travaux dirigés et activités de recherche en Analyse Non Linéaire.">
-    <meta name="keywords" content="Mahmoud El Ahmadi, FST Fès, USMBA, Mathématiques, Analyse Non Linéaire, EDP, Cours de Maths, Recherche Scientifique, Fès, Maroc">
-    <meta name="author" content="Pr. Mahmoud El Ahmadi">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta name="google-site-verification" content="7lDNYsoVl7UIm6LRlAp9KK4LQ04oAV41MRLYEEkWzUY" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pr. Mahmoud El Ahmadi — Espace Académique</title>
+<meta name="description" content="Site officiel du Pr. Mahmoud El Ahmadi, enseignant-chercheur au Département de Mathématiques de la FST de Fès (USMBA). Cours, travaux dirigés et recherche en Analyse Non Linéaire.">
+<meta name="keywords" content="Mahmoud El Ahmadi, FST Fès, USMBA, Mathématiques, Analyse Non Linéaire, EDP, Cours de Maths, Recherche Scientifique">
+<meta name="author" content="Pr. Mahmoud El Ahmadi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b3e;
+    --navy-mid: #162554;
+    --navy-light: #1e3270;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-pale: #f5e8c0;
+    --cream: #faf8f3;
+    --cream-dark: #f0ece0;
+    --text: #1a1a2e;
+    --text-muted: #4a5568;
+    --text-light: #718096;
+    --white: #ffffff;
+    --border: rgba(201,168,76,0.25);
+    --border-light: rgba(201,168,76,0.12);
+    --shadow-sm: 0 2px 8px rgba(13,27,62,0.08);
+    --shadow-md: 0 8px 32px rgba(13,27,62,0.12);
+    --shadow-lg: 0 20px 60px rgba(13,27,62,0.18);
+    --radius: 4px;
+    --radius-lg: 8px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    min-height: 100vh;
+  }
+
+  /* ── PROGRESS BAR ── */
+  #progress-bar {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    width: 0%; z-index: 9999;
+    transition: width 0.1s linear;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .site-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: 
+      radial-gradient(circle at 15% 85%, rgba(201,168,76,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 85% 15%, rgba(201,168,76,0.06) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .header-stripe {
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 52px 40px 48px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-photo-wrap {
+    position: relative;
+  }
+
+  .header-photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  .header-photo-wrap::after {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 50%;
+  }
+
+  .header-photo {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-info { color: var(--white); }
+
+  .header-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    opacity: 0.9;
+  }
+
+  .header-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.6em;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .header-title {
+    font-size: 1.05em;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+  }
+
+  .header-institution {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px 16px;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: var(--radius);
+  }
+
+  .header-institution span:first-child {
+    font-size: 0.92em;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.01em;
+  }
+
+  .header-institution span:last-child {
+    font-size: 0.82em;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+  }
+
+  .header-logo-wrap img {
+    height: 80px;
+    width: auto;
+    opacity: 0.9;
+    filter: brightness(1.1);
+  }
+
+  /* ── NAV ── */
+  .site-nav {
+    background: var(--navy);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 18px 22px;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--gold-light);
+    background: rgba(201,168,76,0.06);
+  }
+
+  .nav-link.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    background: rgba(201,168,76,0.08);
+  }
+
+  .nav-link .nav-icon { font-size: 1em; }
+
+  /* ── MAIN ── */
+  .site-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+  }
+
+  /* ── SECTION TITLES ── */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.9em;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .section-divider {
+    width: 48px; height: 2px;
+    background: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  /* ── SEARCH ── */
+  .search-section {
+    margin-bottom: 52px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .search-wrap {
+    position: relative;
+    max-width: 640px;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 18px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1em;
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 16px 20px 16px 48px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95em;
+    color: var(--text);
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .search-input::placeholder { color: var(--text-light); }
+
+  .search-input:focus {
+    border-color: var(--navy-mid);
+    box-shadow: 0 0 0 4px rgba(22,37,84,0.08), var(--shadow-sm);
+  }
+
+  .search-results {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0; right: 0;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    z-index: 200;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .search-results-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+
+  .search-result-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 0.92em;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+
+  .search-result-link::before {
+    content: '→';
+    color: var(--gold);
+    font-size: 0.85em;
+  }
+
+  .search-result-link:hover {
+    background: var(--cream);
+    color: var(--navy-mid);
+  }
+
+  /* ── BIO SECTION ── */
+  .bio-section {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    margin-bottom: 64px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .bio-text p {
+    font-size: 1.05em;
+    line-height: 1.85;
+    color: var(--text-muted);
+    text-align: justify;
+    margin-bottom: 16px;
+  }
+
+  .bio-text p:last-child { margin-bottom: 0; }
+
+  .bio-text strong { color: var(--text); font-weight: 600; }
+
+  .bio-sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+  .info-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-left: 3px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .info-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .info-card-value {
+    font-size: 0.92em;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .domain-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .domain-tag {
+    padding: 4px 10px;
+    background: var(--cream-dark);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 0.78em;
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  /* ── TWO-COL GRID ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 64px;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .panel {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+
+  .panel:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .panel-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--cream-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .panel-header-icon {
+    width: 38px; height: 38px;
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1em;
+    flex-shrink: 0;
+  }
+
+  .panel-header-icon.red { background: rgba(220,53,69,0.08); }
+  .panel-header-icon.green { background: rgba(40,167,69,0.08); }
+
+  .panel-header-text {}
+
+  .panel-header-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+
+  .panel-header-sub {
+    font-size: 0.75em;
+    color: var(--text-light);
+    letter-spacing: 0.04em;
+    margin-top: 1px;
+  }
+
+  .panel-body { padding: 20px 24px; }
+
+  .announcement-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cream-dark);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .announcement-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .announcement-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .announcement-dot.red { background: #dc3545; }
+  .announcement-dot.blue { background: var(--navy-mid); }
+  .announcement-dot.gold { background: var(--gold); }
+
+  .announcement-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7em;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    margin-top: 1px;
+    min-width: 70px;
+  }
+
+  .announcement-text {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .announcement-text strong { color: var(--text); }
+
+  .ref-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cream-dark);
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9em;
+    transition: var(--transition);
+  }
+
+  .ref-link:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .ref-link::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .ref-link:hover { color: var(--navy); padding-left: 6px; }
+  .ref-link:hover::before { background: var(--navy); }
+
+  .ref-link-badge {
+    margin-left: auto;
+    font-size: 0.7em;
+    padding: 2px 7px;
+    background: var(--cream-dark);
+    border-radius: 10px;
+    color: var(--text-light);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.7);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 52px 40px 32px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 40px;
+  }
+
+  .footer-col-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .footer-col p, .footer-col address {
+    font-size: 0.88em;
+    line-height: 1.75;
+    font-style: normal;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .footer-nav-link {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.88em;
+    padding: 5px 0;
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-nav-link:last-child { border-bottom: none; }
+  .footer-nav-link:hover { color: var(--gold-light); padding-left: 6px; }
+
+  .footer-bottom {
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-quote {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 0.95em;
+    color: rgba(255,255,255,0.4);
+    flex: 1;
+  }
+
+  .footer-copy {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7em;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.3);
+    white-space: nowrap;
+  }
+
+  /* ── BACK TO TOP ── */
+  #back-to-top {
+    position: fixed;
+    bottom: 32px; right: 32px;
+    width: 44px; height: 44px;
+    background: var(--navy);
+    color: var(--gold);
+    border: 1.5px solid rgba(201,168,76,0.4);
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    transition: var(--transition);
+    z-index: 500;
+    box-shadow: var(--shadow-md);
+  }
+
+  #back-to-top:hover {
+    background: var(--navy-mid);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+
+  #back-to-top.visible { display: flex; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .header-inner { animation: fadeUp 0.7s ease both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .header-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 24px;
+    }
+    .header-photo-wrap { margin: 0 auto; }
+    .header-logo-wrap { display: none; }
+    .header-institution { display: inline-flex; text-align: center; }
+    .bio-section { grid-template-columns: 1fr; }
+    .bio-sidebar { flex-direction: row; flex-wrap: wrap; }
+    .info-card { flex: 1; min-width: 200px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .site-main { padding: 36px 20px 60px; }
+    .header-inner { padding: 36px 20px; }
+    .nav-inner { padding: 0 20px; overflow-x: auto; }
+    .nav-link { padding: 16px 14px; white-space: nowrap; }
+    .footer-inner { padding: 40px 20px 24px; }
+    .header-name { font-size: 2em; }
+  }
+
+  @media (max-width: 500px) {
+    .bio-sidebar { flex-direction: column; }
+    .cards-grid { gap: 16px; }
+  }
+</style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="container">
-        <!-- EN-TÊTE -->
-        <header class="professor-header" data-aos="fade-down">
-           <div class="header-photo"><img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi"></div>
-            <div class="header-content">
-                <div class="professor-name">Pr. Mahmoud El Ahmadi</div>
-                <div class="professor-title">Professeur de Mathématiques</div>
-                <div class="institution-badge">
-                    <span class="faculty-highlight">Faculté des Sciences et Techniques de Fès</span><br>
-                    <span style="font-size: 0.95em;">Université Sidi Mohamed Ben Abdellah (USMBA)</span>
-                </div>
-            </div>
-           <div class="header-logo"><img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST"></div>
-        </header>
-        
-        <!-- NAVIGATION -->
-        <nav class="academic-nav" data-aos="fade-up">
-            <a href="index.html" class="nav-card active">🏠 ACCUEIL</a>
-            <a href="recherche.html" class="nav-card">🔬 RECHERCHE</a>
-            <a href="pedagogie.html" class="nav-card">👨‍🏫 PÉDAGOGIE</a>
-            <a href="contact.html" class="nav-card">✉️ CONTACT</a>
-        </nav>
 
-        <!-- BIENVENUE -->
-        <div class="presentation" style="text-align: center; border-left: none; margin-bottom: 20px;" data-aos="fade-up">
-            <h2 style="color: #0056b3;">Bienvenue sur votre plateforme académique</h2>
-            <p style="font-style: italic; margin-top: 10px;">Accédez à vos ressources pédagogiques et suivez l'actualité de nos modules.</p>
+<div id="progress-bar"></div>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-photo-wrap">
+      <img src="assets/pdf/photo-prof.jpg" alt="Pr. Mahmoud El Ahmadi" class="header-photo">
+    </div>
+    <div class="header-info">
+      <div class="header-eyebrow">Espace Académique Officiel</div>
+      <h1 class="header-name">Pr. Mahmoud El Ahmadi</h1>
+      <p class="header-title">Enseignant-Chercheur &middot; Département de Mathématiques</p>
+      <div class="header-institution">
+        <span>Faculté des Sciences et Techniques de Fès</span>
+        <span>Université Sidi Mohamed Ben Abdellah (USMBA)</span>
+      </div>
+    </div>
+    <div class="header-logo-wrap">
+      <img src="assets/pdf/logo-universite.jpg" alt="Logo USMBA FST">
+    </div>
+  </div>
+</header>
+
+<!-- ── NAV ── -->
+<nav class="site-nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link active" aria-current="page">
+      <span class="nav-icon">⌂</span> Accueil
+    </a>
+    <a href="recherche.html" class="nav-link">
+      <span class="nav-icon">◈</span> Recherche
+    </a>
+    <a href="pedagogie.html" class="nav-link">
+      <span class="nav-icon">◉</span> Pédagogie
+    </a>
+    <a href="contact.html" class="nav-link">
+      <span class="nav-icon">✉</span> Contact
+    </a>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main class="site-main" role="main">
+
+  <!-- SEARCH -->
+  <div class="search-section">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input
+        type="search"
+        id="searchInput"
+        class="search-input"
+        placeholder="Rechercher : Analyse 1, Analyse 2, Articles, Communications…"
+        aria-label="Recherche dans les ressources"
+        autocomplete="off"
+      >
+      <div id="searchResults" class="search-results" role="listbox" aria-label="Résultats de recherche">
+        <div class="search-results-label">Résultats</div>
+        <div id="linksContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIO -->
+  <section aria-labelledby="bio-title" style="margin-bottom: 64px; animation: fadeUp 0.6s 0.05s ease both;">
+    <div class="section-label">Présentation</div>
+    <h2 class="section-title" id="bio-title">Parcours académique &amp; axes de recherche</h2>
+    <div class="section-divider"></div>
+    <div class="bio-section" style="margin-bottom: 0;">
+      <div class="bio-text">
+        <p>
+          Le <strong>Pr. Mahmoud El Ahmadi</strong> est enseignant-chercheur au Département de Mathématiques
+          de la Faculté des Sciences et Techniques (FST) de Fès. Ses activités académiques se concentrent
+          sur l'<strong>Analyse Non Linéaire</strong>, avec une expertise spécifique portée sur l'étude
+          des <strong>équations aux dérivées partielles (EDP)</strong> et des équations différentielles.
+        </p>
+        <p>
+          Affilié au <strong>Laboratoire de Modélisation et Structures Mathématiques (LMSM)</strong>,
+          il mène des recherches théoriques et qualitatives sur des problèmes complexes issus des
+          mathématiques appliquées et des sciences de l'ingénieur, en privilégiant l'approche
+          par modélisation mathématique.
+        </p>
+        <p>
+          Cette plateforme académique est dédiée à la diffusion de ressources pédagogiques — Cours,
+          Travaux Dirigés et Annales d'Examens — à destination des étudiants de <strong>Licence
+          et de Master</strong>. Elle a pour vocation de soutenir la formation universitaire,
+          de favoriser l'autonomie intellectuelle des étudiants et de garantir un accès structuré
+          aux documents scientifiques de référence.
+        </p>
+      </div>
+      <aside class="bio-sidebar">
+        <div class="info-card">
+          <div class="info-card-label">Laboratoire</div>
+          <div class="info-card-value">LMSM — Modélisation et Structures Mathématiques</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Domaines de recherche</div>
+          <div class="domain-tags">
+            <span class="domain-tag">Analyse Non Linéaire</span>
+            <span class="domain-tag">EDP</span>
+            <span class="domain-tag">Équations Différentielles</span>
+            <span class="domain-tag">Modélisation</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Correspondance</div>
+          <div class="info-card-value">
+            mahmoud.elahmadi@usmba.ac.ma<br>
+            <span style="font-size:0.85em; color:var(--text-light);">Réponse sous 48h ouvrées</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PANELS GRID -->
+  <div class="cards-grid">
+
+    <!-- Annonces -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-header-icon red">📢</div>
+        <div class="panel-header-text">
+          <div class="panel-header-title">Annonces pédagogiques</div>
+          <div class="panel-header-sub">Mises à jour et informations importantes</div>
+        </div>
+      </div>
+      <div class="panel-body">
+
+        <div class="announcement-item">
+          <div class="announcement-dot red"></div>
+          <div class="announcement-date">29 mars</div>
+          <div class="announcement-text">
+            Mise en ligne de la <strong>Série 2 — Analyse II</strong>. Disponible dans la section Pédagogie.
+          </div>
         </div>
 
-        <!-- BARRE DE RECHERCHE -->
-        <div class="search-container" data-aos="fade-up" style="position: relative;">
-            <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Rechercher : Analyse 1, Analyse 2, Articles, Communications...">
-            <div id="searchResultsBox" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: white; border: 1.5px solid #0056b3; border-radius: 15px; padding: 20px; z-index: 1000; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-top: 5px; box-sizing: border-box;">
-                <p style="font-weight: bold; color: #0056b3; margin-bottom: 15px;">📍 Résultats trouvés :</p>
-                <div id="linksContainer"></div>
-            </div>
+        <div class="announcement-item">
+          <div class="announcement-dot blue"></div>
+          <div class="announcement-date">Permanent</div>
+          <div class="announcement-text">
+            Les supports de cours et séries de TD sont mis à jour périodiquement selon l'avancement du programme.
+          </div>
         </div>
-        
-        <!-- PRÉSENTATION -->
-        <section class="presentation search-item" data-aos="fade-up">
-            <h2>Parcours académique et axes de recherche</h2>
-            <p style="font-size: 1.1em; line-height: 1.8; text-align: justify; margin-top: 15px;">
-                Le <strong>Pr. Mahmoud El Ahmadi</strong> est enseignant-chercheur au Département de Mathématiques de la Faculté des Sciences et Techniques (FST) de Fès. Ses activités académiques se concentrent sur l’<strong>Analyse Non Linéaire</strong>, avec une expertise spécifique portée sur l'étude des <strong>équations aux dérivées partielles (EDP)</strong> et des équations différentielles.
-            </p>
-            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                Affilié au <strong>Laboratoire de Modélisation et Structures Mathématiques (LMSM)</strong>, il mène des recherches théoriques et qualitatives sur des problèmes complexes issus des mathématiques appliquées et des sciences de l’ingénieur, privilégiant l'approche par modélisation mathématique.
-            </p>
-            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                Cette plateforme académique est dédiée à la diffusion de ressources pédagogiques (Cours, Travaux Dirigés et Annales d’Examens) à destination des étudiants de <strong>Licence et de Master</strong>. Elle a pour vocation de soutenir la formation universitaire, de favoriser l’autonomie intellectuelle des étudiants et de garantir un accès structuré et pérenne aux documents scientifiques de référence.
-            </p>
-        </section>
-        
-        <!-- CARTES MODIFIÉES POUR L'ALIGNEMENT À GAUCHE -->
-        <div class="resources-grid">
-            <div class="resource-card search-item" style="border-top: 6px solid #dc3545;" data-aos="zoom-in">
-                <div style="text-align: left; font-size: 2.5em; margin-bottom: 10px;">📢</div>
-                <h3 style="text-align: left; margin-bottom: 15px;">ANNONCES PÉDAGOGIQUES</h3>
-                <ul class="resource-list">
-                    <!-- AJOUT DE LA NOUVEAUTÉ ICI -->
-                    <li><span style="color: #ff0000;">🔴</span> <strong>[29 Mars] :</strong> Mise en ligne de la <strong>Série 2 d'Analyse II</strong>.</li>
-                
-                    <li><strong>Ressources :</strong> Les supports de cours et les séries de TD sont mis à jour périodiquement selon l'avancement du programme.</li>
-                    <li><strong>Communication :</strong> Pour toute correspondance officielle, l'usage de votre adresse institutionnelle <em>(@usmba.ac.ma)</em> est impératif.</li>
-                    <li><strong>Méthodologie :</strong> La réussite repose sur une préparation méthodique des exercices de TD, une étude approfondie des cours et une présence assidue aux séances...</li>
-                </ul>
-            </div>
-            
-            <div class="resource-card search-item" style="border-top: 6px solid #28a745;" data-aos="zoom-in" data-aos-delay="200">
-                <div style="text-align: left; font-size: 2.5em; margin-bottom: 10px;">🔗</div>
-                <h3 style="text-align: left; margin-bottom: 15px;">RÉFÉRENCES UTILES</h3>
-                <ul class="resource-list">
-                    <li><a href="https://ent-fst.usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Espace Numérique (ENT)</a></li>
-                    <li><a href="https://elearn.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Plateforme Moodle FST</a></li>
-                    <li><a href="https://memoirepfe.fst-usmba.ac.ma/" target="_blank" style="color:#0056b3; font-weight: bold;">Bibliothèque FST Fès (Mémoires PFE)</a></li>
-                    <li><a href="http://exo7.emath.fr/" target="_blank" style="color:#0056b3;">Exo7 : Cours et exercices</a></li>
-                    <li><a href="https://www.bibmath.net/" target="_blank" style="color:#0056b3;">BibMath : Bibliothèque des maths</a></li>
-                    <li><a href="https://uel.unisciel.fr/" target="_blank" style="color:#0056b3;">UEL – Unisciel : Sciences et maths</a></li>
-                    <li><a href="https://www.geogebra.org/" target="_blank" style="color:#0056b3;">GeoGebra : Géométrie interactive</a></li>
-                    <li><a href="https://www.wolframalpha.com/" target="_blank" style="color:#0056b3;">Wolfram Alpha : Calcul formel</a></li>
-                </ul>
-            </div>
+
+        <div class="announcement-item">
+          <div class="announcement-dot gold"></div>
+          <div class="announcement-date">Rappel</div>
+          <div class="announcement-text">
+            Toute correspondance officielle doit être envoyée depuis votre adresse institutionnelle <strong>@usmba.ac.ma</strong>.
+          </div>
         </div>
-        
-        <!-- FOOTER -->
-        <footer class="professor-footer" data-aos="fade-up">
-            <h3 style="font-size: 1.8em; margin-bottom: 20px;">Département de Mathématiques</h3>
-            <p>Faculté des Sciences et Techniques de Fès</p>
-            <div class="contact-info">
-                <div class="contact-item"><h4>📍 Localisation</h4><p>FST de Fès, Route d'Imouzzer, BP 2202, Fès</p></div>
-               <div class="contact-item">
-                    <h4>📧 Correspondance</h4>
-                    <p>mahmoud.elahmadi@usmba.ac.ma<br>Réponse sous 48h ouvrées</p>
-                </div>
-                <div class="contact-item"><h4>🕒 Permanence</h4><p>Réception sur rendez-vous à solliciter par courriel</p></div>
-            </div>
-          <footer style="background-color:#0b2e63; color:white; padding:30px 20px; text-align:center;">
-    <div class="footer-links" style="margin-bottom:15px;">
-        <a href="http://www.fst-usmba.ac.ma/" target="_blank" style="color:white; font-weight:bold; margin:0 10px; text-decoration:none;">🌐 Portail FST Fès</a>
-        <a href="https://www.usmba.ac.ma" target="_blank" style="color:white; font-weight:bold; margin:0 10px; text-decoration:none;">🏛️ Université USMBA</a>
-        <a href="https://fst-usmba.ac.ma/emploi-du-temps/" target="_blank" style="color:white; font-weight:bold; margin:0 10px; text-decoration:none;">📅 Emplois du Temps</a>
+
+        <div class="announcement-item">
+          <div class="announcement-dot blue"></div>
+          <div class="announcement-date">Méthode</div>
+          <div class="announcement-text">
+            La réussite repose sur une préparation méthodique des TD, une étude approfondie du cours et une présence assidue aux séances.
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="signature" style="font-style:italic; line-height:1.5;">
-        <p>"La rigueur mathématique est le fondement de toute pensée scientifique structurée."</p>
-        <p style="margin-top:10px;">© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
+
+    <!-- Références -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-header-icon green">🔗</div>
+        <div class="panel-header-text">
+          <div class="panel-header-title">Références et ressources utiles</div>
+          <div class="panel-header-sub">Portails institutionnels et outils mathématiques</div>
+        </div>
+      </div>
+      <div class="panel-body">
+
+        <a href="https://ent-fst.usmba.ac.ma/" target="_blank" rel="noopener" class="ref-link">
+          Espace Numérique de Travail (ENT)
+          <span class="ref-link-badge">Institutionnel</span>
+        </a>
+        <a href="https://elearn.fst-usmba.ac.ma/" target="_blank" rel="noopener" class="ref-link">
+          Plateforme Moodle FST
+          <span class="ref-link-badge">Institutionnel</span>
+        </a>
+        <a href="https://memoirepfe.fst-usmba.ac.ma/" target="_blank" rel="noopener" class="ref-link">
+          Bibliothèque FST — Mémoires PFE
+          <span class="ref-link-badge">Institutionnel</span>
+        </a>
+        <a href="http://exo7.emath.fr/" target="_blank" rel="noopener" class="ref-link">
+          Exo7 — Cours et exercices de mathématiques
+          <span class="ref-link-badge">Ressource</span>
+        </a>
+        <a href="https://www.bibmath.net/" target="_blank" rel="noopener" class="ref-link">
+          BibMath — Bibliothèque des mathématiques
+          <span class="ref-link-badge">Ressource</span>
+        </a>
+        <a href="https://www.geogebra.org/" target="_blank" rel="noopener" class="ref-link">
+          GeoGebra — Géométrie interactive
+          <span class="ref-link-badge">Outil</span>
+        </a>
+        <a href="https://www.wolframalpha.com/" target="_blank" rel="noopener" class="ref-link">
+          Wolfram Alpha — Calcul formel
+          <span class="ref-link-badge">Outil</span>
+        </a>
+
+      </div>
     </div>
+
+  </div>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <div class="footer-col-title">Département de Mathématiques</div>
+        <address>
+          Faculté des Sciences et Techniques de Fès<br>
+          Route d'Imouzzer, BP 2202<br>
+          Fès, Maroc<br><br>
+          mahmoud.elahmadi@usmba.ac.ma<br>
+          Réception sur rendez-vous par courriel
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="index.html" class="footer-nav-link">Accueil</a>
+        <a href="recherche.html" class="footer-nav-link">Recherche</a>
+        <a href="pedagogie.html" class="footer-nav-link">Pédagogie</a>
+        <a href="contact.html" class="footer-nav-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Portails institutionnels</div>
+        <a href="http://www.fst-usmba.ac.ma/" target="_blank" rel="noopener" class="footer-nav-link">Portail FST Fès</a>
+        <a href="https://www.usmba.ac.ma" target="_blank" rel="noopener" class="footer-nav-link">Université USMBA</a>
+        <a href="https://fst-usmba.ac.ma/emploi-du-temps/" target="_blank" rel="noopener" class="footer-nav-link">Emplois du temps</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-quote">
+        "La rigueur mathématique est le fondement de toute pensée scientifique structurée."
+      </p>
+      <span class="footer-copy">© 2026 Pr. M. El Ahmadi — FST Fès, USMBA</span>
+    </div>
+  </div>
 </footer>
-    </div>
 
-    <button id="backToTop" title="Retour en haut">↑</button>
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Retour en haut de page" title="Retour en haut">↑</button>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script>
-    AOS.init({ duration: 1000, once: true });
+<script>
+  // ── Progress bar
+  const progressBar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = Math.min(scrolled, 100) + '%';
+  });
 
-    const database = [
-        { key: "analyse 1", results: [ {n: "Cours Analyse 1", u: "cours-25-26.html"}, {n: "TD Analyse 1", u: "td-25-26.html"}, {n: "Examens Analyse 1", u: "examens-25-26.html"} ] },
-        { key: "analyse 2", results: [ {n: "Cours Analyse 2", u: "cours-24-25.html"}, {n: "TD Analyse 2", u: "td-24-25.html"}, {n: "Examens Analyse 2", u: "examens-24-25.html"} ] },
-        { key: "analyse 4", results: [ {n: "Travaux Dirigés Analyse 4", u: "td-24-25.html"} ] },
-        { key: "articles", results: [ {n: "Consulter les Articles Scientifiques", u: "articles.html"} ] },
-        { key: "communications", results: [ {n: "Consulter les Communications", u: "communications.html"} ] }
-    ];
+  // ── Back to top
+  const btt = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', window.scrollY > 400);
+  });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    document.getElementById('searchInput').addEventListener('keyup', function() {
-        let filter = this.value.toLowerCase().trim();
-        let box = document.getElementById('searchResultsBox');
-        let container = document.getElementById('linksContainer');
-        container.innerHTML = "";
-        let found = false;
+  // ── Search
+  const searchData = [
+    { key: "analyse 1",       results: [{ n: "Cours — Analyse 1",   u: "cours-25-26.html" }, { n: "TD — Analyse 1",   u: "td-25-26.html" }, { n: "Examens — Analyse 1", u: "examens-25-26.html" }] },
+    { key: "analyse 2",       results: [{ n: "Cours — Analyse 2",   u: "cours-24-25.html" }, { n: "TD — Analyse 2",   u: "td-24-25.html" }, { n: "Examens — Analyse 2", u: "examens-24-25.html" }] },
+    { key: "analyse 4",       results: [{ n: "TD — Analyse 4",      u: "td-24-25.html" }] },
+    { key: "articles",        results: [{ n: "Articles scientifiques", u: "articles.html" }] },
+    { key: "communications",  results: [{ n: "Communications",      u: "communications.html" }] }
+  ];
 
-        if (filter.length > 1) {
-            database.forEach(item => {
-                if (item.key.includes(filter)) {
-                    found = true;
-                    item.results.forEach(res => {
-                        let a = document.createElement('a');
-                        a.href = res.u;
-                        a.textContent = res.n; 
-                        a.className = "search-link";
-                        container.appendChild(a);
-                    });
-                }
-            });
-        }
-        box.style.display = found ? "block" : "none";
+  const searchInput   = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  const linksContainer = document.getElementById('linksContainer');
+
+  searchInput.addEventListener('input', function () {
+    const filter = this.value.toLowerCase().trim();
+    linksContainer.innerHTML = '';
+
+    if (filter.length < 2) {
+      searchResults.style.display = 'none';
+      return;
+    }
+
+    let found = false;
+    searchData.forEach(item => {
+      if (item.key.includes(filter)) {
+        found = true;
+        item.results.forEach(res => {
+          const a = document.createElement('a');
+          a.href = res.u;
+          a.textContent = res.n;
+          a.className = 'search-result-link';
+          a.setAttribute('role', 'option');
+          linksContainer.appendChild(a);
+        });
+      }
     });
 
-    document.getElementById('searchInput').addEventListener('input', function() {
-        if(this.value === "") document.getElementById('searchResultsBox').style.display = "none";
-    });
+    searchResults.style.display = found ? 'block' : 'none';
+  });
 
-    const btt = document.getElementById("backToTop");
-    window.onscroll = () => { btt.style.display = (window.scrollY > 300) ? "block" : "none"; };
-    btt.onclick = () => { window.scrollTo({top: 0, behavior: 'smooth'}); };
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.search-wrap')) {
+      searchResults.style.display = 'none';
+    }
+  });
+
+  // Close on Escape
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { searchResults.style.display = 'none'; searchInput.blur(); }
+  });
 </script>
+
 </body>
 </html>
