@@ -139,3 +139,17 @@ body {
     overflow: hidden !important;
 }
 .professor-header .header-logo img { width: 100% !important; height: auto !important; max-height: 90% !important; object-fit: contain !important; border: none !important; }
+/* --- ÉTIQUETTE DU SEMESTRE --- */
+.semester {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #edf3f8;
+    color: #0056b3;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65em;
+    font-weight: 600;
+    vertical-align: middle;
+    white-space: nowrap;
+}
