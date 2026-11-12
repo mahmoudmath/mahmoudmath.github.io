@@ -64,6 +64,23 @@
         transform: translateY(-2px);
     }
 
+    .course-level-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 45px 0 25px;
+        padding: 15px 20px;
+        border-left: 6px solid #003366;
+        border-radius: 6px;
+        background: #edf3f8;
+        color: #003366;
+    }
+
+    .master-title {
+        border-left-color: #00805a;
+        background: #edf7f2;
+        color: #006644;
+    }
+
     h3 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -156,6 +173,10 @@
         h3 {
             font-size: 1.3rem;
         }
+
+        .course-level-title {
+            font-size: 1.5rem;
+        }
     }
     </style>
 </head>
@@ -184,38 +205,88 @@
             <a href="choix-annee-cours.html" class="nav-card">⬅ RETOUR</a>
         </nav>
 
-        <!-- ANALYSE I -->
-        <section class="presentation" data-aos="fade-up">
-            <h3 style="color: #0056b3; border-bottom: 3px solid #0056b3;">
-                📘 Analyse I <span class="semester">S1</span>
-            </h3>
+        <!-- ====================================== -->
+        <!--             COURS DE LICENCE           -->
+        <!-- ====================================== -->
 
-            <ul class="resource-list">
-                <li>
-                    <span>📖 Cours complet - Analyse I</span>
-                    <a href="assets/pdf/Cours-analyse-1v2.pdf" target="_blank">
-                        📄 Ouvrir le PDF
-                    </a>
-                </li>
-            </ul>
+        <section data-aos="fade-up">
+            <h2 class="course-level-title">
+                🎓 Cours de Licence
+            </h2>
+
+            <!-- ANALYSE I -->
+            <section class="presentation" data-aos="fade-up">
+                <h3 style="color: #0056b3; border-bottom: 3px solid #0056b3;">
+                    📘 Analyse I <span class="semester">S1</span>
+                </h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <span>📖 Cours complet - Analyse I</span>
+                        <a href="assets/pdf/Cours-analyse-1v2.pdf" target="_blank">
+                            📄 Ouvrir le PDF
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- TOPOLOGIE -->
+            <section class="presentation" data-aos="fade-up">
+                <h3 style="color: #00805a; border-bottom: 3px solid #00805a;">
+                    📗 Topologie <span class="semester">S5</span>
+                </h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <span>📖 Chapitre 1 - Espaces métriques</span>
+                        <a href="assets/pdf/topologie-chap1.pdf" target="_blank">
+                            📄 Ouvrir le PDF
+                        </a>
+                    </li>
+
+                    <!-- Ajouter les prochains chapitres ici -->
+                </ul>
+            </section>
         </section>
 
-        <!-- TOPOLOGIE -->
-        <section class="presentation" data-aos="fade-up">
-            <h3 style="color: #00805a; border-bottom: 3px solid #00805a;">
-                📗 Topologie <span class="semester">S5</span>
-            </h3>
+        <!-- ====================================== -->
+        <!--              COURS DE MASTER           -->
+        <!-- ====================================== -->
 
-            <ul class="resource-list">
-                <li>
-                    <span>📖 Chapitre 1 - Espaces métriques</span>
-                    <a href="assets/pdf/topologie-chap1.pdf" target="_blank">
-                        📄 Ouvrir le PDF
-                    </a>
-                </li>
+        <section data-aos="fade-up">
+            <h2 class="course-level-title master-title">
+                🎓 Cours de Master
+            </h2>
 
-                <!-- Ajouter les prochains chapitres ici -->
-            </ul>
+            <!-- ESPACES DE SOBOLEV -->
+            <section class="presentation" data-aos="fade-up">
+                <h3 style="color: #00805a; border-bottom: 3px solid #00805a;">
+                    📗 Espaces de Sobolev et applications aux EDP
+                </h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <span>📖 Chapitre 1 - Rappels généraux d’analyse fonctionnelle</span>
+                        <a href="assets/pdf/chap1-sobolev.pdf" target="_blank">
+                            📄 Ouvrir le PDF
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>📖 Chapitre 2 - Fondements de la théorie des distributions</span>
+                        <a href="assets/pdf/chap2-sobolev.pdf" target="_blank">
+                            📄 Ouvrir le PDF
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>📖 Chapitre 3 - Outils fondamentaux pour les EDP</span>
+                        <a href="assets/pdf/chap3-sobolev.pdf" target="_blank">
+                            📄 Ouvrir le PDF
+                        </a>
+                    </li>
+                </ul>
+            </section>
         </section>
 
     </div>
