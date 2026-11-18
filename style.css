@@ -194,12 +194,12 @@ body {
     flex-wrap: nowrap !important;
 }
 
-/* Conserver la photo de profil circulaire */
+/* Même photo rectangulaire sur PC et téléphone */
 .header-photo {
     width: 140px !important;
-    height: 140px !important;
+    height: 170px !important;
     min-width: 140px !important;
-    border-radius: 50% !important;
+    border-radius: 12px !important;
     overflow: hidden !important;
 }
 
@@ -207,5 +207,5 @@ body {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    border-radius: 50% !important;
+    border-radius: 0 !important;
 }
