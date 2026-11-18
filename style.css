@@ -153,3 +153,59 @@ body {
     vertical-align: middle;
     white-space: nowrap;
 }
+html {
+    min-width: 1200px !important;
+}
+
+body {
+    min-width: 1200px !important;
+    overflow-x: auto !important;
+}
+
+.container {
+    width: 1200px !important;
+    min-width: 1200px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Conserver l'en-tête sur une seule ligne */
+.professor-header {
+    flex-wrap: nowrap !important;
+}
+
+/* Navigation horizontale */
+.academic-nav {
+    flex-wrap: nowrap !important;
+}
+
+/* Deux cartes côte à côte */
+.resources-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Coordonnées en trois colonnes */
+.contact-info {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Liens du pied de page */
+.footer-links {
+    flex-wrap: nowrap !important;
+}
+
+/* Conserver la photo de profil circulaire */
+.header-photo {
+    width: 140px !important;
+    height: 140px !important;
+    min-width: 140px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+}
+
+.header-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+}
