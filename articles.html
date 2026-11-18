@@ -1,101 +1,226 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGXYVP14W5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'G-KGXYVP14W5');
 </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Articles - Pr. Mahmoud El Ahmadi</title>
-<meta name="description" content="Publications scientifiques du Pr. Mahmoud El Ahmadi (FST de Fès, USMBA) : articles de revues indexées Scopus / Web of Science en analyse non linéaire et EDP.">
-<meta name="author" content="Pr. Mahmoud El Ahmadi">
-<meta name="theme-color" content="#0f2342">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Pr. Mahmoud El Ahmadi</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+    /* ===== STYLE LOCAL - PAGE ARTICLES SEULEMENT ===== */
+    
+    /* TITRES D'ANNÉES (2026, 2025, etc.) */
+    .year-title {
+        color: #0a4b7a;
+        font-size: 1.3rem;
+        font-weight: 700;
+        border-bottom: 2px solid #ffc107;
+        display: inline-block;
+        margin: 30px 0 15px 0;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* BOUTONS DOI */
+    .link-doi {
+        display: inline-block;
+        background: #f0f7ff;
+        color: #0a4b7a;
+        padding: 4px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border: 1px solid #0a4b7a;
+        margin-left: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .link-doi:hover {
+        background: #0a4b7a;
+        color: white;
+        border-color: #0a4b7a;
+    }
+
+    /* TITRE PRINCIPAL DE LA PAGE */
+    h1 {
+        font-size: 1.8rem;
+        color: #003366;
+        text-align: center;
+        margin: 20px 0;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    /* LISTE DES ARTICLES */
+    .resource-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .resource-list li {
+        background: white;
+        padding: 16px 20px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid transparent;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        transition: all 0.2s;
+        line-height: 1.5;
+    }
+
+    .resource-list li:hover {
+        border-left-color: #ffc107;
+        background: #fefcf5;
+        box-shadow: 0 2px 8px rgba(0,86,179,0.05);
+    }
+
+    /* NOMS DES AUTEURS EN GRAS */
+    .resource-list li strong {
+        color: #0a4b7a;
+        font-weight: 700;
+    }
+
+    /* TITRES DES REVUES EN ITALIQUE */
+    .resource-list li em {
+        color: #2d5a7a;
+        font-style: italic;
+    }
+
+    /* EN-TÊTE PAGE */
+    /* EN-TÊTE - Articles de Revues / Indexés Scopus */
+.professor-header {
+    background: #003366;  /* Fond bleu foncé */
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.professor-name {
+    color: white !important;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.professor-title {
+    color: white !important;
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+    /* RESPONSIVE POUR MOBILES */
+    @media (max-width: 768px) {
+        .year-title {
+            font-size: 1.1rem;
+        }
+        
+        .resource-list li {
+            padding: 14px;
+            font-size: 0.95rem;
+        }
+        
+        .link-doi {
+            display: inline-block;
+            margin-top: 6px;
+            margin-left: 0;
+        }
+        
+        .professor-name {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .resource-list li {
+            padding: 12px;
+        }
+        
+        .link-doi {
+            padding: 3px 10px;
+            font-size: 0.7rem;
+        }
+    }
+    </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HG84LR9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<a class="skip" href="#contenu">Aller au contenu</a>
+    <div class="container">
+        <header class="professor-header">
+            <div class="professor-name">Articles de Revues</div>
+            <div class="professor-title">Indexés Scopus / Web of Science</div>
+        </header>
 
-<header class="topbar">
-  <div class="wrap">
-    <a class="brand" href="index.html">Mahmoud El Ahmadi</a>
-    <nav aria-label="Navigation principale">
-      <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="recherche.html" aria-current="page">Recherche</a></li>
-        <li><a href="pedagogie.html">Pédagogie</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+        <nav class="academic-nav">
+            <a href="index.html" class="nav-card">🏠 ACCUEIL</a>
+            <a href="recherche.html" class="nav-card">⬅ RETOUR</a>
+        </nav>
 
-<div class="page-titre">
-  <div class="wrap">
-    <p class="fil"><a href="index.html">Accueil</a> / <a href="recherche.html">Recherche</a> / Articles</p>
-    <h1>Articles de revues</h1>
-    <p>Indexés Scopus / Web of Science. <a href="communications.html">Voir aussi les communications</a>.</p>
-  </div>
-</div>
+        <section class="presentation">
+            <!-- 2026 -->
+            <h3 class="year-title">2026</h3>
+            <ul class="resource-list">
+                <li>Sihem Berrajaa, Mohammed Abderrahim, <strong>Mahmoud El Ahmadi</strong>,  Omar Chakrone, Qualitative and spectral analysis of a partial discrete Dirichlet problem", <em>Annali dell'Università di Ferrara. Sezione 7: Scienze matematiche </em> 
+                  <a href="https://doi.org/10.1007/s11565-026-00735-z" target="_blank" class="link-doi">DOI</a></li>
+                <li>Sihem Berrajaa, <strong>Mahmoud El Ahmadi</strong>,  Omar Chakrone, "Variational analysis of nonlocal Kirchhoff-type equations driven by a generalized p(x)-Laplacian operator", <em>Journal of Elliptic and Parabolic Equations </em> 
+                  <a href="https://doi.org/10.1007/s41808-026-00488-y" target="_blank" class="link-doi">DOI</a></li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "On a p(x)-biharmonic problem without the Ambrosetti-Rabinowitz condition", <em>Rend. Mat. Appl. (7)</em>, Volume 47 (2026), 29–46.</li>
+                <li>Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, Barghouthe Mohammed, Omar Darhouche, "Some existence results for a class of parabolic equations with nonlinear boundary conditions", <em>Studia Universitatis Babes-Bolyai Matematica</em> 70(4):643-655.
+                    <a href="https://doi.org/10.24193/subbmath.2025.4.08" target="_blank" class="link-doi">DOI</a></li>
+            </ul>
 
-<main id="contenu">
-  <section>
-    <div class="wrap">
+            <!-- 2025 -->
+            <h3 class="year-title">2025</h3>
+            <ul class="resource-list">
+                <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Barghouthe Mohammed, "Global well-posedness of solutions to a class of heat equation under dynamical type boundary conditions", <em>Arab Journal of Mathematical Sciences</em> 32(1). <a href="https://doi.org/10.1108/AJMS-05-2024-0087" target="_blank" class="link-doi">DOI</a></li>
+                <li>Barghouthe Mohammed, <strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "Existence of solutions for a nonlinear discrete problem with the p(k)-Laplacian-like operators", <em>Palestine Journal of Mathematics</em> 14(3):189-200.</li>
+                <li>Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, Mohamed Bouabdallah, "ON A CLASS OF LAPLACIAN PARABOLIC PROBLEMS WITH STEKLOV BOUNDARY CONDITIONS", <em>Palestine Journal of Mathematics</em> 14:105-114.</li>
+                <li>Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, Omar Darhouche, Mostafa Allaoui, "On a dynamic boundary condition for a class of nonlinear parabolic equations", <em>Mathematica</em> 90(1):78-90. <a href="https://doi.org/10.24193/mathcluj.2025.1.07" target="_blank" class="link-doi">DOI</a></li>
+                <li>Barghouthe Mohammed, <strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "On a class of discrete problems with the p(k)-Laplacian-like operators", <em>Journal of Nonlinear Modeling and Analysis (JNMA)</em>. <a href="https://doi.org/10.12150/jnma.2025.439" target="_blank" class="link-doi">DOI</a></li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "p(x)-Kirchhoff type problems without (AR)-condition", <em>Memoirs on Differential Equations and Mathematical Physics</em> 94:59-72.</li>
+                <li>Bouabdallah Mohamed, Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, "Homoclinic solutions for a discrete fractional p-Schrödinger–Kirchhoff type equation", <em>Journal of Elliptic and Parabolic Equations</em> 11(6). <a href="https://doi.org/10.1007/s41808-025-00322-x" target="_blank" class="link-doi">DOI</a></li>
+            </ul>
 
-      <h2 class="annee">2026</h2>
-      <ul class="biblio">
-        <li>Sihem Berrajaa, Mohammed Abderrahim, <strong>Mahmoud El Ahmadi</strong>, Omar Chakrone, "Qualitative and spectral analysis of a partial discrete Dirichlet problem", <em>Annali dell'Università di Ferrara. Sezione 7: Scienze matematiche</em>. <a class="doi" href="https://doi.org/10.1007/s11565-026-00735-z" target="_blank" rel="noopener">DOI</a></li>
-        <li>Sihem Berrajaa, <strong>Mahmoud El Ahmadi</strong>, Omar Chakrone, "Variational analysis of nonlocal Kirchhoff-type equations driven by a generalized p(x)-Laplacian operator", <em>Journal of Elliptic and Parabolic Equations</em>. <a class="doi" href="https://doi.org/10.1007/s41808-026-00488-y" target="_blank" rel="noopener">DOI</a></li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "On a p(x)-biharmonic problem without the Ambrosetti-Rabinowitz condition", <em>Rend. Mat. Appl. (7)</em>, Volume 47 (2026), 29–46.</li>
-        <li>Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, Barghouthe Mohammed, Omar Darhouche, "Some existence results for a class of parabolic equations with nonlinear boundary conditions", <em>Studia Universitatis Babes-Bolyai Matematica</em> 70(4):643-655. <a class="doi" href="https://doi.org/10.24193/subbmath.2025.4.08" target="_blank" rel="noopener">DOI</a></li>
-      </ul>
+            <!-- 2024 -->
+            <h3 class="year-title">2024</h3>
+            <ul class="resource-list">
+                <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Gustavo Silvestre Costa, "Some results for a kind of Kirchhoff-type problems involving the p(x)-biharmonic operator", <em>Filomat</em> 38(26):9185-9201. <a href="https://doi.org/10.2298/FIL2426185A" target="_blank" class="link-doi">DOI</a></li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "On Kirchhoff-double phase problems without (AR)-condition", <em>Mathematica</em> 66 (89)(2):216-229. <a href="https://doi.org/10.24193/mathcluj.2024.2.06" target="_blank" class="link-doi">DOI</a></li>
+                <li>Mohamed Bouabdallah, <strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, "Homoclinic solutions for discrete fractional p-Laplacian equation via the Nehari manifold method", <em>Rendiconti del Circolo Matematico di Palermo</em> 73(6). <a href="https://doi.org/10.1007/s12215-024-01110-7" target="_blank" class="link-doi">DOI</a></li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Barghouthe Mohammed, Lamaizi Anass, Mohammed Berrajaa, "Existence and multiplicity results for a kind of double phase problems with mixed boundary value conditions", <em>Communications in Analysis and Mechanics</em> 16(3):509-527. <a href="https://doi.org/10.3934/cam.2024024" target="_blank" class="link-doi">DOI</a></li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Bouabdallah Mohamed, "Existence and multiplicity results for Kirchhoff-type superlinear problems involving the fractional p(x)-Laplacian satisfying (C)-condition", <em>Gulf Journal of Mathematics</em> 17(1):205-224. <a href="https://doi.org/10.56947/gjom.v17i1.2081" target="_blank" class="link-doi">DOI</a></li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Bouabdallah Mohamed, "On the superlinear Kirchhoff problem involving the double phase operator with variable exponents", <em>Journal of Elliptic and Parabolic Equations</em> 10(4). <a href="https://doi.org/10.1007/s41808-024-00289-1" target="_blank" class="link-doi">DOI</a></li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "Robin Problem Involving the p(x)-Laplacian Operator Without Ambrosetti-Rabinowizt Condition", <em>Boletim da Sociedade Paranaense de Matematica</em> 2024(42):1-14. <a href="https://doi.org/10.5269/bspm.65522" target="_blank" class="link-doi">DOI</a></li>
+            </ul>
 
-      <h2 class="annee">2025</h2>
-      <ul class="biblio">
-        <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Barghouthe Mohammed, "Global well-posedness of solutions to a class of heat equation under dynamical type boundary conditions", <em>Arab Journal of Mathematical Sciences</em> 32(1). <a class="doi" href="https://doi.org/10.1108/AJMS-05-2024-0087" target="_blank" rel="noopener">DOI</a></li>
-        <li>Barghouthe Mohammed, <strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "Existence of solutions for a nonlinear discrete problem with the p(k)-Laplacian-like operators", <em>Palestine Journal of Mathematics</em> 14(3):189-200.</li>
-        <li>Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, Mohamed Bouabdallah, "ON A CLASS OF LAPLACIAN PARABOLIC PROBLEMS WITH STEKLOV BOUNDARY CONDITIONS", <em>Palestine Journal of Mathematics</em> 14:105-114.</li>
-        <li>Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, Omar Darhouche, Mostafa Allaoui, "On a dynamic boundary condition for a class of nonlinear parabolic equations", <em>Mathematica</em> 90(1):78-90. <a class="doi" href="https://doi.org/10.24193/mathcluj.2025.1.07" target="_blank" rel="noopener">DOI</a></li>
-        <li>Barghouthe Mohammed, <strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "On a class of discrete problems with the p(k)-Laplacian-like operators", <em>Journal of Nonlinear Modeling and Analysis (JNMA)</em>. <a class="doi" href="https://doi.org/10.12150/jnma.2025.439" target="_blank" rel="noopener">DOI</a></li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "p(x)-Kirchhoff type problems without (AR)-condition", <em>Memoirs on Differential Equations and Mathematical Physics</em> 94:59-72.</li>
-        <li>Bouabdallah Mohamed, Lamaizi Anass, <strong>Mahmoud El Ahmadi</strong>, "Homoclinic solutions for a discrete fractional p-Schrödinger–Kirchhoff type equation", <em>Journal of Elliptic and Parabolic Equations</em> 11(6). <a class="doi" href="https://doi.org/10.1007/s41808-025-00322-x" target="_blank" rel="noopener">DOI</a></li>
-      </ul>
+            <!-- 2023 -->
+            <h3 class="year-title">2023</h3>
+            <ul class="resource-list">
+                <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "Existence and multiplicity of solutions for a class of double phase variable exponent problems with nonlinear boundary condition", <em>Advanced Mathematical Models & Applications</em>, Vol.8, 2023, pp.401-414.</li>
+                <li><strong>Mahmoud El Ahmadi</strong>, Mohammed Berrajaa, Abdesslem Ayoujil, "Existence of two solutions for Kirchhoff-double phase problems with a small perturbation without (AR)-condition", <em>Discrete and Continuous Dynamical Systems - S</em> 18(1):169-181. <a href="https://doi.org/10.3934/dcdss.2023085" target="_blank" class="link-doi">DOI</a></li>
+            </ul>
+        </section>
 
-      <h2 class="annee">2024</h2>
-      <ul class="biblio">
-        <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Gustavo Silvestre Costa, "Some results for a kind of Kirchhoff-type problems involving the p(x)-biharmonic operator", <em>Filomat</em> 38(26):9185-9201. <a class="doi" href="https://doi.org/10.2298/FIL2426185A" target="_blank" rel="noopener">DOI</a></li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "On Kirchhoff-double phase problems without (AR)-condition", <em>Mathematica</em> 66 (89)(2):216-229. <a class="doi" href="https://doi.org/10.24193/mathcluj.2024.2.06" target="_blank" rel="noopener">DOI</a></li>
-        <li>Mohamed Bouabdallah, <strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, "Homoclinic solutions for discrete fractional p-Laplacian equation via the Nehari manifold method", <em>Rendiconti del Circolo Matematico di Palermo</em> 73(6). <a class="doi" href="https://doi.org/10.1007/s12215-024-01110-7" target="_blank" rel="noopener">DOI</a></li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Barghouthe Mohammed, Lamaizi Anass, Mohammed Berrajaa, "Existence and multiplicity results for a kind of double phase problems with mixed boundary value conditions", <em>Communications in Analysis and Mechanics</em> 16(3):509-527. <a class="doi" href="https://doi.org/10.3934/cam.2024024" target="_blank" rel="noopener">DOI</a></li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Bouabdallah Mohamed, "Existence and multiplicity results for Kirchhoff-type superlinear problems involving the fractional p(x)-Laplacian satisfying (C)-condition", <em>Gulf Journal of Mathematics</em> 17(1):205-224. <a class="doi" href="https://doi.org/10.56947/gjom.v17i1.2081" target="_blank" rel="noopener">DOI</a></li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Lamaizi Anass, Bouabdallah Mohamed, "On the superlinear Kirchhoff problem involving the double phase operator with variable exponents", <em>Journal of Elliptic and Parabolic Equations</em> 10(4). <a class="doi" href="https://doi.org/10.1007/s41808-024-00289-1" target="_blank" rel="noopener">DOI</a></li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "Robin Problem Involving the p(x)-Laplacian Operator Without Ambrosetti-Rabinowizt Condition", <em>Boletim da Sociedade Paranaense de Matematica</em> 2024(42):1-14. <a class="doi" href="https://doi.org/10.5269/bspm.65522" target="_blank" rel="noopener">DOI</a></li>
-      </ul>
-
-      <h2 class="annee">2023</h2>
-      <ul class="biblio">
-        <li><strong>Mahmoud El Ahmadi</strong>, Abdesslem Ayoujil, Mohammed Berrajaa, "Existence and multiplicity of solutions for a class of double phase variable exponent problems with nonlinear boundary condition", <em>Advanced Mathematical Models &amp; Applications</em>, Vol.8, 2023, pp.401-414.</li>
-        <li><strong>Mahmoud El Ahmadi</strong>, Mohammed Berrajaa, Abdesslem Ayoujil, "Existence of two solutions for Kirchhoff-double phase problems with a small perturbation without (AR)-condition", <em>Discrete and Continuous Dynamical Systems - S</em> 18(1):169-181. <a class="doi" href="https://doi.org/10.3934/dcdss.2023085" target="_blank" rel="noopener">DOI</a></li>
-      </ul>
-
+        <footer class="professor-footer">
+            <div class="signature">
+                <p>© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
+            </div>
+        </footer>
     </div>
-  </section>
-</main>
-
-<footer class="pied">
-  <div class="wrap">
-    <p class="copy">© 2026 Pr. Mahmoud El Ahmadi - FST de Fès, USMBA</p>
-  </div>
-</footer>
 </body>
 </html>
