@@ -199,8 +199,10 @@ body {
     width: 140px !important;
     height: 170px !important;
     min-width: 140px !important;
+    min-height: 170px !important;
     border-radius: 12px !important;
     overflow: hidden !important;
+    flex-shrink: 0 !important;
 }
 
 .header-photo img {
