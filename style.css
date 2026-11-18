@@ -1,152 +1,155 @@
-/* Mahmoud El Ahmadi : feuille de style académique partagée.
-   Polices chargées par <link> dans chaque page (Source Serif 4, Source Sans 3). */
+/* --- IMPORTATION DES POLICES --- */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@300;400;600&display=swap');
 
-:root {
-  --nuit: #0f2342;
-  --academique: #1f4e8c;
-  --academique-clair: #e8eef6;
-  --fond: #f9f9f7;
-  --papier: #ffffff;
-  --texte: #222b38;
-  --gris: #5b6675;
-  --filet: #d9dee5;
-  --accent: #9a7b2f;
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* --- AJOUT DES MARGES : DEFINITION DU CONTAINER --- */
+.container {
+    max-width: 1200px; /* Limite la largeur pour créer les marges à gauche et à droite */
+    margin: 0 auto;    /* Centre tout le bloc au milieu de l'écran */
+    padding: 0 20px;   /* Sécurité pour ne pas toucher les bords sur mobile */
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
 body {
-  margin: 0; background: var(--fond); color: var(--texte);
-  font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65;
-  overflow-x: hidden;
-}
-img { max-width: 100%; height: auto; }
-a { color: var(--academique); text-underline-offset: 3px; text-decoration-thickness: 1px; }
-a:hover { color: var(--nuit); }
-:focus-visible { outline: 2px solid var(--academique); outline-offset: 3px; border-radius: 2px; }
-.wrap { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 24px; }
-.skip { position: absolute; left: -999px; top: 8px; background: var(--nuit); color: #fff; padding: 8px 14px; z-index: 100; }
-.skip:focus { left: 8px; color: #fff; }
-
-/* Barre de navigation */
-.topbar { position: sticky; top: 0; z-index: 50; background: var(--nuit); color: #fff; border-bottom: 1px solid rgba(255,255,255,.12); }
-.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; min-height: 56px; }
-.brand { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: #fff; text-decoration: none; padding: 10px 0; }
-.brand:hover { color: #fff; }
-.menu { display: flex; flex-wrap: wrap; gap: 4px 22px; margin: 0; padding: 0; list-style: none; }
-.menu a { display: block; padding: 17px 0 14px; color: #cfd8e6; text-decoration: none; font-size: .98rem; border-bottom: 3px solid transparent; }
-.menu a:hover { color: #fff; }
-.menu a[aria-current="page"] { color: #fff; border-bottom-color: var(--accent); }
-
-/* Section d'accueil */
-.hero { background: var(--papier); border-bottom: 1px solid var(--filet); }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; padding-top: 64px; padding-bottom: 64px; }
-.hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.15; color: var(--nuit); margin: 0 0 10px; }
-.hero .titre { font-family: var(--serif); font-size: 1.25rem; color: var(--academique); margin: 0 0 6px; }
-.hero .affil { color: var(--gris); margin: 0 0 22px; max-width: 60ch; }
-.hero .domaines { margin: 0 0 24px; padding-top: 18px; border-top: 1px solid var(--filet); max-width: 60ch; }
-.hero .domaines p { margin: 0; }
-.liens { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; list-style: none; font-size: .98rem; }
-.liens a { text-decoration: none; border-bottom: 1px solid var(--filet); padding-bottom: 1px; }
-.liens a:hover { border-bottom-color: var(--academique); }
-
-/* Photographie : cercle parfait sur tous les écrans */
-.portrait {
-  display: block; width: 220px; height: 220px; aspect-ratio: 1 / 1;
-  border-radius: 50%; object-fit: cover; flex-shrink: 0;
-  border: 1px solid var(--filet); padding: 5px; background: var(--papier);
+    background-color: #f4f7f9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230056b3' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95V4L10 66l86 29zm-7 0l-67-23 67-23V95zM10 54L96 4 10 24v30zm7 0l67-23-67-23v46zm0 0L46 40 10 54zM0 100L80 0H0v100zm8-8l64-80H8v80zM0 0l100 100V0H0zm92 8L8 92h84V8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    min-height: 100vh;
+    color: #333;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Sections */
-main section { padding: 52px 0; border-bottom: 1px solid var(--filet); }
-main section:last-of-type { border-bottom: 0; }
-h2 { font-family: var(--serif); font-weight: 600; font-size: 1.65rem; color: var(--nuit); margin: 0 0 18px; line-height: 1.25; }
-h3 { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: var(--nuit); margin: 0 0 8px; }
-p { margin: 0 0 1em; }
-.texte { max-width: 70ch; }
-.deux { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
-.liste { margin: 0; padding: 0; list-style: none; }
-.liste li { padding: 9px 0; border-bottom: 1px solid var(--filet); }
-.liste li:first-child { border-top: 1px solid var(--filet); }
-.note { color: var(--gris); font-size: .95rem; }
-.nouveau { color: var(--accent); font-weight: 600; }
-
-/* Recherche interne */
-.recherche { position: relative; max-width: 560px; margin: 0 0 8px; }
-.recherche label { display: block; font-weight: 600; margin-bottom: 6px; color: var(--nuit); }
-.recherche input { width: 100%; padding: 11px 14px; font: inherit; border: 1px solid #aab4c2; border-radius: 3px; background: #fff; }
-.recherche input:focus { border-color: var(--academique); outline: 2px solid var(--academique-clair); }
-.resultats { display: none; margin-top: 8px; padding: 6px 16px; background: #fff; border: 1px solid var(--filet); border-radius: 3px; }
-.resultats.ouvert { display: block; }
-.resultats a { display: block; padding: 8px 0; border-bottom: 1px solid var(--filet); text-decoration: none; }
-.resultats a:last-child { border-bottom: 0; }
-
-/* Entrées de page intérieure */
-.page-titre { background: var(--papier); border-bottom: 1px solid var(--filet); padding: 44px 0 34px; }
-.page-titre h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.7rem, 4vw, 2.3rem); color: var(--nuit); margin: 0 0 6px; line-height: 1.2; }
-.page-titre p { margin: 0; color: var(--gris); }
-.fil { font-size: .92rem; margin-bottom: 14px; color: var(--gris); }
-.fil a { color: var(--gris); }
-
-/* Liens vers sous-pages (sans cartes) */
-.entrees { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--filet); }
-.entrees li { border-bottom: 1px solid var(--filet); }
-.entrees a { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 16px 4px; text-decoration: none; }
-.entrees a:hover { background: var(--academique-clair); }
-.entrees strong { font-family: var(--serif); font-size: 1.15rem; color: var(--nuit); font-weight: 600; }
-.entrees span { color: var(--gris); font-size: .95rem; text-align: right; }
-
-/* Bibliographie */
-.annee { font-family: var(--serif); font-size: 1.3rem; color: var(--academique); margin: 36px 0 6px; padding-bottom: 6px; border-bottom: 1px solid var(--nuit); font-weight: 600; }
-.annee:first-of-type { margin-top: 0; }
-.biblio { margin: 0; padding: 0; list-style: none; }
-.biblio li { padding: 12px 0 12px 18px; border-bottom: 1px solid var(--filet); line-height: 1.55; position: relative; text-indent: 0; overflow-wrap: anywhere; }
-.biblio li::before { content: ""; position: absolute; left: 0; top: 1.15em; width: 5px; height: 5px; background: var(--filet); }
-.biblio strong { color: var(--nuit); font-weight: 700; }
-.biblio em { color: var(--texte); }
-.doi { display: inline-block; margin-left: 6px; font-size: .88rem; white-space: nowrap; }
-
-/* Formulaire de contact */
-form.contact { display: grid; gap: 16px; max-width: 560px; }
-.champ label { display: block; font-weight: 600; margin-bottom: 4px; }
-.champ input, .champ select, .champ textarea { width: 100%; padding: 10px 12px; font: inherit; border: 1px solid #aab4c2; border-radius: 3px; background: #fff; color: var(--texte); }
-.champ textarea { min-height: 150px; resize: vertical; }
-.champ input:focus, .champ select:focus, .champ textarea:focus { border-color: var(--academique); outline: 2px solid var(--academique-clair); }
-.noms { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-button.envoi { justify-self: start; padding: 11px 26px; font: inherit; font-weight: 600; color: #fff; background: var(--academique); border: 1px solid var(--academique); border-radius: 3px; cursor: pointer; }
-button.envoi:hover { background: var(--nuit); border-color: var(--nuit); }
-button.envoi:disabled { opacity: .6; cursor: wait; }
-.statut { display: none; padding: 11px 14px; border-radius: 3px; border: 1px solid; font-weight: 600; }
-.statut.ok { display: block; background: #eaf4ec; color: #1d5a2c; border-color: #b9d9c0; }
-.statut.ko { display: block; background: #fbeaea; color: #8a1f1f; border-color: #e5b9b9; }
-
-/* Pied de page */
-footer.pied { background: var(--nuit); color: #cfd8e6; padding: 44px 0 28px; margin-top: 0; }
-footer.pied a { color: #fff; }
-footer.pied h2 { color: #fff; font-size: 1.15rem; margin-bottom: 10px; }
-.pied-grille { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-.pied-grille p { margin: 0 0 .4em; font-size: .98rem; }
-.pied-liens { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 28px 0 0; padding: 18px 0 0; border-top: 1px solid rgba(255,255,255,.15); list-style: none; font-size: .95rem; }
-.copy { margin: 18px 0 0; font-size: .9rem; opacity: .85; }
-.retour { position: fixed; right: 20px; bottom: 20px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--filet); background: #fff; color: var(--nuit); cursor: pointer; display: none; font-size: 1.1rem; }
-
-@media (max-width: 860px) {
-  .hero .wrap { grid-template-columns: 1fr; gap: 28px; padding-top: 40px; padding-bottom: 44px; justify-items: start; }
-  .hero .portrait-bloc { order: -1; }
-  .deux, .pied-grille { grid-template-columns: 1fr; gap: 32px; }
+/* --- EN-TÊTE (STYLE ORIGINAL) --- */
+.professor-header {
+    background: linear-gradient(135deg, #004488 0%, #002d5f 100%);
+    color: white; padding: 40px 50px; border-radius: 20px;
+    margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0, 45, 95, 0.3);
+    display: flex; align-items: center; justify-content: space-between;
 }
-@media (max-width: 560px) {
-  body { font-size: 1rem; }
-  .wrap { padding: 0 18px; }
-  .portrait { width: 168px; height: 168px; }
-  .noms { grid-template-columns: 1fr; }
-  .entrees a { flex-direction: column; gap: 2px; }
-  .entrees span { text-align: left; }
-  .menu { gap: 2px 18px; }
-  .menu a { padding: 8px 0 7px; }
-  .topbar .wrap { padding-bottom: 4px; }
+.header-photo, .header-logo {
+    width: 210px; height: 210px; border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    background: white; display: flex; 
+    align-items: center; justify-content: center; flex-shrink: 0;
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-@media print { .topbar, .retour, .recherche { display: none; } body { background: #fff; } }
+.header-photo img { width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+.header-logo img { width: 85%; height: auto; object-fit: contain; }
+.header-content { flex: 1; text-align: center; padding: 0 30px; }
+.professor-name { font-size: 3.2em; font-weight: 700; font-family: 'Crimson Pro', serif; }
+.institution-badge { background: rgba(255, 255, 255, 0.1); padding: 12px 30px; border-radius: 50px; display: inline-block; border: 1px solid rgba(255, 255, 255, 0.2); margin-top: 10px;}
+.faculty-highlight { color: #ffcc00; font-weight: 700; }
+
+/* --- NAVIGATION (STYLE ORIGINAL) --- */
+.academic-nav { display: flex; justify-content: center; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
+.nav-card {
+    background: white; color: #0056b3; padding: 15px 30px; border-radius: 12px;
+    font-weight: 600; border: 2px solid #0056b3; min-width: 180px; text-align: center; transition: 0.3s;
+    text-decoration: none;
+}
+.nav-card:hover { background: #0056b3; color: white; transform: translateY(-5px); }
+.nav-card.active { background: #0056b3; color: white; }
+
+/* --- CARTES ET PRÉSENTATION (STYLE ORIGINAL) --- */
+.presentation, .resource-card {
+    background: white; padding: 40px; border-radius: 15px; margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.presentation { border-left: 8px solid #0056b3; }
+.resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.resource-list { list-style: none; margin: 20px 0; }
+.resource-list li { padding: 10px 0 10px 30px; border-bottom: 1px solid #eee; position: relative; }
+.resource-list li::before { content: '→'; position: absolute; left: 0; color: #0056b3; font-weight: bold; }
+
+/* --- RECHERCHE --- */
+.search-container { max-width: 800px; margin: 0 auto 30px auto; position: relative; z-index: 10; }
+.search-bar { width: 100%; padding: 18px 25px; border-radius: 35px; border: 2px solid #0056b3; outline: none; font-size: 1.1em; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+#searchResultsBox { display: none; position: absolute; z-index: 9999; width: 100%; background-color: #ffffff !important; padding: 20px; border-radius: 15px; border: 2px solid #0056b3; margin-top: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+#linksContainer { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+.search-link { display: flex; align-items: center; justify-content: center; color: #0056b3; font-weight: 600; background: #f0f7ff; padding: 14px; border-radius: 10px; text-decoration: none; border: 1px solid #d0e4ff; transition: 0.3s; text-align: center; }
+.search-link:hover { background: #0056b3; color: white; transform: translateY(-2px); }
+
+/* --- FOOTER --- */
+.professor-footer { background: #002d5f; color: white; padding: 50px 40px; margin-top: 60px; border-radius: 20px; text-align: center; }
+.contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 30px 0; }
+.contact-item { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; }
+.contact-item h4 { color: #ffc107; margin-bottom: 10px; }
+.footer-links { display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap; }
+.signature { margin-top: 30px; font-style: italic; opacity: 0.8; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; }
+#backToTop { display: none; position: fixed; bottom: 30px; right: 30px; background: #0056b3; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 1000; }
+
+/* ============================================================
+   CORRECTION DES LIGNES (TOUCHE UNIQUEMENT AUX TITRES DES CARTES)
+   ============================================================ */
+
+/* Règle globale pour forcer une seule ligne de la couleur du mot */
+.resource-card h3 {
+    border-bottom: 3px solid currentColor !important; /* Ligne = Couleur du mot */
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    display: inline-block !important;
+    padding-bottom: 5px !important;
+    text-decoration: none !important;
+    position: relative !important;
+}
+
+/* On supprime les "doubles lignes" (::after) pour les 3 premières cartes */
+.resource-card h3::after, .resource-card h3::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* On conserve les couleurs d'icônes et de textes spécifiques pour les 3 premières */
+.resource-card:nth-child(1) i, .resource-card:nth-child(1) h3 { color: #6a11cb !important; font-size: 1.4em; }
+.resource-card:nth-child(2) i, .resource-card:nth-child(2) h3 { color: #2575fc !important; font-size: 1.4em; }
+.resource-card:nth-child(3) i, .resource-card:nth-child(3) h3 { color: #00b09b !important; font-size: 1.4em; }
+
+/* Taille des icônes pour les 3 premiers */
+.resource-card:nth-child(1) i, .resource-card:nth-child(2) i, .resource-card:nth-child(3) i {
+    font-size: 2.8rem !important; display: block !important; margin-bottom: 10px !important;
+}
+
+/* ============================================================
+   FIN DE LA CORRECTION - LE RESTE DEMEURE INCHANGÉ
+   ============================================================ */
+
+[data-aos] { overflow: visible !important; }
+
+/* --- PHOTO ET LOGO --- */
+.header-photo {
+    overflow: hidden !important;
+    border-radius: 12px !important; 
+    border: 3px solid white !important; 
+    width: 140px !important;
+    height: 170px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+    background: #f0f0f0 !important;
+}
+.header-photo img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
+
+.professor-header .header-logo {
+    width: 140px !important;  
+    height: 175px !important; 
+    background: white !important;
+    border: 2px solid white !important; 
+    border-radius: 12px !important;    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px !important;
+    overflow: hidden !important;
+}
+.professor-header .header-logo img { width: 100% !important; height: auto !important; max-height: 90% !important; object-fit: contain !important; border: none !important; }
+/* --- ÉTIQUETTE DU SEMESTRE --- */
+.semester {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #edf3f8;
+    color: #0056b3;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65em;
+    font-weight: 600;
+    vertical-align: middle;
+    white-space: nowrap;
+}
